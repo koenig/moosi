@@ -2,6 +2,8 @@
 
 PlantsRoute = Ember.Route.extend
   model: -> @store.find 'plant'
+  actions:
+    linkToPlant: (plant)-> @transitionTo 'plant', plant
 
 
 

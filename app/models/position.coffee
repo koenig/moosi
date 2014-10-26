@@ -3,8 +3,8 @@ attr = DS.attr
 hasMany = DS.hasMany
 belongsTo = DS.belongsTo
 
-Quarter = DS.Model.extend
-  name: attr()
+Position = DS.Model.extend
+  plant: belongsTo 'plant'
 
 
-`export default Quarter`
+`export default Position`

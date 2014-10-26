@@ -5,7 +5,7 @@ belongsTo = DS.belongsTo
 
 Plant = DS.Model.extend
   name: attr()
-  positions: hasMany('position')
+  # positions: hasMany('position')
   # quarters: DS.hasMany 'quarter'
 
 Plant.reopenClass

@@ -1,5 +1,15 @@
-plamnts
-{{#each content}}
-  {{name}} o
-{{/each}}
-{{outlet}}
+<div class="main">
+  <div class='header'>
+    <h1 class="title">Pflanzen</h1>
+  </div>
+
+  <div class="plant-list">
+    {{#each content}}
+      <div class="item" {{action 'linkToPlant' 'plant' this}}>{{name}}</div>
+    {{/each}}
+  </div>
+
+  <div class='plant-detail'>
+    {{outlet}}
+  </div>
+</div>

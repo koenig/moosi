@@ -5,6 +5,8 @@ Router = Ember.Router.extend
   location: config.locationType
 
 Router.map ->
-  @resource 'plants'
+  @resource 'plants', ->
+    @resource 'plant', path: '/:plant_id', ->
+      @route 'edit'
 
 `export default Router`
