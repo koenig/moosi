@@ -1,15 +1,15 @@
-<div class="main">
-  <div class='header'>
-    <h1 class="title">Pflanzen</h1>
-  </div>
+<div class="moosi">
+  <div class='sidemenu'>
 
-  <div class="plant-list">
-    {{#each content}}
-      <div class="item" {{action 'linkToPlant' this}}>{{name}}</div>
-    {{/each}}
-  </div>
+    <div class='header'>
+      <h1 class="title">Pflanzen</h1>
+    </div>
 
-  <div class='plant-detail'>
-    {{outlet}}
+    <div class='content plant-list'>
+      {{#each content}}
+        <item class="item" {{action 'linkToPlant' this}}>{{name}}</item>
+      {{/each}}
+    </div>
   </div>
 </div>
+{{outlet}}
