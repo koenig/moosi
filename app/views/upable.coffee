@@ -8,15 +8,14 @@ UpableView = Ember.View.extend
   actions:
     back: ->
       @set 'shouldShow', no
-      Em.run.later(@, =>
+      Em.run.later( =>
         @get('controller').send 'goBack'
       , 400)
 
   didInsertElement: ->
     $view = @$()
-
     Em.run.later( =>
       @set 'shouldShow', yes
-    , 100)
+    , 0)
 
 `export default UpableView`

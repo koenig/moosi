@@ -3,6 +3,9 @@
   @include transition(all 0.3s ease);
 }
 
+body,html{
+  overflow:hidden
+}
 
 .moosi {
   // background: green;
