@@ -2,16 +2,23 @@
 
 DraggableView = Ember.View.extend
   # touch gestures properties
-  startX: 0
-  dist: 0
-  active: null
-  maxDist: 250
-  threshold: 40
-  activeWidth: null
+  # startX: 0
+  # dist: 0
+  # active: null
+  # maxDist: 250
+  # threshold: 40
+  # activeWidth: null
   classNames: 'main-content'
   classNameBindings: ['shouldShow:in']
   tagName: 'div'
   shouldShow: no
+  actions:
+    back: ->
+      @set 'shouldShow', no
+      Em.run.later(@, =>
+        @get('controller').send 'goBack'
+      , 400)
+
 
   didInsertElement: ->
     $view = @$()
@@ -20,9 +27,8 @@ DraggableView = Ember.View.extend
     # $(dragTrigger).appendTo($view)
 
     Em.run.later( =>
-      console.log 'j'
       @set 'shouldShow', yes
-      $view.css({ '-webkit-transform': 'translate3d(-100%, 0, 0)' })
+      # $view.css({ '-webkit-transform': 'translate3d(-100%, 0, 0)' })
     , 100)
 
   # touchStart: (event)->

@@ -1,9 +1,8 @@
 `import Ember from 'ember'`
 
-PlantRoute = Ember.Route.extend
+PlantsCreateRoute = Ember.Route.extend
   actions:
     goBack: ->
       @transitionTo 'plants'
 
-
-`export default PlantRoute`
+`export default PlantsCreateRoute`

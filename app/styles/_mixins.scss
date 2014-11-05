@@ -53,3 +53,26 @@
      -moz-box-sizing: $boxmodel;
           box-sizing: $boxmodel;
 }
+
+
+@mixin flexbox() {
+ display: -webkit-flex;
+ display: flex;
+}
+@mixin flex-direction($values) {
+ -webkit-flex-direction: $values;
+ flex-direction: $values;
+}
+@mixin flex($values) {
+ -webkit-flex: $values;
+ flex: $values;
+}
+@mixin border-box() {
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+}
+@mixin align-items($values) {
+  -webkit-align-items: $values;
+  align-items: $values;
+}

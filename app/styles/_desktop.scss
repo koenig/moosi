@@ -1,8 +1,8 @@
 $mainColWidth: 550px;
 $mainColHeight: 400px;
 html, body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   color: rgb(68, 68, 68);
 }
 .border-box {
