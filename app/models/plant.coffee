@@ -5,6 +5,7 @@ belongsTo = DS.belongsTo
 
 Plant = DS.Model.extend
   name: attr()
+  price: attr('number')
   # positions: hasMany('position')
   # quarters: DS.hasMany 'quarter'
 
