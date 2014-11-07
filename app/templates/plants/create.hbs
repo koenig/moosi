@@ -1,8 +1,20 @@
 {{#view 'upable'}}
   <div class='header'>
-    <a href='#' {{action 'back' target='view'}}>back</a>
-    <h2 class='title'>create</h2>
+    <a class='left' href='#' {{action 'back' target='view'}}>back</a>
+    <h2 class='title'>Neue Pflanze</h2>
+    <a></a>
   </div>
-  <div>
+  <div class='content list'>
+    <div class="padding">
+      <label for="name">Name</label>
+      {{input value=name placeholder='Tulpe' }}
+    </div>
+    <div class="padding">
+      <label for="preis">Preis</label>
+      {{input value=preis placeholder='0.00' type='tel'}}
+    </div>
+    <div class="padding aright">
+      <button class="blue btn-desktop" {{action "save"}} title="save"> speichern </button>
+    </div>
   </div>
 {{/view}}

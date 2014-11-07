@@ -1,12 +1,13 @@
 <div class="moosi">
   <div class='header'>
+    <a class='left'>&nbsp;</a>
     <h1 class="title">Pflanzen</h1>
     {{#link-to 'plants.create'}}add{{/link-to}}
   </div>
 
-  <div class='content plant-list'>
+  <div class='content list'>
     {{#each content}}
-      <item class="item" {{action 'linkToPlant' this }}>{{name}}</item>
+      <div class="item" {{action 'linkToPlant' this }}>{{name}}</div>
     {{/each}}
   </div>
 </div>

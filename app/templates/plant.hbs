@@ -1,10 +1,14 @@
 {{#view 'draggable'}}
   <div class='header'>
-    <a href='#' {{action 'back' target='view'}}>back</a>
+    <a class='left' {{action 'back' target='view'}}>back</a>
     <h2 class='title'>{{name}}</h2>
+    <a></a>
   </div>
   <div>
-    <p>{{bio}}</p>
+  <div class='content list'>
+    <div class="item">
+      Preis {{preis}}
+    </div>
   </div>
 {{/view}}
 

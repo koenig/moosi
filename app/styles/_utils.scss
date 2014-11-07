@@ -15,3 +15,7 @@
              user-select:none;
 }
 .line { @include clearfix(); }
+
+.padding {
+  padding:20px 20px 0 20px ;
+}
