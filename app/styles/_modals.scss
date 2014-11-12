@@ -2,12 +2,13 @@
     $modalWidth:400px;
     padding:20px 35px 35px;
     @include box-sizing(border-box);
-    width:80vw;
+    width:$modalWidth;
     min-height:330px;
 
     position:absolute;
     // hrz centering
-    left:50%; margin-left:-$modalWidth/2;
+    left:50%;
+    margin-left:-$modalWidth/2;
     // vrt positioning
     top:18%;
     background: blue;

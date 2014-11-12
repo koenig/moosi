@@ -13,9 +13,13 @@
 @mixin transition($params...) {
   -webkit-transition: $params;
      -moz-transition: $params;
-      -ms-transition: $params;
           transition: $params;
 }
+
+@mixin translate3d($x, $y, $z) {
+  @include transform( translate3d($x, $y, $z) );
+}
+
 
 // css3 animations
 @mixin animation($params) {

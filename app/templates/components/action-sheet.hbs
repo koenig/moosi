@@ -1,0 +1,18 @@
+<div {{bind-attr class=":action-sheet-backdrop isVisible:active"}} buttons="buttons">
+  <div class="action-sheet-wrapper action-sheet-up">
+    <div class="action-sheet">
+      <div class="action-sheet-group">
+<!-- ngIf: titleText -->
+<!-- ngRepeat: button in buttons -->
+        <button class="button" ng-click="buttonClicked($index)" ng-repeat="button in buttons" ng-bind-html="button.text">Quartiere</button>
+<!-- end ngRepeat: button in buttons -->
+      </div>
+<!-- ngIf: destructiveText -->
+<!-- ngIf: cancelText -->
+      <div class="action-sheet-group" ng-if="cancelText">
+        <button class="button" {{action "hideSheet"}}>Zurück</button>
+      </div>
+<!-- end ngIf: cancelText -->
+    </div>
+  </div>
+</div>
