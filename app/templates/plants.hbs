@@ -1,17 +1,18 @@
 <div class="moosi">
   <div class='header'>
-    <a class='left'>&nbsp;</a>
+    <a class='left' {{action 'openActionSheet'}}>settings</a>
     <h1 class="title">Pflanzen</h1>
     {{#link-to 'plants.create'}}add{{/link-to}}
   </div>
 
   <div class='content list'>
-    {{#each content}}
-      <div class="item" {{action 'linkToPlant' this }}>{{name}}</div>
+    {{#each plant in arrangedContent}}
+      <div class="item" {{action 'linkToPlant' this }}>
+        <span>{{plant.name}}</span>
+        <span class='flex'></span>
+        <span>{{plant.quantity}} 3</span>
+      </div>
     {{/each}}
-    <div class="item" {{action 'openmodal' }}>modal {{modalVisible}}</div>
-    <div class="item" {{action 'openActionSheet' }}>action {{actionSheetVisible}}</div>
-
   </div>
 </div>
 {{outlet}}
@@ -24,10 +25,5 @@
 {{/modal-box}}
 
 
-{{#action-sheet isVisible=actionSheetVisible}}
-    <h3>action-sheet</h3>
-    <hr/>
-    <p></p>
-
-{{/action-sheet}}
+{{action-sheet isVisible=actionSheetVisible goToQuarters='goToQuarters' }}
 

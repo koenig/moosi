@@ -9,6 +9,7 @@ Router.map ->
     @resource 'plant', path: '/:plant_id', ->
       @route 'edit'
     @route 'create'
-  @route 'plants/create'
+    @resource 'quarters'
+  # @route 'plants/create'
 
 `export default Router`

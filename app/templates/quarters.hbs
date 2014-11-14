@@ -1,0 +1,16 @@
+{{#view 'upable'}}
+    <div class='header'>
+    <a class='left' {{action 'back' target='view'}}>back</a>
+    <h2 class='title'>Quarters</h2>
+    <a></a>
+  </div>
+  <div>
+  <div class='content list'>
+    {{#each quarter in content }}
+      <div class="item">
+        <span>{{quarter.name}}</span>
+      </div>
+    {{/each}}
+  </div>
+
+{{/view}}

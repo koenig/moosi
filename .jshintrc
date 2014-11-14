@@ -29,5 +29,5 @@
   "eqnull": true,
   "esnext": true,
   "unused": true,
-  "FastClick":true
+  "FastClick": true
 }
