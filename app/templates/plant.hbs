@@ -7,8 +7,17 @@
   <div>
   <div class='content list'>
     <div class="item">
-      Preis {{preis}}
+      <span>Preis</span>
+      <span class='flex'></span>
+      <span>{{price}}</span>
     </div>
+    {{#each position in positions}}
+      <div class="item">
+        <span>{{position.quarter.name}}</span>
+        <span class='flex'></span>
+        <span>{{position.quantity}}</span>
+      </div>
+    {{/each}}
   </div>
 {{/view}}
 

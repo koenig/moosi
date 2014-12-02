@@ -1,13 +1,13 @@
 `import Ember from 'ember'`
 
-PlantsCreateController = Ember.Controller.extend
+PlantsCreateController = Ember.ObjectController.extend
   shouldShowCreate: no
   actions:
     save: ->
-      new_plant = @store.createRecord 'plant',
-        name: @get 'content.name'
-        price: @get 'content.price'
-      new_plant.save().then =>
+      @get('content').save().then (plant) =>
+        console.log 'saved', plant, plant.get('positions.length'), plant.get('positions')
+        plant.get('positions').forEach (position) ->
+          position.save()
         @set 'shouldShowCreate', no
         Em.run.later( =>
           @send 'goBack'

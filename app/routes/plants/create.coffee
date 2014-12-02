@@ -2,16 +2,8 @@
 
 PlantsCreateRoute = Ember.Route.extend
   model: ->
-    result = Em.Object.create()
-    result.set 'positions', []
+    @store.createRecord 'plant'
 
-    quarters = @store.find 'quarter'
-    quarters.forEach (quarter) ->
-      result.get('positions').pushObject
-        quarter: quarter
-        name: quarter.name
-        quantiy: 0
-    result
   actions:
     goBack: ->
       @transitionTo 'plants'

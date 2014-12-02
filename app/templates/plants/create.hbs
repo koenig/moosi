@@ -15,15 +15,18 @@
       {{input value=content.price placeholder='0.00' type='tel'}}
     </div>
 
-    <div class="padding aright">
-      <button class="blue btn-desktop" {{action "save"}} title="save"> speichern </button>
+    <div class="padding">
+      <div class="divider">Bestände</div>
     </div>
-    <div class="divider">Bestände</div>
-    {{#each position in content.positions}}
+    {{#each position in positions }}
       <div class="padding">
-        <label for="preis">{{position.name}}</label>
+        <label for="preis">{{position.quarter.name}}</label>
         {{input value=position.quantity placeholder='0' type='tel'}}
       </div>
     {{/each}}
+
+    <div class="padding aright">
+      <button class="blue btn-desktop" {{action "save"}} title="save"> speichern </button>
+    </div>
   </div>
 {{/view}}

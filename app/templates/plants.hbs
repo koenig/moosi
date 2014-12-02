@@ -7,10 +7,10 @@
 
   <div class='content list'>
     {{#each plant in arrangedContent}}
-      <div class="item" {{action 'linkToPlant' this }}>
+      <div class="item" {{action 'linkToPlant' plant}}>
         <span>{{plant.name}}</span>
         <span class='flex'></span>
-        <span>{{plant.quantity}} 3</span>
+        <span>{{plant.quantity}}</span>
       </div>
     {{/each}}
   </div>
