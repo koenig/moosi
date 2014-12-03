@@ -93,6 +93,12 @@ body {
       border-right-width: 0px;
       border-top-width: 0px;
       &.active { background-color:#000; }
+      &.rows {
+        @include flex-direction(column);
+        .row {
+          @include flexbox();
+        }
+      }
     }
 }
 

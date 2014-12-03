@@ -1,5 +1,4 @@
 
-- make an quarters view
 - make the content sliding in having a border
 - divider
 
@@ -10,9 +9,12 @@
 - make quarters addable
 - make the quarters and positions update when adding an quarter
 - make plants editable
+- make the order tabs
 
 
 **done**
+- make an quarters view
+- make multiline items (class='item horizontal' > row)
 - make an item clickable
 - make an plant details view
 - make the view full screen

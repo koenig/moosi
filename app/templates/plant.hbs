@@ -17,16 +17,20 @@
     </div>
 
     {{#each position in positions itemController='position'}}
-      <div class="item" {{action 'selectPosition' position }}>
-        <span>{{position.quarter.name}}</span>
-        <span class='flex'></span>
-        <span>{{position.quantity}}</span>
-        {{#if position.isFrom}}
-          FROM
-        {{/if}}
-        {{#if position.isTo}}
-          TO
-        {{/if}}
+      <div class="item rows" {{action 'selectPosition' position }}>
+        <div class="row">
+          <span>{{position.quarter.name}}</span>
+          <span class='flex'></span>
+          <span>{{position.quantity}}</span>
+        </div>
+        <div>
+          {{#if position.isFrom}}
+            FROM
+          {{/if}}
+          {{#if position.isTo}}
+            TO
+          {{/if}}
+        </div>
       </div>
     {{/each}}
   </div>
