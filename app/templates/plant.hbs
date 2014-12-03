@@ -11,11 +11,22 @@
       <span class='flex'></span>
       <span>{{price}}</span>
     </div>
-    {{#each position in positions}}
-      <div class="item">
+
+    <div class="padding">
+      <div class="divider">Bestände</div>
+    </div>
+
+    {{#each position in positions itemController='position'}}
+      <div class="item" {{action 'selectPosition' position }}>
         <span>{{position.quarter.name}}</span>
         <span class='flex'></span>
         <span>{{position.quantity}}</span>
+        {{#if position.isFrom}}
+          FROM
+        {{/if}}
+        {{#if position.isTo}}
+          TO
+        {{/if}}
       </div>
     {{/each}}
   </div>
