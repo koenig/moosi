@@ -2,7 +2,7 @@
   <div class='header'>
     <a class='left' {{action 'back' target='view'}}>back</a>
     <h2 class='title'>{{name}}</h2>
-    <a></a>
+    <a class='right' {{action 'resetTransaction'}}>abbrechen</a>
   </div>
   <div>
   <div class='content list'>
@@ -17,20 +17,31 @@
     </div>
 
     {{#each position in positions itemController='position'}}
-      <div class="item rows" {{action 'selectPosition' position }}>
-        <div class="row">
-          <span>{{position.quarter.name}}</span>
+      <div class="item rows">
+        <div class="row" {{action 'selectPosition' position }}>
+          <span>{{position.quarter.name}}
+            {{#if isTransaction}}
+              <span class='note'>{{#if position.isFrom}} von{{/if}}
+              {{#if position.isTo}} nach{{/if}}</span>
+            {{/if}}
+          </span>
           <span class='flex'></span>
           <span>{{position.quantity}}</span>
         </div>
-        <div>
-          {{#if position.isFrom}}
-            FROM
-          {{/if}}
-          {{#if position.isTo}}
-            TO
-          {{/if}}
-        </div>
+        {{#if position.isTo}}
+          <div class="row">
+            {{input value=transaction.quantity type='tel'}}
+
+            <div class="aright">
+              <button class="blue btn-desktop" {{action "execute"}} title="save"> {{#if isTransaction}}
+              verschieben
+            {{else}}
+              neue hinzufügen
+            {{/if}} </button>
+            </div>
+
+          </div>
+        {{/if}}
       </div>
     {{/each}}
   </div>

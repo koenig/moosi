@@ -6,8 +6,6 @@ belongsTo = DS.belongsTo
 Quarter = DS.Model.extend
   name: attr()
   positions: hasMany 'position'
-  copy: ->
-    {name: @get('name')}
 
 
 Quarter.reopenClass

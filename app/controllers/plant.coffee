@@ -3,11 +3,14 @@
 PlantController = Ember.ObjectController.extend
   needs: ['transaction']
   transaction: Em.computed.alias 'controllers.transaction'
+  isTransaction: Em.computed 'transaction.from', 'transaction.to', ->
+    @get('transaction.to') isnt @get('transaction.from')
 
-  # hasFrom:
-  # actions:
-  #   selectPosition: (position) ->
-  #     console.log 'selectQuarter'
-  #     @set 'transaction.from', position
+  actions:
+    execute: ->
+      @get('transaction').execute()
+
+    resetTransaction: ->
+      @get('transaction').send 'resetTransaction'
 
 `export default PlantController`
