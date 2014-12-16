@@ -3,7 +3,9 @@
 TransactionController = Ember.ObjectController.extend
   from: null
   to: null
-  quantity: null
+  quantityInput: null
+  quantity: Em.computed 'quantityInput', ->
+    (@get('quantityInput') or '').replace(',', '.')
   isRealTransaction: Em.computed 'from', 'to', ->
     @get('to') isnt @get('from')
   quantityShouldBeNumeric: Em.computed 'quantity', ->
@@ -39,7 +41,7 @@ TransactionController = Ember.ObjectController.extend
       @setProperties
         from: null
         to: null
-        quantity: null
+        quantityInput: null
 
 
 `export default TransactionController`

@@ -9,11 +9,11 @@
 - make the quarters and positions update when adding an quarter
 - make plants editable
 - make the order tabs
-transaction # execute
-# quantity should allow , in value
 
 
 **done**
+transaction # execute
+# quantity should allow , in value
 # check if quantity is legal smaller than from quantity
 # should validate numericallity
 # should be autocheckinh
