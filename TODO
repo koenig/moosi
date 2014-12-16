@@ -1,17 +1,22 @@
 
 - make the content sliding in having a border
 - divider
+** maybe **
 
 - make transactions from quarters to orders
-- make orders overview
 - make quarters editable
 - make quarters addable
 - make the quarters and positions update when adding an quarter
 - make plants editable
+- make the input field for transaction and button look good
+- make the plant order selector a footer
+
+- make details orderview
+- create new order functionality
 - make the order tabs
 
-
 **done**
+- make orders overview
 transaction # execute
 # quantity should allow , in value
 # check if quantity is legal smaller than from quantity

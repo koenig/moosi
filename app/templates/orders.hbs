@@ -1,0 +1,18 @@
+<div class="moosi">
+  <div class='header'>
+    <a class='left'></a>
+    <h1 class="title">Bestellungen {{#link-to 'plants'}}Pflanzen{{/link-to}}</h1>
+    {{!#link-to 'order.create'}}add{{!/link-to}}
+  </div>
+
+  <div class='content list'>
+    {{#each order in arrangedContent}}
+      <div class="item" >
+        <span>{{order.name}}</span>
+        <span class='flex'></span>
+        <span></span>
+      </div>
+    {{/each}}
+  </div>
+</div>
+{{outlet}}
