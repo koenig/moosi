@@ -3,6 +3,9 @@
 PlantController = Ember.ObjectController.extend
   needs: ['transaction']
   transaction: Em.computed.alias 'controllers.transaction'
+  hasFrom: Em.computed.bool 'transaction.from'
+  hasTo: Em.computed.bool 'transaction.to'
+  hasTransaction: Em.computed.or 'hasFrom', 'hasTo'
   isTransaction: Em.computed 'transaction.from', 'transaction.to', ->
     @get('transaction.to') isnt @get('transaction.from')
 

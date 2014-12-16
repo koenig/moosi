@@ -17,6 +17,7 @@ transaction # execute
 
 
 **done**
+- make reset transaction button appear only if there is an transaction
 - make transactions from quarters
 - transaction should be abordable
 - make an quarters view
