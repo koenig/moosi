@@ -2,7 +2,7 @@
   <div class='header'>
     <a class='left' {{action 'back' target='view'}}>back</a>
     <h2 class='title'>{{name}}</h2>
-    {{#if hasTransaction}}<a class='right' {{action 'resetTransaction'}}>abbrechen</a>{{/if}} {{transaction.isValidTransaction}}
+    {{#if hasTransaction}}<a class='right' {{action 'resetTransaction'}}>abbrechen</a>{{/if}}
   </div>
   <div>
   <div class='content list'>
@@ -33,7 +33,7 @@
             {{input value=transaction.quantityInput type='tel'}}
 
             <div class="aright">
-              <button class="blue btn-desktop" {{action "execute"}} title="save"> {{#if isTransaction}}
+              <button class="blue btn-desktop" {{action "execute"}} title="save" {{bind-attr disabled='transaction.isInvalidTransaction'}}> {{#if isTransaction}}
               verschieben
             {{else}}
               neue hinzufügen

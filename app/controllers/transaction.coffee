@@ -12,8 +12,11 @@ TransactionController = Ember.ObjectController.extend
     quantity = @get 'quantity'
     !isNaN(parseFloat(quantity)) && isFinite(quantity)
   quantityShouldBeBiggerThanZero: Em.computed.gt 'quantity', 0
-  quantityShouldBeSmallerThanFrom: Em.computed 'from.quantity', 'quantity', -> @get('quantity') <= @get('from.quantity')
+  quantityShouldBeSmallerThanFrom: Em.computed 'from.quantity', 'quantity', 'isRealTransaction', ->
+    return yes unless @get 'isRealTransaction'
+    @get('quantity') <= @get('from.quantity')
   isValidTransaction: Em.computed.and 'quantityShouldBeNumeric', 'quantityShouldBeBiggerThanZero', 'quantityShouldBeSmallerThanFrom'
+  isInvalidTransaction: Em.computed.not 'isValidTransaction'
   execute: ->
     # the idea is, that the execution of a transfer
     # is a one time event
@@ -23,6 +26,8 @@ TransactionController = Ember.ObjectController.extend
     # that is why the validity appears to be something the
     # controller should check and feels wrong to place on the
     # model itself
+    return unless @get('isValidTransaction')
+
     transaction = @store.createRecord 'transaction',
       from: @get 'from'
       to: @get 'to'
