@@ -2,7 +2,7 @@
   <div class='header'>
     <a class='left' {{action 'back' target='view'}}>back</a>
     <h2 class='title'>{{name}}</h2>
-    {{#if hasTransaction}}<a class='right' {{action 'resetTransaction'}}>abbrechen</a>{{/if}}
+    {{#if hasTransaction}}<a class='right' {{action 'resetTransaction'}}>abbrechen</a>{{/if}} {{transaction.isValidTransaction}}
   </div>
   <div>
   <div class='content list'>

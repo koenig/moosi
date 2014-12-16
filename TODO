@@ -10,13 +10,14 @@
 - make plants editable
 - make the order tabs
 transaction # execute
-# should be autocheckinh
-# should validate numericallity
-# should validate not null or 0
-# check if quantity is legal smaller than from quantity
+# quantity should allow , in value
 
 
 **done**
+# check if quantity is legal smaller than from quantity
+# should validate numericallity
+# should be autocheckinh
+# should validate not null or 0
 - make reset transaction button appear only if there is an transaction
 - make transactions from quarters
 - transaction should be abordable

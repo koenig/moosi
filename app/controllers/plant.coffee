@@ -6,8 +6,7 @@ PlantController = Ember.ObjectController.extend
   hasFrom: Em.computed.bool 'transaction.from'
   hasTo: Em.computed.bool 'transaction.to'
   hasTransaction: Em.computed.or 'hasFrom', 'hasTo'
-  isTransaction: Em.computed 'transaction.from', 'transaction.to', ->
-    @get('transaction.to') isnt @get('transaction.from')
+  isTransaction: Em.computed.alias 'transaction.isRealTransaction'
 
   actions:
     execute: ->

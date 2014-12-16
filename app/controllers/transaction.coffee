@@ -4,6 +4,14 @@ TransactionController = Ember.ObjectController.extend
   from: null
   to: null
   quantity: null
+  isRealTransaction: Em.computed 'from', 'to', ->
+    @get('to') isnt @get('from')
+  quantityShouldBeNumeric: Em.computed 'quantity', ->
+    quantity = @get 'quantity'
+    !isNaN(parseFloat(quantity)) && isFinite(quantity)
+  quantityShouldBeBiggerThanZero: Em.computed.gt 'quantity', 0
+  quantityShouldBeSmallerThanFrom: Em.computed 'from.quantity', 'quantity', -> @get('quantity') <= @get('from.quantity')
+  isValidTransaction: Em.computed.and 'quantityShouldBeNumeric', 'quantityShouldBeBiggerThanZero', 'quantityShouldBeSmallerThanFrom'
   execute: ->
     # the idea is, that the execution of a transfer
     # is a one time event
