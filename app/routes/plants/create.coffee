@@ -6,6 +6,7 @@ PlantsCreateRoute = Ember.Route.extend
 
   actions:
     goBack: ->
+      @modelFor('plants.create').destroyRecord()
       @transitionTo 'plants'
 
 `export default PlantsCreateRoute`

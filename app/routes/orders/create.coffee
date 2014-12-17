@@ -6,6 +6,7 @@ OrdersCreateRoute = Ember.Route.extend
 
   actions:
     goBack: ->
+      @modelFor('orders.create').destroyRecord()
       @transitionTo 'orders'
 
 

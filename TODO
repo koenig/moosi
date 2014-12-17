@@ -3,12 +3,11 @@
 - divider
 ** maybe **
 
-- make price decimal view
 - make transactions from quarters to orders
 - make quarters editable
 - make quarters addable
 - make order selectable for adding positions
-- make the quarters and positions update when adding an quarter
+- make the quarters and positions update when adding a quarter
 - make the input field for transaction and button look good
 - make the "tabs" location aware (so that you can switch between orders and plants and remember the position)
 - make the bestellung name number go on
@@ -16,9 +15,10 @@
 - make the plant view only show created plants (or destroy plant if not created)
 - make the orders view only show created orders (or destroy order if not created)
 
-- make plants editable
 
 **done**
+- make price decimal view
+- make plants editable
 - make the plant order selector a footer
 - create new order functionality
 - make the order tabs
