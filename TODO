@@ -9,14 +9,16 @@
 - make order selectable for adding positions
 - make the quarters and positions update when adding a quarter
 - make the input field for transaction and button look good
-- make the "tabs" location aware (so that you can switch between orders and plants and remember the position)
 - make the bestellung name number go on
 - make bestell Nr
 - make the plant view only show created plants (or destroy plant if not created)
 - make the orders view only show created orders (or destroy order if not created)
+- make the view know if they should fade in or not
+- make the tabbar a real footer
 
 
 **done**
+- make the "tabs" location aware (so that you can switch between orders and plants and remember the position)
 - make price decimal view
 - make plants editable
 - make the plant order selector a footer
