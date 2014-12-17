@@ -1,18 +1,22 @@
 <div class="moosi">
   <div class='header'>
     <a class='left'></a>
-    <h1 class="title">Bestellungen {{#link-to 'plants'}}Pflanzen{{/link-to}}</h1>
-    {{!#link-to 'order.create'}}add{{!/link-to}}
+    <h1 class="title">Bestellungen</h1>
+    {{#link-to 'orders.create'}}add{{/link-to}}
   </div>
 
   <div class='content list'>
     {{#each order in arrangedContent}}
-      <div class="item" >
+      <div class="item" {{action 'linkToOrder' order}}>
         <span>{{order.name}}</span>
         <span class='flex'></span>
         <span></span>
       </div>
     {{/each}}
+  </div>
+
+  <div class='footer'>
+    {{#link-to 'plants'}}Pflanzen{{/link-to}}
   </div>
 </div>
 {{outlet}}

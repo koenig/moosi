@@ -6,10 +6,14 @@
 - make transactions from quarters to orders
 - make quarters editable
 - make quarters addable
+- make order selectable for adding positions
 - make the quarters and positions update when adding an quarter
 - make plants editable
 - make the input field for transaction and button look good
 - make the plant order selector a footer
+- make the "tabs" location aware (so that you can switch between orders and plants and remember the position)
+- make the bestellung name number go on
+- make bestell Nr
 
 - make details orderview
 - create new order functionality

@@ -13,7 +13,7 @@ Order.reopenClass
   FIXTURES: [
     {
       id: 1
-      name: "Bestellung Nr.1"
+      name: "Reschnung Nr.1"
       customer: 'Marko Liebknecht'
       adress: 'Tannenallee 23
       23443 Freiland'
@@ -22,7 +22,7 @@ Order.reopenClass
     }
     {
       id: 2
-      name: "Bestellung Nr.2"
+      name: "Reschnung Nr.2"
       customer: 'Resi Laub'
       adress: 'Hammer Baum 23
       20243 Hamburg'

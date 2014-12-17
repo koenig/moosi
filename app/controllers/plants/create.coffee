@@ -5,7 +5,7 @@ PlantsCreateController = Ember.ObjectController.extend
   actions:
     save: ->
       @get('content').save().then (plant) =>
-        console.log 'saved', plant, plant.get('positions.length'), plant.get('positions')
+        # console.log 'saved', plant, plant.get('positions.length'), plant.get('positions')
         plant.get('positions').forEach (position) ->
           position.save()
         @set 'shouldShowCreate', no
