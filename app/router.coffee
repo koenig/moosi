@@ -16,6 +16,6 @@ Router.map ->
     @route 'create'
 
   # @route 'plants/create'
-  @route 'orders/create'
+  # @route 'orders/create'
 
 `export default Router`

@@ -1,0 +1,32 @@
+{{#view 'upable' shouldShow=shouldShowCreate}}
+  <div class='header'>
+    <a class='left' href='#' {{action 'back' target='view'}}>back</a>
+    <h2 class='title'>{{content.name}}</h2>
+    <a></a>
+  </div>
+  <div class='content list'>
+    <div class="padding">
+      <label for="name">Name</label>
+      {{input value=content.name }}
+    </div>
+
+    <div class="padding">
+      <label for="preis">Preis</label>
+      {{input value=content.price placeholder='0.00' type='tel'}}
+    </div>
+
+    <div class="padding">
+      <div class="divider">Bestände</div>
+    </div>
+    {{#each position in positions }}
+      <div class="padding">
+        <label for="preis">{{position.quarter.name}}</label>
+        {{input value=position.quantity placeholder='0' type='tel'}}
+      </div>
+    {{/each}}
+
+    <div class="padding aright">
+      <button class="blue btn-desktop" {{action "save"}} title="save"> speichern </button>
+    </div>
+  </div>
+{{/view}}

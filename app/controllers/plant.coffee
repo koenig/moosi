@@ -15,4 +15,7 @@ PlantController = Ember.ObjectController.extend
     resetTransaction: ->
       @get('transaction').send 'resetTransaction'
 
+    editPlant: ->
+      @transitionToRoute 'plant.edit', @get 'content'
+
 `export default PlantController`
