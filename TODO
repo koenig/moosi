@@ -1,22 +1,22 @@
 
 - make the content sliding in having a border
 - divider
+- make the view know if they should fade in or not
 ** maybe **
 
 - make transactions from quarters to orders
 - make quarters editable
-- make quarters addable
 - make order selectable for adding positions
 - make the quarters and positions update when adding a quarter
 - make the input field for transaction and button look good
 - make the bestellung name number go on
 - make bestell Nr
-- make the plant view only show created plants (or destroy plant if not created)
-- make the orders view only show created orders (or destroy order if not created)
-- make the view know if they should fade in or not
 
 
 **done**
+- make quarters addable
+- make the plant view only show created plants (or destroy plant if not created)
+- make the orders view only show created orders (or destroy order if not created)
 - make the "tabs" location aware (so that you can switch between orders and plants and remember the position)
 - make price decimal view
 - make plants editable

@@ -13,4 +13,12 @@
     {{/each}}
   </div>
 
+  <div class='padding flexbox'>
+   {{input value=selectedQuarter.name}}
+   <div class="aright">
+     <button {{action 'createQuarter'}}>
+        hinzufügen
+     </button>
+   </div>
+  </div>
 {{/view}}
