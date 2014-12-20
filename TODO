@@ -14,7 +14,6 @@
 - make the plant view only show created plants (or destroy plant if not created)
 - make the orders view only show created orders (or destroy order if not created)
 - make the view know if they should fade in or not
-- make the tabbar a real footer
 
 
 **done**
@@ -40,3 +39,7 @@ transaction # execute
 - make an item clickable
 - make an plant details view
 - make the view full screen
+
+
+** not **
+- make the tabbar a real footer

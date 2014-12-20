@@ -13,7 +13,6 @@ UpableView = Ember.View.extend
       , 400)
 
   didInsertElement: ->
-    $view = @$()
     Em.run.later( =>
       @set 'shouldShow', yes
     , 0)
