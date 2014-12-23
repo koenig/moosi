@@ -6,19 +6,20 @@
   </div>
   <div>
   <div class='content list'>
-    {{#each quarter in content }}
+    {{#each quarter in arrangedContent }}
       <div class="item">
-        <span>{{quarter.name}}</span>
+        <span class='flex'>{{quarter.name}}</span>
+        <span {{action 'rename' quarter}}>edit</span>
       </div>
     {{/each}}
   </div>
 
   <div class='padding flexbox'>
-   {{input value=selectedQuarter.name}}
-   <div class="aright">
-     <button {{action 'createQuarter'}}>
-        hinzufügen
-     </button>
-   </div>
+    {{input value=selectedQuarter.name}}
+    <div class="aright">
+      <button {{action 'createQuarter'}}>
+        {{#if editMode}}ändern{{else}}hinzufügen{{/if}}
+      </button>
+    </div>
   </div>
 {{/view}}

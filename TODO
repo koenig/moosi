@@ -5,15 +5,15 @@
 ** maybe **
 
 - make transactions from quarters to orders
-- make quarters editable
-- make order selectable for adding positions
 - make the quarters and positions update when adding a quarter
 - make the input field for transaction and button look good
 - make the bestellung name number go on
 - make bestell Nr
 
+- make order selectable for adding positions
 
 **done**
+- make quarters editable
 - make quarters addable
 - make the plant view only show created plants (or destroy plant if not created)
 - make the orders view only show created orders (or destroy order if not created)
