@@ -4,15 +4,15 @@
 - make the view know if they should fade in or not
 ** maybe **
 
-- make transactions from quarters to orders
 - make the quarters and positions update when adding a quarter
 - make the input field for transaction and button look good
 - make the bestellung name number go on
 - make bestell Nr
 
-- make order selectable for adding positions
+- make transactions from quarters to orders
 
 **done**
+- make order selectable for adding positions
 - make quarters editable
 - make quarters addable
 - make the plant view only show created plants (or destroy plant if not created)

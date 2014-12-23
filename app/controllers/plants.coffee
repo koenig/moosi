@@ -1,6 +1,10 @@
 `import Ember from 'ember'`
 
 PlantsController = Ember.ArrayController.extend
+  needs: ['application']
+  activeOrder: Em.computed.alias 'controllers.application.activeOrder'
+  hasActiveOrder: Em.computed.bool 'activeOrder'
+
   sortProperties: ['name']
   sortAscending: yes
   modalVisible: no

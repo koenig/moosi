@@ -10,6 +10,16 @@
   </div>
   <div>
   <div class='content list'>
+    {{#if hasActiveOrder}}
+      <div class="item">
+        <span>{{activeOrder.name}}</span>
+        <span class='flex'></span>
+        <span class="padding aright">
+            <button class="blue btn-desktop"> hinzufügen </button>
+        </span>
+      </div>
+    {{/if}}
+
     <div class="item">
       <span>Preis</span>
       <span class='flex'></span>
