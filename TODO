@@ -8,7 +8,9 @@
 - make the input field for transaction and button look good
 - make the bestellung name number go on
 - make bestell Nr
-
+- active order stylen
+- positions in order anzeigen
+- active order anklicken um die order anzuschauen
 - make transaction from orders to quarters
 - make activeOrderDeselectable
 

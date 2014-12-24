@@ -43,7 +43,6 @@ TransactionController = Ember.ObjectController.extend AccessActiveOrderMixin,
         quantity: @get 'quantity'
 
     transaction.one 'didCreate', (transaction) ->
-      debugger
       if transaction.get('isRealTransaction')
         transaction.decrementProperty 'from.quantity', transaction.get('quantity')
       transaction.incrementProperty 'to.quantity', transaction.get('quantity')
