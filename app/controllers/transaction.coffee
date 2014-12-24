@@ -1,6 +1,7 @@
 `import Ember from 'ember'`
+`import AccessActiveOrderMixin from 'moosi/mixins/access-active-order'`
 
-TransactionController = Ember.ObjectController.extend
+TransactionController = Ember.ObjectController.extend AccessActiveOrderMixin,
   from: null
   to: null
   quantityInput: null
@@ -28,13 +29,22 @@ TransactionController = Ember.ObjectController.extend
     # model itself
     return unless @get('isValidTransaction')
 
-    transaction = @store.createRecord 'transaction',
-      from: @get 'from'
-      to: @get 'to'
-      quantity: @get 'quantity'
+    if @get 'hasActiveOrder'
+      # setup to
+      transaction = @store.createRecord 'orderSelection',
+        from: @get 'from'
+        to: @get('activeOrder').findOrderItemFor @get('from.plant')
+        quantity: @get 'quantity'
+
+    else
+      transaction = @store.createRecord 'transaction',
+        from: @get 'from'
+        to: @get 'to'
+        quantity: @get 'quantity'
 
     transaction.one 'didCreate', (transaction) ->
-      if transaction.get('from') isnt transaction.get('to')
+      debugger
+      if transaction.get('isRealTransaction')
         transaction.decrementProperty 'from.quantity', transaction.get('quantity')
       transaction.incrementProperty 'to.quantity', transaction.get('quantity')
 

@@ -1,10 +1,8 @@
 `import Ember from 'ember'`
+`import AccessActiveOrderMixin from 'moosi/mixins/access-active-order'`
 
-PlantsController = Ember.ArrayController.extend
-  needs: ['application']
-  activeOrder: Em.computed.alias 'controllers.application.activeOrder'
-  hasActiveOrder: Em.computed.bool 'activeOrder'
 
+PlantsController = Ember.ArrayController.extend AccessActiveOrderMixin,
   sortProperties: ['name']
   sortAscending: yes
   modalVisible: no

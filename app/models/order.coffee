@@ -8,6 +8,16 @@ Order = DS.Model.extend
   customer: attr 'string'
   adress: attr 'string'
   date: attr 'date'
+  orderItems: hasMany 'orderItem'
+  findOrderItemFor: (plant) ->
+    orderItem = @get('orderItems').find (orderItem) -> orderItem.get('plant') is plant
+    return orderItem if orderItem
+    orderItem = @store.createRecord 'orderItem',
+      order: @
+      plant: plant
+      quantity: 0
+    orderItem.save()
+    orderItem
 
 Order.reopenClass
   FIXTURES: [

@@ -1,6 +1,8 @@
 `import Ember from 'ember'`
+`import AccessActiveOrderMixin from 'moosi/mixins/access-active-order'`
 
-PositionController = Ember.ObjectController.extend
+
+PositionController = Ember.ObjectController.extend AccessActiveOrderMixin,
   needs: ['transaction']
   transaction: Em.computed.alias 'controllers.transaction'
   hasFrom: Em.computed.bool 'transaction.from'
@@ -12,8 +14,11 @@ PositionController = Ember.ObjectController.extend
 
   actions:
     selectPosition: ->
-      @set 'transaction.to', @get 'content'
-      unless @get 'hasFrom'
+      if @get 'hasActiveOrder'
         @set 'transaction.from', @get 'content'
+      else
+        @set 'transaction.to', @get 'content'
+        unless @get 'hasFrom'
+          @set 'transaction.from', @get 'content'
 
 `export default PositionController`

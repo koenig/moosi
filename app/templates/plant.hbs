@@ -15,7 +15,10 @@
         <span>{{activeOrder.name}}</span>
         <span class='flex'></span>
         <span class="padding aright">
-            <button class="blue btn-desktop"> hinzufügen </button>
+          {{#if hasFrom }}
+            {{input value=transaction.quantityInput type='tel'}}
+          {{/if}}
+          <button class="blue btn-desktop" {{action "execute"}}> hinzufügen </button>
         </span>
       </div>
     {{/if}}

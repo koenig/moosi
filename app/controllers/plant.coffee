@@ -1,9 +1,8 @@
 `import Ember from 'ember'`
+`import AccessActiveOrderMixin from 'moosi/mixins/access-active-order'`
 
-PlantController = Ember.ObjectController.extend
-  needs: ['transaction', 'application']
-  activeOrder: Em.computed.alias 'controllers.application.activeOrder'
-  hasActiveOrder: Em.computed.bool 'activeOrder'
+PlantController = Ember.ObjectController.extend AccessActiveOrderMixin,
+  needs: ['transaction']
 
   transaction: Em.computed.alias 'controllers.transaction'
   hasFrom: Em.computed.bool 'transaction.from'

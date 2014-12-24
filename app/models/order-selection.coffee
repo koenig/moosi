@@ -1,13 +1,16 @@
 `import DS from 'ember-data'`
+
 attr = DS.attr
 hasMany = DS.hasMany
 belongsTo = DS.belongsTo
 
-Transaction = DS.Model.extend
+OrderSelection = DS.Model.extend
   from: belongsTo 'position'
-  to: belongsTo 'position'
+  to: belongsTo 'orderItem'
   quantity: attr 'number'
   date: attr 'date', defaultValue: -> new Date()
   isRealTransaction: Em.computed 'from', 'to', ->
     @get('to') isnt @get('from')
-`export default Transaction`
+
+
+`export default OrderSelection`
