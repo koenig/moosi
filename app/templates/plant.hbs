@@ -13,7 +13,7 @@
     {{#if hasActiveOrder}}
       <div class="item">
         <span>
-          {{#link-to 'order' activeOrder}}{{activeOrder.name}}{{/link-to}}<br>
+          {{#link-to 'order' activeOrder}}{{activeOrder.name}}{{/link-to}} {{#if hasFrom }}nach{{/if}}<br>
           <a {{action 'deselectActiveOrder'}}>abbrechen</a>
         </span>
         <span class='flex'></span>

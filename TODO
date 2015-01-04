@@ -7,7 +7,6 @@
 ** maybe **
 
 - make bestellungen/pflanzen proper tabs
-- calculate total for order
 - make the quarters and positions update when adding a quarter
 - make the input field for transaction and button look good
 - make the bestellung name number go on
@@ -15,7 +14,9 @@
 - active order stylen
 - make transaction from orders to quarters
 
+
 **done**
+- calculate total for order
 - also show prices in order items
 - active order anklicken um die order anzuschauen
 - positions in order anzeigen

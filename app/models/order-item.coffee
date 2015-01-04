@@ -8,6 +8,9 @@ OrderItem = DS.Model.extend
   plant: belongsTo 'plant', async: yes
   quantity: attr 'number'
 
+  total: Em.computed 'plant.price', 'quantity', ->
+    @get('plant.price') * @get('quantity')
+
 OrderItem.reopenClass
   FIXTURES: [
     {

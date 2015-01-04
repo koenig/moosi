@@ -33,6 +33,12 @@
       </div>
     {{/each}}
 
+    <div class="item">
+      <span><b>Total</b></span>
+      <span class='flex'></span>
+      <span>{{euro totalPrice}}</span>
+    </div>
+
     <div class="padding aright">
       <button class="blue btn-desktop" {{action "selectActiveOrder" this}}> Waren hinzufügen </button>
     </div>

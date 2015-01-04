@@ -18,6 +18,10 @@ Order = DS.Model.extend
       quantity: 0
     orderItem.save()
     orderItem
+  totalPrice: Em.computed 'orderItems.@each.total', ->
+    sum = 0
+    @get('orderItems').forEach (orderItem) -> sum += orderItem.get 'total'
+    sum
 
 Order.reopenClass
   FIXTURES: [
