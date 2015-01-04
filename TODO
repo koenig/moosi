@@ -4,14 +4,15 @@
 - make the view know if they should fade in or not
 - order item  quick view in active order
 - use cents instead of floats
+- make single active order area
 ** maybe **
 
 - make bestellungen/pflanzen proper tabs
-- make the quarters and positions update when adding a quarter
+- active order stylen
 - make the input field for transaction and button look good
+- make the quarters and positions update when adding a quarter
 - make the bestellung name number go on
 - make bestell Nr
-- active order stylen
 - make transaction from orders to quarters
 
 
