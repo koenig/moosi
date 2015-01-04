@@ -18,4 +18,8 @@ ApplicationRoute = Ember.Route.extend
     setPlantState: (newState) ->
       @set 'plantState', newState
 
+    deselectActiveOrder: ->
+      @controllerFor('application').set 'activeOrder', null
+      console.log 'deselect'
+
 `export default ApplicationRoute`

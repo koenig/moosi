@@ -12,13 +12,16 @@
   <div class='content list'>
     {{#if hasActiveOrder}}
       <div class="item">
-        <span>{{activeOrder.name}}</span>
+        <span>
+          {{activeOrder.name}}<br>
+          <a {{action 'deselectActiveOrder'}}>abbrechen</a>
+        </span>
         <span class='flex'></span>
         <span class="padding aright">
           {{#if hasFrom }}
             {{input value=transaction.quantityInput type='tel'}}
+            <button class="blue btn-desktop" {{action "execute"}}> hinzufügen </button>
           {{/if}}
-          <button class="blue btn-desktop" {{action "execute"}}> hinzufügen </button>
         </span>
       </div>
     {{/if}}
