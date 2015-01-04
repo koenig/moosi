@@ -7,6 +7,7 @@ OrdersRoute = Ember.Route.extend
     selectActiveOrder: (order) ->
       console.log 'selecting order', order
       @controllerFor('application').set 'activeOrder', order
+      @send 'goToPlants'
 
 
 `export default OrdersRoute`

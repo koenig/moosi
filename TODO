@@ -12,9 +12,9 @@
 - positions in order anzeigen
 - active order anklicken um die order anzuschauen
 - make transaction from orders to quarters
-- make it go to plants after clicking 'waren hinzufuegen'
 
 **done**
+- make it go to plants after clicking 'waren hinzufuegen'
 - make activeOrderDeselectable
 - make transactions from quarters to orders
 - make order selectable for adding positions
