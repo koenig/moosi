@@ -2,18 +2,21 @@
 - make the content sliding in having a border
 - divider
 - make the view know if they should fade in or not
+- order item  quick view in active order
 ** maybe **
 
+- make bestellungen/pflanzen proper tabs
+- calculate total for order
 - make the quarters and positions update when adding a quarter
 - make the input field for transaction and button look good
 - make the bestellung name number go on
 - make bestell Nr
 - active order stylen
-- positions in order anzeigen
-- active order anklicken um die order anzuschauen
 - make transaction from orders to quarters
 
 **done**
+- active order anklicken um die order anzuschauen
+- positions in order anzeigen
 - make it go to plants after clicking 'waren hinzufuegen'
 - make activeOrderDeselectable
 - make transactions from quarters to orders

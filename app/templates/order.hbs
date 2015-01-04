@@ -21,12 +21,12 @@
       <div class="divider">Waren</div>
     </div>
 
-    {{#each position in positions itemController='position'}}
+    {{#each orderItem in orderItems}}
       <div class="item rows">
         <div class="row">
-          <span></span>
+          <span>{{orderItem.plant.name}}</span>
           <span class='flex'></span>
-          <span></span>
+          <span>{{orderItem.quantity}}</span>
         </div>
       </div>
     {{/each}}

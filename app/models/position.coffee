@@ -6,8 +6,8 @@ belongsTo = DS.belongsTo
 
 Position = DS.Model.extend
   quantity: attr 'number'
-  plant: belongsTo 'plant'
-  quarter: belongsTo 'quarter'
+  plant: belongsTo 'plant', async: yes
+  quarter: belongsTo 'quarter', async: yes
 
 Position.reopenClass
   FIXTURES: [
