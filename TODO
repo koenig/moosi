@@ -3,6 +3,7 @@
 - divider
 - make the view know if they should fade in or not
 - order item  quick view in active order
+- use cents instead of floats
 ** maybe **
 
 - make bestellungen/pflanzen proper tabs
@@ -15,6 +16,7 @@
 - make transaction from orders to quarters
 
 **done**
+- also show prices in order items
 - active order anklicken um die order anzuschauen
 - positions in order anzeigen
 - make it go to plants after clicking 'waren hinzufuegen'
