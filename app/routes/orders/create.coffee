@@ -2,11 +2,19 @@
 
 OrdersCreateRoute = Ember.Route.extend
   model: ->
-    @store.createRecord 'order'
+    @store.find('order').then (orders) =>
+      orderCount = orders.content.length + 1
+      # @store.createRecord 'order',
+
+      {
+        name: "Bestellung Nr. #{orderCount}"
+        number: orderCount
+        customer: null
+        adress: null
+      }
 
   actions:
     goBack: ->
-      @modelFor('orders.create').destroyRecord()
       @transitionTo 'orders'
 
 

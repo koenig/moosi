@@ -3,7 +3,7 @@
 OrdersCreateController = Ember.Controller.extend
   actions:
     save: ->
-      @get('content').save().then (plant) =>
+      @store.createRecord('order', @get('content')).save().then (plant) =>
         @set 'shouldShowCreate', no
         Em.run.later =>
           @transitionToRoute 'orders'
