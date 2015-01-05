@@ -5,18 +5,19 @@
 - order item  quick view in active order
 - use cents instead of floats
 - make single active order area
+- handle removing of quarters
 ** maybe **
 
 - make bestellungen/pflanzen proper tabs
 - active order stylen
 - make the input field for transaction and button look good
-- make the quarters and positions update when adding a quarter
 - make the bestellung name number go on
 - make bestell Nr
 - make transaction from orders to quarters
 
 
 **done**
+- make the quarters and positions update when adding a quarter
 - calculate total for order
 - also show prices in order items
 - active order anklicken um die order anzuschauen

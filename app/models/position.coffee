@@ -5,7 +5,7 @@ hasMany = DS.hasMany
 belongsTo = DS.belongsTo
 
 Position = DS.Model.extend
-  quantity: attr 'number'
+  quantity: attr 'number', defaultValue: 0
   plant: belongsTo 'plant', async: yes
   quarter: belongsTo 'quarter' #, async: yes # this is probably not a good idea to change otherwise we have double positons in through plant model accessing quarter syncronous
 

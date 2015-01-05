@@ -13,10 +13,7 @@ Plant = DS.Model.extend
           foundQuarter = positions.find (position) -> position.get('quarter') is quarter
           unless foundQuarter
             console.log 'no position found creating'
-            @store.createRecord 'position',
-              quarter: quarter
-              plant: @
-              quantity: 0
+            @createNewPosition quarter
 
 
   name: attr()
@@ -28,6 +25,11 @@ Plant = DS.Model.extend
     @get('positions').forEach (position) ->
       result += position.getWithDefault('quantity', 0)
     result
+
+  createNewPosition: (quarter) ->
+    @store.createRecord 'position',
+      quarter: quarter
+      plant: @
 
 Plant.reopenClass
   FIXTURES: [

@@ -6,14 +6,18 @@ QuartersController = Ember.ArrayController.extend
   editMode: no
   actions:
     createQuarter: ->
-      console.log 'createQuarter'
       if @get 'editMode'
         @get('selectedQuarter').save()
       else
-        @store.createRecord('quarter',
+        quarter = @store.createRecord 'quarter',
           name: @get 'selectedQuarter.name'
-        ).save()
 
+        quarter.one 'didCreate', (quarter) =>
+          @store.find('plant').then (plants) =>
+            plants.forEach (plant) ->
+              plant.createNewPosition quarter
+
+        quarter.save()
       @setProperties
         selectedQuarter: name: null
         editMode: no
