@@ -4,7 +4,7 @@ hasMany = DS.hasMany
 belongsTo = DS.belongsTo
 
 Order = DS.Model.extend
-  name: attr 'string'
+  number: attr 'string'
   customer: attr 'string'
   adress: attr 'string'
   date: attr 'date'
@@ -22,12 +22,13 @@ Order = DS.Model.extend
     sum = 0
     @get('orderItems').forEach (orderItem) -> sum += orderItem.get 'total'
     sum
+  name: Em.computed 'number', -> "Rechnung #{@get('number')}"
 
 Order.reopenClass
   FIXTURES: [
     {
       id: 1
-      name: "Rechnung Nr.1"
+      number: '1'
       customer: 'Marko Liebknecht'
       adress: 'Tannenallee 23
       23443 Freiland'
@@ -37,7 +38,7 @@ Order.reopenClass
     }
     {
       id: 2
-      name: "Rechnung Nr.2"
+      number: '2'
       customer: 'Resi Laub'
       adress: 'Hammer Baum 23
       20243 Hamburg'
