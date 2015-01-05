@@ -5,9 +5,9 @@ OrdersCreateController = Ember.Controller.extend
     save: ->
       @get('content').save().then (plant) =>
         @set 'shouldShowCreate', no
-        Em.run.later( =>
-          @send 'goBack'
-        , 400)
+        Em.run.later =>
+          @transitionToRoute 'orders'
+        , 400
 
 
 `export default OrdersCreateController`
