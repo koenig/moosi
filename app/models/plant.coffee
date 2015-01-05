@@ -8,17 +8,15 @@ Plant = DS.Model.extend
     @_super()
 
     @store.find('quarter').then (quarters) =>
-      # console.log 'init', quarters
       quarters.forEach (quarter) =>
-        # console.log 'quarter', quarter
-        foundQuarter = @get('positions').find (position) -> position.get('quarter') is quarter
-        # console.log 'foun quarter', foundQuarter
-        unless foundQuarter
-          console.log 'no position found creating'
-          @store.createRecord 'position',
-            quarter: quarter
-            plant: @
-            quantity: 0
+        @get('positions').then (positions) =>
+          foundQuarter = positions.find (position) -> position.get('quarter') is quarter
+          unless foundQuarter
+            console.log 'no position found creating'
+            @store.createRecord 'position',
+              quarter: quarter
+              plant: @
+              quantity: 0
 
 
   name: attr()
