@@ -6,14 +6,22 @@
 - use cents instead of floats
 - make single active order area
 - handle removing of quarters
+- get some icons
 ** maybe **
 
+- get the todos of the mosi app
+- make jungpflanzen
+- more styling of numbers etc.
+- style buttons in header
+- style orders
+- make orders editable
 - active order stylen
 - make the input field for transaction and buttons look good
 - make transaction from orders to quarters
 
 
 **done**
+- style dividers
 - make bestellungen/pflanzen proper tabs
 - make plants editable
 - make the bestellung name number go on

@@ -15,9 +15,8 @@
       {{input value=content.price placeholder='0.00' type='tel'}}
     </div>
 
-    <div class="padding">
-      <div class="divider">Bestände</div>
-    </div>
+    <div class="item divider">Bestände</div>
+
     {{#each position in positions }}
       <div class="padding">
         <label for="preis">{{position.quarter.name}}</label>
