@@ -8,7 +8,7 @@ DraggableView = Ember.View.extend
   # maxDist: 250
   # threshold: 40
   # activeWidth: null
-  classNames: 'main-content'
+  classNames: ['main-content', 'flexbox']
   classNameBindings: ['shouldShow:in']
   tagName: 'div'
   shouldShow: no

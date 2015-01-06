@@ -2,8 +2,9 @@
   <div class='header'>
     <a class='left' {{action 'back' target='view'}}>back</a>
     <h2 class='title'>{{name}}</h2>
+    <a></a>
   </div>
-  <div>
+
   <div class='content list'>
     <div class="item">
       <span>Kunde</span>
@@ -43,10 +44,8 @@
       <button class="blue btn-desktop" {{action "selectActiveOrder" this}}> Waren hinzufügen </button>
     </div>
 
-    <div class='footer'>
-      <a data-href="#" {{action 'goToPlants'}}>Pflanzen</a>
-    </div>
   </div>
+  {{view 'tabs'}}
 {{/view}}
 
 {{!outlet}}
