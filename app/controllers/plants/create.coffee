@@ -10,7 +10,7 @@ PlantsCreateController = Ember.ObjectController.extend
           position.save()
         @set 'shouldShowCreate', no
         Em.run.later( =>
-          @send 'goBack'
+          @transitionTo 'plants'
         , 400)
 
 

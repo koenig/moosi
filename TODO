@@ -7,13 +7,18 @@
 - make single active order area
 - handle removing of quarters
 - get some icons
+- make the scss file more nice
 ** maybe **
 
+- pflanzen 'löschbar'
+- rechnungen löschbar?
 - get the todos of the mosi app
 - make jungpflanzen
 - more styling of numbers etc.
 - style buttons in header
 - style orders
+- style inputs and labels
+- make the add plant not use a createRecord 'plant'
 - make orders editable
 - active order stylen
 - make the input field for transaction and buttons look good
