@@ -49,7 +49,7 @@
         {{#if position.isTo}}
           <div class="row">
             {{input value=transaction.quantityInput type='tel'}}
-            <div class="aright">
+            <div class="aright padding-left">
               <button class="blue btn-desktop" {{action "execute"}} title="save" {{bind-attr disabled='transaction.isInvalidTransaction'}}>
                 {{#if isTransaction}}
                   verschieben
