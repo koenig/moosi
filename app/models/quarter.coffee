@@ -12,11 +12,11 @@ Quarter.reopenClass
   FIXTURES: [
     {
       id: 1
-      name: 'Hauptlager'
+      name: 'Jungpflanzen'
     }
     {
       id: 2
-      name: 'Nebenlager'
+      name: 'Hauptlager'
     }
   ]
 

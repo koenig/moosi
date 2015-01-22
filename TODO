@@ -10,6 +10,8 @@
 - make the scss file more nice
 ** maybe **
 
+- icon
+- webapp capable
 - pflanzen 'löschbar'
 - rechnungen löschbar?
 - get the todos of the mosi app
@@ -17,15 +19,15 @@
 - more styling of numbers etc.
 - style buttons in header
 - style orders
-- style inputs and labels
 - make the add plant not use a createRecord 'plant'
 - make orders editable
 - active order stylen
 - make the input field for transaction and buttons look good
 - make transaction from orders to quarters
 
-
 **done**
+- scrolling
+- style inputs and labels
 - style dividers
 - make bestellungen/pflanzen proper tabs
 - make plants editable

@@ -119,8 +119,11 @@ body {
 
 .content {
   @include flex(1);
-  overflow: scroll;
   -webkit-overflow:touch;
+  overflow: scroll;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
 }
 .footer {
   height: 50px;
@@ -136,7 +139,6 @@ body {
 
   background: white;
   z-index: 3;
-  // border: 2px solid rgb(221, 221, 221);
   border-right-width: 0px;
   border-top-width: 0px;
   border-bottom-width: 0px;
@@ -152,6 +154,9 @@ body {
   top: 100%;
   background: white;
   z-index: 3;
+  @include flexbox();
+  @include flex-direction(column);
+
   &.in {
     top: 0px;
   }

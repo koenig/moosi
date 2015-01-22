@@ -19,7 +19,6 @@ input, textarea {
   -moz-flex: 1 ;
   -ms-flex: 1 ;
   flex: 1 ;
-  height: 36px;
   // -webkit-appearance: none;
   // -moz-appearance: none;
   // appearance: none;
@@ -33,6 +32,9 @@ input, textarea {
   // outline-width: 0;
   -webkit-font-smoothing: inherit;
   background-image: none;
+}
+input {
+  height: 36px;
 }
 
 .input-label {
