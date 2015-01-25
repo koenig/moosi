@@ -23,6 +23,6 @@ OrderEditController = Ember.Controller.extend OrderTabActive,
         , 400)
     goBack: ->
       @set 'shouldShowCreate', no
-      @transitionTo 'orders'
+      @transitionTo 'order'
 
 `export default OrderEditController`

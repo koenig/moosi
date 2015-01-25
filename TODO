@@ -28,6 +28,7 @@
 - handle autofocus
 - quantity of put back should be the same as plants available
 - should be possible to even get more plants from the order view
+- new each
 ** later **
 - style buttons in header
 - make the view know if they should fade in or not
