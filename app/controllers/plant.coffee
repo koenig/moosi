@@ -10,6 +10,10 @@ PlantController = Ember.ObjectController.extend AccessActiveOrderMixin,
   hasTransaction: Em.computed.or 'hasFrom', 'hasTo'
   isTransaction: Em.computed.alias 'transaction.isRealTransaction'
 
+  doAction: Em.computed 'hasFrom', ->
+    return ' wie viele?' if @get 'hasFrom'
+    ' wähle das Lager'
+
   actions:
     execute: ->
       @get('transaction').execute()
@@ -19,5 +23,9 @@ PlantController = Ember.ObjectController.extend AccessActiveOrderMixin,
 
     editPlant: ->
       @transitionToRoute 'plant.edit', @get 'content'
+
+    goBack: ->
+      @get('transaction').send 'resetTransaction'
+      yes
 
 `export default PlantController`

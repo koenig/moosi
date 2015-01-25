@@ -106,6 +106,9 @@ body {
         .row {
           padding: 16px 16px 16px 16px;
           @include flexbox();
+          &.slim {
+            padding: 16px 16px 0 16px;
+          }
         }
       }
     }
@@ -234,4 +237,7 @@ body {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
+}
+.active-order {
+  background: rgba(255, 255, 102, 0.8) ;
 }

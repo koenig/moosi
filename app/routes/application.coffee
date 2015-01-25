@@ -20,6 +20,10 @@ ApplicationRoute = Ember.Route.extend
 
     deselectActiveOrder: ->
       @controllerFor('application').set 'activeOrder', null
-      console.log 'deselect'
+      @controllerFor('transaction').send 'resetTransaction'
+
+    resetTransaction: ->
+      @controllerFor('transaction').send 'resetTransaction'
+
 
 `export default ApplicationRoute`

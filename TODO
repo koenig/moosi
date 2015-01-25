@@ -21,6 +21,7 @@
 - input validation (not null not empty strings)
 - make buttons disableable
 - für den pc layouten
+- make the add plant not use a createRecord 'plant' (or another way to avoid cancleable plants)
 ** later **
 - style buttons in header
 - make the view know if they should fade in or not
@@ -38,15 +39,14 @@
 - webapp capable
 - pflanzen 'löschbar'
 - rechnungen löschbar, nachdem alle pflanzen zurückgelegt worden sind (mit hinweis darauf)
-- get the todos of the mosi app
 - more styling of numbers etc.
 - style orders
-- make the add plant not use a createRecord 'plant' (or another way to avoid cancleable plants)
 - make orders editable
-- active order "bestellmodus" stylen
-- make the input field for transaction and buttons look good
 
 **done**
+- active order "bestellmodus" stylen
+- get the todos of the mosi app
+- make the input field for transaction and buttons look good
 - die tabs mit aktiv status
 - small font utility
 - make jungpflanzen

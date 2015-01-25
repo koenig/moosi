@@ -7,18 +7,19 @@
 
   <div class='content list'>
     {{#if hasActiveOrder}}
-      <div class="item">
-        <span>
-          {{#link-to 'order' activeOrder}}{{activeOrder.name}}{{/link-to}} {{#if hasFrom }}nach{{/if}}<br>
-          <a {{action 'deselectActiveOrder'}}>abbrechen</a>
-        </span>
-        <span class='flex'></span>
-        <span class="padding aright">
-          {{#if hasFrom }}
-            {{input value=transaction.quantityInput type='tel'}}
-            <button class="blue btn-desktop" {{action "execute"}}> hinzufügen </button>
-          {{/if}}
-        </span>
+      <div class="item active-order rows">
+        <div class="row" {{bind-attr class="hasFrom:slim"}}>
+          <span>
+            {{#link-to 'order' activeOrder}}{{activeOrder.name}}{{/link-to}}
+            <a href='#' {{action 'deselectActiveOrder'}} class="smaller">abbrechen</a>
+          </span>
+
+
+          <span class='flex'></span>
+          <span class='smaller note'><em>wähle die Pflanze</em></span>
+        </div>
+
+
       </div>
     {{/if}}
     {{#each plant in arrangedContent}}
