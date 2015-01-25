@@ -21,7 +21,7 @@
     <div class="item divider">Pflanzen</div>
 
     {{#each orderItem in orderItems itemController='orderItem'}}
-      <div class="item rows" {{bind-attr class=orderItem.activityStyles}}>
+      <div {{bind-attr class=orderItem.activityStyles}}>
         <div class="row">
           <span>{{orderItem.plant.name}}&nbsp;<a href="#" class='smaller' {{action 'showPutBack'}}>{{#if orderItem.isFrom}}abbrechen{{else}}zurücklegen{{/if}}</a></span>
           <span class='flex'></span>
@@ -31,7 +31,7 @@
         </div>
         {{#if orderItem.isFrom}}
           {{#each plantPosition in orderItem.plant.positions itemController='plantPosition'}}
-            <div class='row' {{bind-attr class=plantPosition.activityStyles}}>
+            <div {{bind-attr class=plantPosition.activityStyles}}>
               <span class='padding-right'>
                 {{plantPosition.quarter.name}}
               </span>

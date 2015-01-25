@@ -12,9 +12,9 @@ OrderItemController = Ember.ObjectController.extend
     @get('transaction.to') is @get('content')
 
   activityStyles: Em.computed 'isTo', 'isFrom', ->
-    return 'second' if @get('isFrom') and @get('hasTo')
-    return 'prime' if @get('isFrom')
-    ''
+    return 'item rows second' if @get('isFrom') and @get('hasTo')
+    return 'item rows prime' if @get('isFrom')
+    'item rows'
 
 
   actions:

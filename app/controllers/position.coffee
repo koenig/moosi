@@ -11,9 +11,9 @@ PositionController = Ember.ObjectController.extend AccessActiveOrderMixin,
   isTo: Em.computed 'transaction.to', ->
     @get('transaction.to') is @get('content')
   activityStyles: Em.computed 'isTo', 'isFrom', ->
-    return 'prime' if @get 'isTo'
-    return 'second' if @get 'isFrom'
-    ''
+    return 'item rows prime' if @get 'isTo'
+    return 'item rows second' if @get 'isFrom'
+    'item rows'
 
   actions:
     selectPosition: ->

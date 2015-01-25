@@ -8,7 +8,7 @@
   <div class='content list'>
     {{#if hasActiveOrder}}
       <div class="item active-order rows">
-        <div class="row" {{bind-attr class="hasFrom:slim"}}>
+        <div {{bind-attr class=":row hasFrom:slim"}}>
           <span>
             {{#link-to 'order' activeOrder}}{{activeOrder.name}}{{/link-to}}
             <a href='#' {{action 'deselectActiveOrder'}} class="smaller">abbrechen</a>

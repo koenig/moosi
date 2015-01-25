@@ -33,6 +33,7 @@
 - make small links buttons likes outline buttons?
 ** maybe **
 
+- content security policy
 - pfeil nach links
 - deploy
 - firebase
@@ -47,6 +48,7 @@
 - style orders
 
 **done**
+- canary ember
 - make orders editable
 - active order "bestellmodus" stylen
 - get the todos of the mosi app

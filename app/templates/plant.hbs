@@ -13,7 +13,7 @@
   <div class='content list'>
     {{#if hasActiveOrder}}
       <div class="item active-order rows">
-        <div class="row" {{bind-attr class="hasFrom:slim"}}>
+        <div {{bind-attr class=":row hasFrom:slim"}}>
           <span>
             {{#link-to 'order' activeOrder}}{{activeOrder.name}}{{/link-to}}
           </span>
@@ -54,7 +54,7 @@
     <div class="item divider">Bestände</div>
 
     {{#each position in positions itemController='position'}}
-      <div class="item rows" {{bind-attr class=position.activityStyles}}>
+      <div {{bind-attr class=position.activityStyles}}>
         <div class="row" {{action 'selectPosition' position }}>
           <span>{{position.quarter.name}}
             {{#if isTransaction}}

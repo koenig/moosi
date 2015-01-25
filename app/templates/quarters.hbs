@@ -1,13 +1,12 @@
 {{#view 'upable'}}
-    <div class='header'>
+  <div class='header'>
     <a class='left' {{action 'back' target='view'}}>back</a>
     <h2 class='title'>Quarters</h2>
     <a></a>
   </div>
-  <div>
   <div class='content list'>
     {{#each quarter in arrangedContent itemController='quarter'}}
-      <div class="item" {{bind-attr class=quarter.isActive:prime}}>
+      <div {{bind-attr class="quarter.isActive:prime :item"}}>
         <span class='flex'>{{quarter.name}}</span>
         <span class='smaller' {{action 'rename' quarter}}>edit</span>
       </div>
