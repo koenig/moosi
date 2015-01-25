@@ -13,7 +13,9 @@ button, html, body {
        -ms-user-select: none;
            user-select: none;
 }
-
+* {
+  @include border-box();
+}
 body,html{
   overflow:hidden
 }
