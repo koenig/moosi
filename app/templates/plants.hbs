@@ -25,7 +25,9 @@
       <div class="item" {{action 'linkToPlant' plant}}>
         <span>{{plant.name}}</span>
         <span class='flex'></span>
-        <span class='number'>{{plant.quantity}}</span>
+        <span class='number'>{{euro plant.price}}</span>
+        <span class='number calm padding-left'>{{plant.youngPlantQuantity}}</span>
+        <span class='number padding-left'>{{plant.quantity}}</span>
       </div>
     {{/each}}
   </div>

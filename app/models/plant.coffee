@@ -19,10 +19,13 @@ Plant = DS.Model.extend
   name: attr()
   price: attr 'number'
   positions: hasMany 'position', async: yes
+  youngPlantQuantity: Em.computed 'positions.@each.quantity', ->
+    @get('positions.firstObject.quantity')
 
   quantity: Em.computed 'positions.@each.quantity', ->
     result = 0
-    @get('positions').forEach (position) ->
+    @get('positions').forEach (position) =>
+      return if position is @get('positions.firstObject')
       result += position.getWithDefault('quantity', 0)
     result
 
