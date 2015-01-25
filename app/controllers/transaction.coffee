@@ -18,7 +18,7 @@ TransactionController = Ember.ObjectController.extend AccessActiveOrderMixin,
     @get('quantity') <= @get('from.quantity')
   isValidTransaction: Em.computed.and 'quantityShouldBeNumeric', 'quantityShouldBeBiggerThanZero', 'quantityShouldBeSmallerThanFrom'
   isInvalidTransaction: Em.computed.not 'isValidTransaction'
-  execute: ->
+  execute: (action) ->
     # the idea is, that the execution of a transfer
     # is a one time event
     # so a transaction has a validity on a spcecific point in time
@@ -37,10 +37,16 @@ TransactionController = Ember.ObjectController.extend AccessActiveOrderMixin,
         quantity: @get 'quantity'
 
     else
-      transaction = @store.createRecord 'transaction',
-        from: @get 'from'
-        to: @get 'to'
-        quantity: @get 'quantity'
+      if action is "putBack"
+        transaction = @store.createRecord 'putBack',
+          from: @get 'from'
+          to: @get 'to'
+          quantity: @get 'quantity'
+      else
+        transaction = @store.createRecord 'transaction',
+          from: @get 'from'
+          to: @get 'to'
+          quantity: @get 'quantity'
 
     transaction.one 'didCreate', (transaction) ->
       if transaction.get('isRealTransaction')

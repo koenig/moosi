@@ -1,6 +1,6 @@
 `import Ember from 'ember'`
 
-OrderItemController = Ember.ObjectController.extend
+PlantPositionController = Ember.ObjectController.extend
   needs: ['transaction']
 
   transaction: Em.computed.alias 'controllers.transaction'
@@ -11,8 +11,10 @@ OrderItemController = Ember.ObjectController.extend
     @get('transaction.to') is @get('content')
 
   actions:
-    showPutBack: ->
-      @set 'transaction.from', @get 'content'
-      false
+    putBackToQuarter: ->
+      @set 'transaction.to', @get 'content'
+    executePutBack: ->
+      @get('transaction').execute('putBack')
 
-`export default OrderItemController`
+
+`export default PlantPositionController`
