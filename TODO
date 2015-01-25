@@ -24,6 +24,7 @@
 - make the view know if they should fade in or not
 - use cents instead of floats
 - vielleicht info auf pflanzen seite, dass man pflanzen aussuchen kann um neue zu erstellen oder verschieben von lagern
+- make small links buttons likes outline buttons?
 ** maybe **
 
 - deploy
@@ -47,10 +48,10 @@
 - active order "bestellmodus" stylen
 - make the input field for transaction and buttons look good
 - beim zurucklegen soll man erst das lager auswählen und dann die zahl eingeben, anstatt gleich die option überall was einzufügen
-- aktivity background
-- secondary background
 
 **done**
+- aktivity background
+- secondary background
 - rename 'add' zu 'neu'
 - make transaction from orders to quarters "putback"
 - scrolling

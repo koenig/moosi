@@ -10,6 +10,11 @@ PlantPositionController = Ember.ObjectController.extend
   isTo: Em.computed 'transaction.to', ->
     @get('transaction.to') is @get('content')
 
+  activityStyles: Em.computed 'isTo', 'isFrom', ->
+    return 'prime' if @get 'isTo'
+    ''
+
+
   actions:
     putBackToQuarter: ->
       @set 'transaction.to', @get 'content'

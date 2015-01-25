@@ -4,6 +4,10 @@ QuartersController = Ember.ArrayController.extend
   selectedQuarter:
     name: ''
   editMode: no
+  resetSelection: ->
+    @setProperties
+      selectedQuarter: name: null
+      editMode: no
   actions:
     createQuarter: ->
       if @get 'editMode'
@@ -18,13 +22,15 @@ QuartersController = Ember.ArrayController.extend
               plant.createNewPosition quarter
 
         quarter.save()
-      @setProperties
-        selectedQuarter: name: null
-        editMode: no
+      @resetSelection()
 
     rename: (quarter) ->
       @setProperties
         selectedQuarter: quarter
         editMode: yes
+
+    goBack: ->
+      @resetSelection()
+      true
 
 `export default QuartersController`

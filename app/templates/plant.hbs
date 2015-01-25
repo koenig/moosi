@@ -35,11 +35,11 @@
     <div class="item divider">Bestände</div>
 
     {{#each position in positions itemController='position'}}
-      <div class="item rows">
+      <div class="item rows" {{bind-attr class=position.activityStyles}}>
         <div class="row" {{action 'selectPosition' position }}>
           <span>{{position.quarter.name}}
             {{#if isTransaction}}
-              <span class='note'>{{#if position.isFrom}} von{{/if}}
+              <span class='note smaller badge'>{{#if position.isFrom}} von{{/if}}
               {{#if position.isTo}} nach{{/if}}</span>
             {{/if}}
           </span>
