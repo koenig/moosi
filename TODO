@@ -45,9 +45,9 @@
 - make orders editable
 - active order "bestellmodus" stylen
 - make the input field for transaction and buttons look good
-- die tabs mit aktiv status
 
 **done**
+- die tabs mit aktiv status
 - small font utility
 - make jungpflanzen
 - beim zurucklegen soll man erst das lager auswählen und dann die zahl eingeben, anstatt gleich die option überall was einzufügen
