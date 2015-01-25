@@ -1,29 +1,54 @@
-
+- evt. direkte feedback funktion
+- cutomer auto fill in
+- rechnungen auch von kunden, pflanzen etc. unabhängig machen
+- rechnungen archivierbar machen
+- unabhängigkeit, von rechnungen zu pflanzen und quarter
 - make the content sliding in having a border
 - divider
-- make the view know if they should fade in or not
 - order item  quick view in active order
-- use cents instead of floats
 - make single active order area
 - handle removing of quarters
 - get some icons
 - make the scss file more nice
+- fixed width for the collums in the list
+- more details in order view
+- passwort funktion
+- "backup"
+- appcache
+- suche/filtern von pflanzen
+- loading state
+- error handling
+- input validation (not null not empty strings)
+- make buttons disableable
+** later **
+- make the view know if they should fade in or not
+- use cents instead of floats
 ** maybe **
 
+- deploy
+- firebase
+- die tabs mit icons
+- die tabs mit aktiv status
+- import funktion von mehreren pflanzen gleichzeitig
+- autokorrektur ausmachen
 - icon
+- small font utility
 - webapp capable
 - pflanzen 'löschbar'
-- rechnungen löschbar?
+- rechnungen löschbar, nachdem alle pflanzen zurückgelegt worden sind (mit hinweis darauf)
 - get the todos of the mosi app
 - make jungpflanzen
 - more styling of numbers etc.
 - style buttons in header
 - style orders
-- make the add plant not use a createRecord 'plant'
+- make the add plant not use a createRecord 'plant' (or another way to avoid cancleable plants)
 - make orders editable
-- active order stylen
+- active order "bestellmodus" stylen
 - make the input field for transaction and buttons look good
-- make transaction from orders to quarters
+- beim zurucklegen soll man erst das lager auswählen und dann die zahl eingeben, anstatt gleich die option überall was einzufügen
+- aktivity background
+- secondary background
+- make transaction from orders to quarters "putback"
 
 **done**
 - scrolling
