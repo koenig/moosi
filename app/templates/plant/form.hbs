@@ -18,20 +18,5 @@
 {{/each}}
 
 <div class="aright padding flexbox">
-  {{#if deleteMode}}
-    <button class="blue btn-desktop" {{action "leaveDeleteMode"}} title="save">abbrechen</button>
-    <span class='flex'></span>
-    <button class="warn btn-desktop smaller" {{action "deleteOrder"}} title="save">sicher löschen</button>
-  {{else}}
-    {{#if content.isNew}}{{else}}
-      <button class="warn smaller" {{action "goIntoDeleteMode"}} {{bind-attr disabled=isNotDeletable }}>
-        '{{content.name}}' löschen
-        {{#if isNotDeletable}}
-          <br><em class='smaller black visible'>vorher alles zurücklegen</em>
-        {{/if}}
-      </button>
-      <span class='flex'></span>
-    {{/if}}
-    <button class="blue btn-desktop" {{action "save"}} title="save"> speichern </button>
-  {{/if}}
+  {{partial 'shared/delete'}}
 </div>
