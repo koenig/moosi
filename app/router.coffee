@@ -10,6 +10,7 @@ Router.map ->
       @route 'edit'
     @route 'create'
     @resource 'quarters'
+    @route 'import'
   @resource 'orders', ->
     @resource 'order', path: '/:order_id', ->
       @route 'edit'

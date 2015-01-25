@@ -5,10 +5,10 @@ ActionSheetComponent = Ember.Component.extend
 
   actions:
     hideSheet: ->
-      console.log 'no no no'
       @set 'isVisible', no
     goToQuarters: ->
-      console.log 'goto'
       @sendAction 'goToQuarters'
+    goToImport: ->
+      @sendAction 'goToImport'
 
 `export default ActionSheetComponent`

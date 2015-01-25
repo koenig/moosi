@@ -1,0 +1,26 @@
+{{#view 'upable'}}
+  <div class='header'>
+    <a class='left' {{action 'back' target='view'}}>zurück</a>
+    <h2 class='title'>Pflanzen Import</h2>
+    <a></a>
+  </div>
+  <div class='content list'>
+    <div class="padding item-input smaller">
+      Hier kann man schnell eine große Anzahl an Pflanzen anlegen.<br>
+      <ul class='input-labe'>
+        <li>Dazu einfach in jeder Zeile einen Namen eintragen und auf importieren klicken.</li>
+        <li>Für jeden Namen wird eine Pflanze angelegt.</li>
+      </ul>
+      {{nohelp-textarea value=plantList rows=8 }}
+    </div>
+
+    <div class='padding flexbox'>
+      <div class="flex"></div>
+      <div class="aright">
+        <button {{action 'importPlants'}} class="blue btn-desktop">
+          importieren
+        </button>
+      </div>
+    </div>
+  </div>
+{{/view}}

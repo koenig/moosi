@@ -9,13 +9,14 @@ PlantsController = Ember.ArrayController.extend AccessActiveOrderMixin,
   actionSheetVisible: no
   actions:
     openmodal: ->
-      console.log 'jo'
       @set 'modalVisible', yes
     openActionSheet: ->
       @set 'actionSheetVisible', yes
     goToQuarters: ->
       @set 'actionSheetVisible', no
       @transitionToRoute 'quarters'
-      console.log 'goint to Quarters'
+    goToImport: ->
+      @set 'actionSheetVisible', no
+      @transitionToRoute 'plants.import'
 
 `export default PlantsController`
