@@ -24,6 +24,7 @@ PlantEditController = Ember.ObjectController.extend
     goBack: ->
       @set 'shouldShowCreate', no
       @transitionTo 'plants'
+      no
 
 
 
