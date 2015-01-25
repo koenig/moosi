@@ -1,11 +1,11 @@
 {{#view 'draggable'}}
   <div class='header'>
-    <a class='left' {{action 'back' target='view'}}>back</a>
+    <a class='left' {{action 'back' target='view'}}>zurück</a>
     <h2 class='title'>{{name}}</h2>
     {{#if hasTransaction}}
       <a class='right' {{action 'resetTransaction'}}>abbrechen</a>
     {{else}}
-      <a class='right' {{action 'editPlant'}}>edit</a>
+      <a class='right' {{action 'editPlant'}}>bearbeiten</a>
     {{/if}}
   </div>
 

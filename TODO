@@ -23,6 +23,7 @@
 ** later **
 - make the view know if they should fade in or not
 - use cents instead of floats
+- vielleicht info auf pflanzen seite, dass man pflanzen aussuchen kann um neue zu erstellen oder verschieben von lagern
 ** maybe **
 
 - deploy
@@ -48,10 +49,10 @@
 - beim zurucklegen soll man erst das lager auswählen und dann die zahl eingeben, anstatt gleich die option überall was einzufügen
 - aktivity background
 - secondary background
-- rename 'add' zu 'neu'
-- make transaction from orders to quarters "putback"
 
 **done**
+- rename 'add' zu 'neu'
+- make transaction from orders to quarters "putback"
 - scrolling
 - style inputs and labels
 - style dividers
