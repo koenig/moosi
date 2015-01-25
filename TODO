@@ -25,21 +25,20 @@
 - für den pc layouten
 - make the add plant not use a createRecord 'plant' (or another way to avoid cancleable plants)
 - eigene icon font
+- handle autofocus
 ** later **
 - style buttons in header
 - make the view know if they should fade in or not
 - use cents instead of floats
 - vielleicht info auf pflanzen seite, dass man pflanzen aussuchen kann um neue zu erstellen oder verschieben von lagern
 - make small links buttons likes outline buttons?
+- die tabs mit icons
 ** maybe **
 
 - content security policy
-- pfeil nach links
 - deploy
 - firebase
-- die tabs mit icons
-- import funktion von mehreren pflanzen gleichzeitig
-- autokorrektur ausmachen
+- import funktion von mehreren pflanzen gleichzeitig (autokorrektur ausmachen)
 - icon
 - webapp capable
 - pflanzen 'löschbar'
@@ -48,6 +47,8 @@
 - style orders
 
 **done**
+- autokorrektur ausmachen
+- pfeil nach links
 - canary ember
 - make orders editable
 - active order "bestellmodus" stylen
