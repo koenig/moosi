@@ -1,6 +1,7 @@
 {{#view 'draggable'}}
   <div class='header'>
-    <a class='left' {{action 'back' target='view'}}>zurück</a>
+    <button class="left go-back" {{action 'back' target='view'}}>&nbsp;</button>
+
     <h2 class='title'>{{name}}</h2>
     {{#if hasTransaction}}
       <a></a>

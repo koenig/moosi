@@ -1,6 +1,6 @@
 {{#view 'draggable'}}
   <div class='header'>
-    <a href="#" class='left' {{action 'back' target='view'}}>zurück</a>
+    <button class="left go-back" {{action 'back' target='view'}}>&nbsp;</button>
     <h2 class='title'>{{name}}</h2>
     <a href="#" {{action 'editOrder'}}>bearbeiten</a>
   </div>
@@ -36,7 +36,7 @@
                 {{plantPosition.quarter.name}}
               </span>
               {{#if plantPosition.isTo}}
-                {{input value=plantPosition.transaction.quantity type='tel'}}
+                {{focus-input value=plantPosition.transaction.quantity type='tel'}}
                 <span class='padding-left'>
                   <button class='blue btn-desktop' {{action 'executePutBack' }}>zurücklegen</button>
                 </span>
