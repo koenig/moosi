@@ -1,31 +1,10 @@
 {{#view 'upable' shouldShow=shouldShowCreate}}
   <div class='header'>
-    <a class='left' href='#' {{action 'back' target='view'}}>back</a>
-    <h2 class='title'>Neue Pflanze</h2>
-    <a></a>
+    <a class='left'></a>
+    <h2 class='title'>eine neue Pflanze anlegen</h2>
+    <a href='#' {{action 'back' target='view'}}>abbrechen</a>
   </div>
   <div class='content list'>
-    <div class="item item-input">
-      <label for="name" class='input-label'>Name</label>
-      {{input value=content.name }}
-    </div>
-
-    <div class="item item-input">
-      <label for="preis" class='input-label'>Preis</label>
-      {{input value=content.price placeholder='0.00' type='tel'}}
-    </div>
-
-    <div class="item divider">Bestände</div>
-
-    {{#each position in positions }}
-      <div class="item item-input">
-        <label for="preis" class='input-label'>{{position.quarter.name}}</label>
-        {{input value=position.quantity placeholder='0' type='tel'}}
-      </div>
-    {{/each}}
-
-    <div class="item aright">
-      <button class="blue btn-desktop" {{action "save"}} title="save"> speichern </button>
-    </div>
+    {{partial 'plant/form'}}
   </div>
 {{/view}}
