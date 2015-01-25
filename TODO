@@ -49,9 +49,9 @@
 - nach putback reset transfer
 - zurück auf die zurück seite
 - use cents instead of floats
-- pflanzen 'löschbar'
 
 **done**
+- pflanzen 'löschbar'
 - zurückleg aber dennoch da error
 - zurücklegen macht auch, dass pflanzen bei null wieder aus einer rechnung verschwinden
 - rechnungen löschbar, nachdem alle pflanzen zurückgelegt worden sind (mit hinweis darauf)

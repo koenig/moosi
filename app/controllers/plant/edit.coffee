@@ -11,6 +11,21 @@ PlantEditController = Ember.ObjectController.extend
         Em.run.later( =>
           @send 'goBack'
         , 400)
+    goIntoDeleteMode: ->
+      @set 'deleteMode', yes
+    leaveDeleteMode: ->
+      @set 'deleteMode', no
+    deleteOrder: ->
+      @get('content').destroyRecord().then =>
+        @set 'shouldShowCreate', no
+        Em.run.later( =>
+          @send 'goBack'
+        , 400)
+    goBack: ->
+      @set 'shouldShowCreate', no
+      @transitionTo 'plants'
+
+
 
 
 `export default PlantEditController`
