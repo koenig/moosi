@@ -4,7 +4,6 @@ PlantEditController = Ember.ObjectController.extend
   shouldShowCreate: no
   actions:
     save: ->
-      console.log 'saving'
       @get('content').save().then (plant) =>
         plant.get('positions').forEach (position) ->
           position.save()

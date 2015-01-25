@@ -1,28 +1,10 @@
 {{#view 'upable' shouldShow=shouldShowCreate}}
   <div class='header'>
-    <a class='left' href='#' {{action 'back' target='view'}}>back</a>
+    <a class='left'></a>
     <h2 class='title'>Neue Bestellung</h2>
-    <a></a>
+    <a href='#' {{action 'back' target='view'}}>zurück</a>
   </div>
   <div class='content list'>
-    <div class="item item-input">
-      <label for="name" class='input-label'>Rechnungs Nummer</label>
-      {{input value=content.number }}
-    </div>
-
-    <div class="item item-input">
-      <label for="preis" class='input-label'>Kunde</label>
-      {{input value=content.customer}}
-    </div>
-
-    <div class="item item-input">
-      <label for="adress" class='input-label'>Adresse</label>
-      {{textarea value=content.adress rows=3 }}
-    </div>
-
-
-    <div class="padding aright">
-      <button class="blue btn-desktop" {{action "save"}} title="save"> speichern </button>
-    </div>
+    {{partial 'order/form'}}
   </div>
 {{/view}}

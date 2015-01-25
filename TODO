@@ -22,6 +22,7 @@
 - make buttons disableable
 - für den pc layouten
 - make the add plant not use a createRecord 'plant' (or another way to avoid cancleable plants)
+- eigene icon font
 ** later **
 - style buttons in header
 - make the view know if they should fade in or not
@@ -30,6 +31,7 @@
 - make small links buttons likes outline buttons?
 ** maybe **
 
+- pfeil nach links
 - deploy
 - firebase
 - die tabs mit icons
@@ -41,9 +43,9 @@
 - rechnungen löschbar, nachdem alle pflanzen zurückgelegt worden sind (mit hinweis darauf)
 - more styling of numbers etc.
 - style orders
-- make orders editable
 
 **done**
+- make orders editable
 - active order "bestellmodus" stylen
 - get the todos of the mosi app
 - make the input field for transaction and buttons look good
