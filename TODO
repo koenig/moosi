@@ -20,7 +20,9 @@
 - error handling
 - input validation (not null not empty strings)
 - make buttons disableable
+- für den pc layouten
 ** later **
+- style buttons in header
 - make the view know if they should fade in or not
 - use cents instead of floats
 - vielleicht info auf pflanzen seite, dass man pflanzen aussuchen kann um neue zu erstellen oder verschieben von lagern
@@ -30,26 +32,25 @@
 - deploy
 - firebase
 - die tabs mit icons
-- die tabs mit aktiv status
 - import funktion von mehreren pflanzen gleichzeitig
 - autokorrektur ausmachen
 - icon
-- small font utility
 - webapp capable
 - pflanzen 'löschbar'
 - rechnungen löschbar, nachdem alle pflanzen zurückgelegt worden sind (mit hinweis darauf)
 - get the todos of the mosi app
-- make jungpflanzen
 - more styling of numbers etc.
-- style buttons in header
 - style orders
 - make the add plant not use a createRecord 'plant' (or another way to avoid cancleable plants)
 - make orders editable
 - active order "bestellmodus" stylen
 - make the input field for transaction and buttons look good
-- beim zurucklegen soll man erst das lager auswählen und dann die zahl eingeben, anstatt gleich die option überall was einzufügen
+- die tabs mit aktiv status
 
 **done**
+- small font utility
+- make jungpflanzen
+- beim zurucklegen soll man erst das lager auswählen und dann die zahl eingeben, anstatt gleich die option überall was einzufügen
 - aktivity background
 - secondary background
 - rename 'add' zu 'neu'
