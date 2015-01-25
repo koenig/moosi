@@ -12,7 +12,6 @@ Plant = DS.Model.extend
         @get('positions').then (positions) =>
           foundQuarter = positions.find (position) -> position.get('quarter') is quarter
           unless foundQuarter
-            console.log 'no position found creating'
             @createNewPosition quarter
 
 

@@ -24,6 +24,12 @@ button, .gray   { @include buttonColorz($gray){ color:#666; text-shadow:0 1px 0 
 .blue, button.active, .button.active { @include buttonColorz($blue); }
 .delete, button.red.active  { @include buttonColorz($red); }
 
+button, .warn   {
+  @include buttonColorz(white){ color:red; text-shadow:0 1px 0 white; }
+}
+button[disabled].warn, button[disabled].warn:hover {
+  opacity:0.4
+}
 
 
 .header button {

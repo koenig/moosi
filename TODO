@@ -29,7 +29,6 @@
 ** later **
 - style buttons in header
 - make the view know if they should fade in or not
-- use cents instead of floats
 - vielleicht info auf pflanzen seite, dass man pflanzen aussuchen kann um neue zu erstellen oder verschieben von lagern
 - make small links buttons likes outline buttons?
 - die tabs mit icons
@@ -42,10 +41,13 @@
 - firebase
 - icon
 - webapp capable
+- zurück auf die zurück seite
+- use cents instead of floats
 - pflanzen 'löschbar'
-- rechnungen löschbar, nachdem alle pflanzen zurückgelegt worden sind (mit hinweis darauf)
 
 **done**
+- zurücklegen macht auch, dass pflanzen bei null wieder aus einer rechnung verschwinden
+- rechnungen löschbar, nachdem alle pflanzen zurückgelegt worden sind (mit hinweis darauf)
 - import funktion von mehreren pflanzen gleichzeitig (autokorrektur ausmachen)
 - style orders
 - autokorrektur ausmachen

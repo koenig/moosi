@@ -16,6 +16,9 @@ OrderItemController = Ember.ObjectController.extend
     return 'item rows prime' if @get('isFrom')
     'item rows'
 
+  onQuantityChange: (->
+    @get('content').destroyRecord() if @get('quantity') < 1
+  ).observes 'quantity'
 
   actions:
     showPutBack: ->

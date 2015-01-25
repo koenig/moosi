@@ -1,8 +1,8 @@
 {{#view 'upable' shouldShow=shouldShowCreate}}
   <div class='header'>
-    <a class='left'></a>
+    <a class='left' href='#' {{action 'back' target='view'}}>zurück</a>
     <h2 class='title'>{{content.name}}</h2>
-    <a href='#' {{action 'back' target='view'}}>zurück</a>
+    <a></a>
   </div>
   <div class='content list'>
     {{partial 'order/form'}}
