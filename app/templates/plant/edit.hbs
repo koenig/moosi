@@ -1,8 +1,8 @@
 {{#view 'upable' shouldShow=shouldShowCreate}}
   <div class='header'>
-    <a class='left'></a>
+    {{partial 'shared/back-button'}}
     <h2 class='title'>{{content.name}}</h2>
-    <a href='#' {{action 'back' target='view'}}>zurück</a>
+    <a></a>
   </div>
   <div class='content list'>
     {{partial 'plant/form'}}

@@ -1,6 +1,6 @@
 {{#view 'draggable'}}
   <div class='header'>
-    <button class="left go-back" {{action 'back' target='view'}}>&nbsp;</button>
+    {{partial 'shared/back-button'}}
     <h2 class='title'>{{name}}</h2>
     <a href="#" {{action 'editOrder'}}>bearbeiten</a>
   </div>

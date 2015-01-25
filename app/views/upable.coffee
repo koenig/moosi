@@ -1,6 +1,7 @@
 `import Ember from 'ember'`
 
 UpableView = Ember.View.extend
+  isUppable: yes
   classNames: 'down-content'
   classNameBindings: ['shouldShow:in']
   tagName: 'div'

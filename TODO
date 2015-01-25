@@ -47,9 +47,10 @@
 - firebase
 - icon
 - webapp capable
-- zurück auf die zurück seite
 
 **done**
+- zurück auf die zurück seite
+- upable down arrow
 - use cents instead of floats
 - nach putback reset transfer
 - pflanzen 'löschbar'

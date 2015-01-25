@@ -68,6 +68,23 @@ button[disabled].warn, button[disabled].warn:hover {
           transform: rotate(45deg);
 }
 
+.push-down:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  border-left: none;
+  border-top: none;
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 .header h2 {
   font-weight: bold;
   font: -apple-system-headline;
