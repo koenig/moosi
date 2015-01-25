@@ -33,20 +33,21 @@
 - vielleicht info auf pflanzen seite, dass man pflanzen aussuchen kann um neue zu erstellen oder verschieben von lagern
 - make small links buttons likes outline buttons?
 - die tabs mit icons
+- style order
 ** maybe **
 
+- more styling of numbers etc.
 - content security policy
 - deploy
 - firebase
-- import funktion von mehreren pflanzen gleichzeitig (autokorrektur ausmachen)
 - icon
 - webapp capable
+- import funktion von mehreren pflanzen gleichzeitig (autokorrektur ausmachen)
 - pflanzen 'löschbar'
 - rechnungen löschbar, nachdem alle pflanzen zurückgelegt worden sind (mit hinweis darauf)
-- more styling of numbers etc.
-- style orders
 
 **done**
+- style orders
 - autokorrektur ausmachen
 - pfeil nach links
 - canary ember

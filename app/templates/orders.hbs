@@ -7,10 +7,16 @@
 
   <div class='content list'>
     {{#each order in arrangedContent}}
-      <div class="item" {{action 'linkToOrder' order}}>
-        <span>{{order.name}}</span>
-        <span class='flex'></span>
-        <span></span>
+      <div class="item rows" {{action 'linkToOrder' order}}>
+        <div class='row'>
+          <span>{{order.name}}</span>
+          <span class='padding-left note smaller'>
+            {{order.customer}}
+          </span>
+
+          <span class='flex'></span>
+          <span class='number calm'>{{euro order.totalPrice}}</span>
+        </div>
       </div>
     {{/each}}
   </div>
