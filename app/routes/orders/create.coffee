@@ -9,6 +9,7 @@ OrdersCreateRoute = Ember.Route.extend
         number: orderCount
         customer: null
         adress: null
+        isNew: yes
       }
 
   actions:
