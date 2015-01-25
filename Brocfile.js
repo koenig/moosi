@@ -24,4 +24,5 @@ var app = new EmberApp({
 
 // app.import('bower_components/ionic/css/ionic.css');
 app.import('bower_components/fastclick/lib/fastclick.js');
+app.import('bower_components/currency.js/currency.js');
 module.exports = app.toTree();

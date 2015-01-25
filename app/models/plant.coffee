@@ -16,7 +16,10 @@ Plant = DS.Model.extend
 
 
   name: attr()
-  price: attr 'number', defaultValue: 0
+  priceInCents: attr 'number', defaultValue: 0
+  price: Em.computed 'priceInCents', ->
+    currency(@get('priceInCents')/100).format()
+
   positions: hasMany 'position', async: yes
   youngPlantQuantity: Em.computed 'positions.@each.quantity', ->
     @get('positions.firstObject.quantity')
@@ -40,14 +43,14 @@ Plant.reopenClass
     {
       id: 1
       name: 'anc'
-      price: 2.40
+      priceInCents: 240
       positions: [1, 2]
       orderItems: [1, 3]
     }
     {
       id: 2
       name: 'all'
-      price: 3.20
+      priceInCents: 320
       positions: [3, 4]
       orderItems: [2]
     }

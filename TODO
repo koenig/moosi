@@ -37,6 +37,7 @@
 - style order
 - tabs deutlicher
 - deprecations
+- form validations
 ** maybe **
 
 
@@ -47,9 +48,9 @@
 - icon
 - webapp capable
 - zurück auf die zurück seite
-- use cents instead of floats
 
 **done**
+- use cents instead of floats
 - nach putback reset transfer
 - pflanzen 'löschbar'
 - zurückleg aber dennoch da error
