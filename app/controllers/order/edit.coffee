@@ -21,5 +21,8 @@ OrderEditController = Ember.Controller.extend OrderTabActive,
         Em.run.later( =>
           @send 'goBack'
         , 400)
+    goBack: ->
+      @set 'shouldShowCreate', no
+      @transitionTo 'orders'
 
 `export default OrderEditController`

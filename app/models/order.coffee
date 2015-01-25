@@ -20,7 +20,7 @@ Order = DS.Model.extend
     orderItem
   totalPrice: Em.computed 'orderItems.@each.total', ->
     sum = 0
-    @get('orderItems').forEach (orderItem) -> sum += orderItem.get 'total'
+    @get('orderItems').forEach (orderItem) -> sum += orderItem.get('total') or 0
     sum
   name: Em.computed 'number', -> "Rechnung #{@get('number')}"
 

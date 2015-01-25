@@ -17,7 +17,8 @@ PlantPositionController = Ember.ObjectController.extend
 
   actions:
     putBackToQuarter: ->
-      @set 'transaction.to', @get 'content'
+      @get('transaction').setProperties
+        to: @get 'content'
     executePutBack: ->
       @get('transaction').execute('putBack')
 

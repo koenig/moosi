@@ -26,6 +26,8 @@
 - make the add plant not use a createRecord 'plant' (or another way to avoid cancleable plants)
 - eigene icon font
 - handle autofocus
+- quantity of put back should be the same as plants available
+- should be possible to even get more plants from the order view
 ** later **
 - style buttons in header
 - make the view know if they should fade in or not
@@ -33,7 +35,9 @@
 - make small links buttons likes outline buttons?
 - die tabs mit icons
 - style order
+- tabs deutlicher
 ** maybe **
+
 
 - more styling of numbers etc.
 - content security policy
@@ -41,11 +45,14 @@
 - firebase
 - icon
 - webapp capable
+- deprecations
+- nach putback reset transfer
 - zurück auf die zurück seite
 - use cents instead of floats
 - pflanzen 'löschbar'
 
 **done**
+- zurückleg aber dennoch da error
 - zurücklegen macht auch, dass pflanzen bei null wieder aus einer rechnung verschwinden
 - rechnungen löschbar, nachdem alle pflanzen zurückgelegt worden sind (mit hinweis darauf)
 - import funktion von mehreren pflanzen gleichzeitig (autokorrektur ausmachen)

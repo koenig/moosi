@@ -17,7 +17,8 @@ OrderItemController = Ember.ObjectController.extend
     'item rows'
 
   onQuantityChange: (->
-    @get('content').destroyRecord() if @get('quantity') < 1
+    return if @get('quantity') > 0
+    @get('content.order.orderItems').removeObject @get('content')
   ).observes 'quantity'
 
   actions:
@@ -26,6 +27,7 @@ OrderItemController = Ember.ObjectController.extend
         @get('transaction').send('resetTransaction')
       else
         @set 'transaction.from', @get 'content'
+        @set 'transaction.quantity', @get 'quantity'
       false
 
 `export default OrderItemController`

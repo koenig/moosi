@@ -20,6 +20,8 @@ Plant = DS.Model.extend
   positions: hasMany 'position', async: yes
   youngPlantQuantity: Em.computed 'positions.@each.quantity', ->
     @get('positions.firstObject.quantity')
+  orderItems: hasMany 'orderItem', async: true
+
 
   quantity: Em.computed 'positions.@each.quantity', ->
     result = 0
@@ -40,12 +42,14 @@ Plant.reopenClass
       name: 'anc'
       price: 2.40
       positions: [1, 2]
+      orderItems: [1, 3]
     }
     {
       id: 2
       name: 'all'
       price: 3.20
       positions: [3, 4]
+      orderItems: [2]
     }
   ]
 `export default Plant`
