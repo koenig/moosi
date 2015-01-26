@@ -48,7 +48,7 @@
     <div class="item">
       <span>Preis</span>
       <span class='flex'></span>
-      <span>{{euro price}}</span>
+      <span class='number relax'>{{euro price}}</span>
     </div>
 
     <div class="item divider">Bestände</div>
@@ -65,7 +65,7 @@
             {{/if}}
           </span>
           <span class='flex'></span>
-          <span>{{position.quantity}}</span>
+          <span {{bind-attr class="position.isYoungPlant:calm:peace :number"}}>{{position.quantity}}</span>
         </div>
         {{#if position.isTo}}
           <div class="row">

@@ -23,7 +23,7 @@ PlantEditController = Ember.ObjectController.extend
         , 400)
     goBack: ->
       @set 'shouldShowCreate', no
-      @transitionTo 'plants'
+      @transitionTo 'plant'
       no
 
 

@@ -14,21 +14,18 @@
             <a href='#' {{action 'deselectActiveOrder'}} class="smaller">abbrechen</a>
           </span>
 
-
           <span class='flex'></span>
           <span class='smaller note'><em>wähl eine Pflanze</em></span>
         </div>
-
-
       </div>
     {{/if}}
     {{#each plant in filteredContent}}
       <div class="item" {{action 'linkToPlant' plant}}>
         <span>{{plant.name}}</span>
         <span class='flex'></span>
-        <span class='number'>{{euro plant.price}}</span>
-        <span class='number calm padding-left'>{{plant.youngPlantQuantity}}</span>
-        <span class='number padding-left'>{{plant.quantity}}</span>
+        <span class='col number relax'>{{euro plant.price}}</span>
+        <span class='col number calm padding-left'>{{plant.youngPlantQuantity}}</span>
+        <span class='col number padding-left peace'>{{plant.quantity}}</span>
       </div>
     {{/each}}
   </div>

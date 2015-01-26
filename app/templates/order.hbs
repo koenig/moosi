@@ -25,9 +25,9 @@
         <div class="row">
           <span>{{orderItem.plant.name}}&nbsp;<a href="#" class='smaller' {{action 'showPutBack'}}>{{#if orderItem.isFrom}}abbrechen{{else}}zurücklegen{{/if}}</a></span>
           <span class='flex'></span>
-          <span class='padding-left padding-right note'>{{euro orderItem.plant.price}}</span>
-          <span class='padding-left padding-right note'>{{orderItem.quantity}}</span>
-          <span class='padding-left'>{{euro orderItem.total}}</span>
+          <span class='col number peace thinner'>{{orderItem.quantity}}</span>
+          <span class='col number calm'>{{euro orderItem.plant.price}}</span>
+          <span class='col number relax'>{{euro orderItem.total}}</span>
         </div>
         {{#if orderItem.isFrom}}
           {{#each plantPosition in orderItem.plant.positions itemController='plantPosition'}}
@@ -52,7 +52,7 @@
     <div class="item">
       <span><b>Total</b></span>
       <span class='flex'></span>
-      <span>{{euro totalPrice}}</span>
+      <span><b>{{euro totalPrice}}</b></span>
     </div>
 
     <div class="padding aright">

@@ -53,3 +53,16 @@ a.warn {
 .black {
   color: black;
 }
+.col {
+  text-align:right;
+  width: 65px;
+  &.thinner {
+    width: 45px;
+  }
+}
+.peace {
+  color: #8A6DE9;
+}
+.relax {
+  color: #ffb41d;
+}

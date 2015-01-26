@@ -36,18 +36,20 @@
 ** maybe **
 
 
-- style order
 - form validations
-- make small links buttons likes outline buttons?
 - content security policy
 - deploy
 - firebase
 - icon
 - webapp capable
-- more styling of numbers etc.
-- fixed width for the collums in the list
+- make small links buttons likes outline buttons?
+- style order and "card"
 
 **done**
+- more styling of numbers etc.
+- second color
+- jungpflanzen farbe
+- fixed width for the collums in the list
 - tabs deutlicher
 - make the content sliding in having a border
 - quantity of put back should be the same as plants available

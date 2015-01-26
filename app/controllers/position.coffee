@@ -14,6 +14,8 @@ PositionController = Ember.ObjectController.extend AccessActiveOrderMixin,
     return 'item rows prime' if @get 'isTo'
     return 'item rows second' if @get 'isFrom'
     'item rows'
+  isYoungPlant: Em.computed ->
+    @get('plant.positions.firstObject') is @get('content')
 
   actions:
     selectPosition: ->
