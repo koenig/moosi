@@ -26,6 +26,7 @@
 - style buttons in header
 - draggable aufräumen
 - deletemode reset (time or leaving of site)
+- make "settings" a real route (and the action sheet coming in outlet)
 ** later **
 - rechnungen archivierbar machen
 - deprecations
@@ -43,9 +44,9 @@
 - firebase
 - icon
 - webapp capable
-- goback from imports
 
 **done**
+- goback from imports
 - save and add next
 - form validations create order
 - rechnungen auch von kunden, pflanzen etc. unabhängig machen, unabhängigkeit, von rechnungen zu pflanzen und quarter
