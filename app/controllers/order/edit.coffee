@@ -22,6 +22,7 @@ OrderEditController = Ember.Controller.extend OrderTabActive,
           @transitionTo 'orders'
         , 400)
     goBack: ->
+      @get('content').rollback()
       @set 'shouldShowCreate', no
       @transitionTo 'order'
 

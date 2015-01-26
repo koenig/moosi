@@ -2,12 +2,12 @@
 
 CurrencyInputComponent = Ember.TextField.extend
   onInit: (->
-    value = currency(@get('currency')).format()
-    @set "value", value
+    value = @get('cents')
+    @set "value", currency(value/100).format()
   ).on 'init'
   valueChange: (->
     cents = currency(@get("value")).intValue
-    @set "currency", cents
-  ).observes("value")
+    @set "cents", cents
+  ).observes "value"
 
 `export default CurrencyInputComponent`

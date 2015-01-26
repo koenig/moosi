@@ -21,10 +21,10 @@ Plant = DS.Model.extend
     currency(@get('priceInCents')/100).format()
 
   positions: hasMany 'position', async: yes
-  youngPlantQuantity: Em.computed 'positions.@each.quantity', ->
-    @get('positions.firstObject.quantity')
   orderItems: hasMany 'orderItem', async: true
 
+  youngPlantQuantity: Em.computed 'positions.@each.quantity', ->
+    @get('positions.firstObject.quantity')
 
   quantity: Em.computed 'positions.@each.quantity', ->
     result = 0

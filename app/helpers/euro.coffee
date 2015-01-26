@@ -1,6 +1,6 @@
 `import Ember from 'ember'`
 
 euro = (value) ->
-  "#{parseFloat(value).toFixed(2).replace('.', ',')} €"
+  currency(value).format()
 
 `export default euro`

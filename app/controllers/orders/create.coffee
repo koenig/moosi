@@ -8,7 +8,7 @@ OrdersCreateController = Ember.Controller.extend OrderTabActive,
         number: @get('content.number')
         customer: @get('content.customer')
         adress: @get('content.adress')
-      @store.createRecord('order', properties).save().then (plant) =>
+      @store.createRecord('order', properties).save().then (order) =>
         @set 'shouldShowCreate', no
         Em.run.later =>
           @transitionToRoute 'orders'

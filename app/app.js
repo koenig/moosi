@@ -13,6 +13,8 @@ var App = Ember.Application.extend({
   Resolver: Resolver,
   ready: function(){
     FastClick.attach(document.body);
+    currency.settings.seperator = '.';
+    currency.settings.decimal = ',';
   }
 });
 

@@ -21,7 +21,7 @@ DraggableView = Ember.View.extend
 
 
   didInsertElement: ->
-    $view = @$()
+    # $view = @$()
 
     # dragTrigger = '<div class="mobile-drag-trigger"><i class="icon-grip"></i></div>'
     # $(dragTrigger).appendTo($view)
