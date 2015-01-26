@@ -14,6 +14,8 @@ button, html, body {
            user-select: none;
 }
 * {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: -apple-system-body;
   @include border-box();
   -webkit-user-select: none;
   -webkit-touch-callout: none;
@@ -40,7 +42,8 @@ a {
   @include flex-direction(column);
   margin: 0 auto;
   max-width: 1200px;
-  width:100vw;
+  // width:100vw;
+  width:100%;
 }
 .flexbox {
   @include flexbox();
@@ -70,6 +73,7 @@ body {
   @include align-items(center);
   color:white;
   font-weight: normal;
+  font: -apple-system-headline;
   .title {
     text-align: center;
     @include flex(1);
@@ -245,6 +249,8 @@ body {
   line-height: 49px;
 }
 .tab-item {
+  // background: red;
+  vertical-align: middle;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -moz-box-flex: 1;
@@ -253,7 +259,7 @@ body {
   flex: 1;
   display: block;
   overflow: hidden;
-  max-width: 150px;
+  // max-width: 150px;
   height: 100%;
   color: inherit;
   text-align: center;
@@ -262,8 +268,9 @@ body {
   white-space: nowrap;
   font-weight: 400;
   font-size: 14px;
-  font-family: "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   opacity: 0.6;
+  // align-self: center;
+  @include align-items(center);
   &.aktiv {
     border-top: 2px solid #b2b2b2;
     opacity: 0.9

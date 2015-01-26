@@ -1,5 +1,3 @@
-$mainColWidth: 550px;
-$mainColHeight: 400px;
 html, body {
   width: 100vw;
   height: 100vh;
@@ -9,6 +7,6 @@ html, body {
   @include box-sizing(border-box);
 }
 * {
-  @extend .border-box;
+  @include box-sizing(border-box);
 }
 
