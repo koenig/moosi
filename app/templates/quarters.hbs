@@ -1,24 +1,31 @@
 {{#view 'upable'}}
   <div class='header'>
-    <a class='left' {{action 'back' target='view'}}>back</a>
-    <h2 class='title'>Quarters</h2>
+    {{partial 'shared/back-button'}}
+    <h2 class='title'>Quartiere</h2>
     <a></a>
   </div>
   <div class='content list'>
     {{#each quarter in arrangedContent itemController='quarter'}}
       <div {{bind-attr class="quarter.isActive:prime :item"}}>
         <span class='flex'>{{quarter.name}}</span>
-        <span class='smaller' {{action 'rename' quarter}}>edit</span>
+        {{#if quarter.isActive}}
+          <a href="#" class='btn-small' {{action 'stopRename' quarter}}>abbrechen</a>
+        {{else}}
+          {{#if editMode}}{{else}}
+            <a href="#" class='btn-small' {{action 'rename' quarter}}>edit</a>
+          {{/if}}
+        {{/if}}
       </div>
     {{/each}}
-  </div>
 
-  <div class='padding flexbox'>
-    {{input value=selectedQuarter.name}}
-    <div class="aright padding-left">
-      <button {{action 'createQuarter'}} class="blue btn-desktop">
-        {{#if editMode}}ändern{{else}}hinzufügen{{/if}}
-      </button>
+    <div class='padding flexbox'>
+      {{input value=selectedQuarter.name}}
+      <div class="aright padding-left">
+        <button {{action 'createQuarter'}} class="blue btn-desktop">
+          {{#if editMode}}ändern{{else}}hinzufügen{{/if}}
+        </button>
+      </div>
     </div>
   </div>
+
 {{/view}}

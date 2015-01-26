@@ -2,7 +2,10 @@
  * Action Sheets
  * --------------------------------------------------
  */
-
+ button, html input[type="button"], input[type="reset"], input[type="submit"] {
+   cursor: pointer;
+   -webkit-appearance: button;
+ }
 .action-sheet-backdrop {
   @include transition(background-color 300ms ease-in-out);
   position: fixed;
@@ -37,14 +40,13 @@
   z-index: 11;
   overflow: hidden;
 
-  .button {
+  .sheet-button {
     display: block;
-    padding: 16px;
+    padding: 14px;
     width: 100%;
-    border-radius: 0;
-
+    border-radius: inherit;
     background-color: transparent;
-
+    background-color: #fff;
     color: #4a87ee;
     font-size: 18px;
 
@@ -65,16 +67,14 @@
   margin-bottom: 5px;
   border-radius: 3px 3px 3px 3px;
   background-color: #fff;
-  .button {
+  .sheet-button {
     border-width: 1px 0px 0px 0px;
-    border-radius: 0;
-
     &.active {
       background-color: transparent;
       color: inherit;
     }
   }
-  .button:first-child:last-child {
+  .sheet-button:first-child:last-child {
     border-width: 0;
   }
 }
