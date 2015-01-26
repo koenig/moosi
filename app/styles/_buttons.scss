@@ -20,19 +20,17 @@ button, .button {
     &:hover { background:$colorScheme; }
     &:active, &.active { background:$colorScheme; box-shadow:inset 0 1px 1px rgba(0,0,0,.2); }
 }
-button, .gray   { @include buttonColorz($gray){ color:#666; text-shadow:0 1px 0 white; } }
 .blue, button.active, .button.active { @include buttonColorz($blue); }
-.delete, button.red.active  { @include buttonColorz($red); }
 
 button, .warn   {
   @include buttonColorz(white){ color:red; text-shadow:0 1px 0 white; }
 }
-button[disabled].warn, button[disabled].warn:hover {
+button[disabled], button[disabled].warn, button[disabled].warn:hover {
   opacity:0.4
 }
 
 
-a.btn-small {
+a.btn-small, .btn-small {
   background-color: white;
   text-decoration: none;
   padding: 4px 5px;

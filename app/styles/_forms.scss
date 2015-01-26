@@ -32,6 +32,7 @@ input, textarea {
   // outline-width: 0;
   -webkit-font-smoothing: inherit;
   background-image: none;
+  -webkit-user-select: text;
 }
 input {
   height: 36px;

@@ -1,10 +1,14 @@
 {{#view 'upable' shouldShow=shouldShowCreate}}
   <div class='header'>
     {{partial 'shared/back-button'}}
-    <h2 class='title'>eine neue Pflanze anlegen</h2>
+    <h2 class='title'>Pflanze anlegen</h2>
     <a></a>
   </div>
-  <div class='content list'>
+  <div class='content list' id='createForm'>
     {{partial 'plant/form'}}
+    <div class="padding aright flexbox">
+      <span class='flex'></span>
+      <button class=" btn-small" {{bind-attr disabled=isNotValid }} {{action "saveAndRepeat"}} title="save">speichern und sofort weitere Pflanze anlegen</button>
+    </div>
   </div>
 {{/view}}

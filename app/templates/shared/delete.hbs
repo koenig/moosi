@@ -12,5 +12,5 @@
     </button>
   {{/if}}
   <span class='flex'></span>
-  <button class="blue btn-desktop" {{action "save"}} title="save"> speichern </button>
+  <button class="blue btn-desktop" {{bind-attr disabled=isNotValid }} {{action "save"}} title="save">speichern</button>
 {{/if}}
