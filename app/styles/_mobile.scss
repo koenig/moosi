@@ -224,7 +224,11 @@ body {
   font-family: "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   opacity: 0.6;
   &.aktiv {
+    border-top: 2px solid #b2b2b2;
     opacity: 0.9
+  }
+  .middle {
+    width: 50px;
   }
 }
 

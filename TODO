@@ -1,23 +1,13 @@
 - evt. direkte feedback funktion
-- cutomer auto fill in
 - font: -apple-system-headline;
-- make use of <header>
-- rechnungen auch von kunden, pflanzen etc. unabhängig machen
-- rechnungen archivierbar machen
-- unabhängigkeit, von rechnungen zu pflanzen und quarter
-- make the content sliding in having a border
 - divider
 - order item  quick view in active order
-- make single active order area
 - handle removing of quarters
 - get some icons
 - make the scss file more nice
-- fixed width for the collums in the list
 - more details in order view
 - passwort funktion
 - "backup"
-- appcache
-- suche/filtern von pflanzen
 - loading state
 - error handling
 - input validation (not null not empty strings)
@@ -25,31 +15,41 @@
 - für den pc layouten
 - eigene icon font
 - handle autofocus
+- make use of <header>
 - should be possible to even get more plants from the order view
 - new each
 - die tabs mit icons
 - vielleicht info auf pflanzen seite, dass man pflanzen aussuchen kann um neue zu erstellen oder verschieben von lagern
+- make single active order area
 - style buttons in header
 - draggable aufräumen
 ** later **
 
-
+- rechnungen auch von kunden, pflanzen etc. unabhängig machen
+- unabhängigkeit, von rechnungen zu pflanzen und quarter
+- cutomer auto fill in
+- suche/filtern von pflanzen
+- appcache
 - deprecations
+- rechnungen archivierbar machen
+
 ** maybe **
 
 
 - style order
 - form validations
 - make small links buttons likes outline buttons?
-- tabs deutlicher
-- more styling of numbers etc.
 - content security policy
 - deploy
 - firebase
 - icon
 - webapp capable
+- more styling of numbers etc.
+- fixed width for the collums in the list
 
 **done**
+- tabs deutlicher
+- make the content sliding in having a border
 - quantity of put back should be the same as plants available
 - make the add plant not use a createRecord 'plant' (or another way to avoid cancleable plants)
 - make the view know if they should fade in or not
