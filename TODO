@@ -36,13 +36,16 @@
 - appcache
 - transaction form input validation
 - zu breit?
+- passwort protection
+- empty states
 
 ** maybe **
-- loading state
+- loading state nice
 - todo size of website ?
 - firebase
 
 **done**
+- loading state
 - deploy
 - suddenly more than two quarters in order
 - webapp capable
