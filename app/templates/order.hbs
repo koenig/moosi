@@ -5,54 +5,58 @@
     <a href="#" {{action 'editOrder'}}>bearbeiten</a>
   </div>
 
-  <div class='content list'>
-    <div class="item">
-      <span>Kunde</span>
-      <span class='flex'></span>
-      <span>{{customer}}</span>
-    </div>
-
-    <div class="item">
-      <span>Adresse</span>
-      <span class='flex'></span>
-      <span>{{adressWithBreaks}}</span>
-    </div>
-
-    <div class="item divider">Pflanzen</div>
-
-    {{#each orderItem in orderItems itemController='orderItem'}}
-      <div {{bind-attr class=orderItem.activityStyles}}>
-        <div class="row">
-          <span>{{orderItem.plant.name}}&nbsp;<a href="#" class='smaller' {{action 'showPutBack'}}>{{#if orderItem.isFrom}}abbrechen{{else}}zurücklegen{{/if}}</a></span>
-          <span class='flex'></span>
-          <span class='col number peace thinner'>{{orderItem.quantity}}</span>
-          <span class='col number calm'>{{euro orderItem.plant.price}}</span>
-          <span class='col number relax'>{{euro orderItem.total}}</span>
+  <div class='content'>
+    <div class="card rows">
+      <div class='row'>
+        <div class='cell smaller'>
+          {{customer}}<br>
+          {{adressWithBreaks}}
         </div>
-        {{#if orderItem.isFrom}}
-          {{#each plantPosition in orderItem.plant.positions itemController='plantPosition'}}
-            <div {{bind-attr class=plantPosition.activityStyles}}>
-              <span class='padding-right'>
-                {{plantPosition.quarter.name}}
-              </span>
-              {{#if plantPosition.isTo}}
-                {{focus-input value=plantPosition.transaction.quantity type='tel'}}
-                <span class='padding-left'>
-                  <button class='blue btn-desktop' {{action 'executePutBack' }}>zurücklegen</button>
-                </span>
-              {{else}}
-                <span class='note smaller' {{action 'putBackToQuarter'}}>in dieses Lager zurücklegen</span>
-              {{/if}}
-            </div>
-          {{/each}}
-        {{/if}}
+        <div class='cell'></div>
+        <div class='cell aright bottom smaller'>{{date date}}</div>
       </div>
-    {{/each}}
+      <div class='row'>
+        <div class='cell'><b>{{name}}</b></div>
+      </div>
+      {{#each orderItem in orderItems itemController='orderItem'}}
+        <div {{bind-attr class=orderItem.activityStyles}}>
+          <div class="row">
+            <span>{{orderItem.plant.name}}&nbsp;<a href="#" class='smaller' {{action 'showPutBack'}}>{{#if orderItem.isFrom}}abbrechen{{else}}zurücklegen{{/if}}</a></span>
+            <span class='flex'></span>
+            <span class='col number peace thinner'>{{orderItem.quantity}}</span>
+            <span class='col number calm'>{{euro orderItem.plant.price}}</span>
+            <span class='col number relax'>{{euro orderItem.total}}</span>
+          </div>
+          {{#if orderItem.isFrom}}
+            {{#each plantPosition in orderItem.plant.positions itemController='plantPosition'}}
+              <div {{bind-attr class=plantPosition.activityStyles}}>
+                <span class='padding-right'>
+                  {{plantPosition.quarter.name}}
+                </span>
+                {{#if plantPosition.isTo}}
+                  {{focus-input value=plantPosition.transaction.quantity type='tel'}}
+                  <span class='padding-left'>
+                    <button class='blue btn-desktop' {{action 'executePutBack' }}>zurücklegen</button>
+                  </span>
+                {{else}}
+                  <span class='note smaller' {{action 'putBackToQuarter'}}>in dieses Lager zurücklegen</span>
+                {{/if}}
+              </div>
+            {{/each}}
+          {{/if}}
+        </div>
+      {{else}}
+        <div class="row">
+          <em>leer</em>
+        </div>
 
-    <div class="item">
-      <span><b>Total</b></span>
-      <span class='flex'></span>
-      <span><b>{{euro totalPrice}}</b></span>
+      {{/each}}
+
+      <div class="row total">
+        <span><b>Total</b></span>
+        <span class='flex'></span>
+        <span><b>{{euro totalPrice}}</b></span>
+      </div>
     </div>
 
     <div class="padding aright">
