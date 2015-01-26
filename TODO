@@ -23,24 +23,23 @@
 - input validation (not null not empty strings)
 - make buttons disableable
 - für den pc layouten
-- make the add plant not use a createRecord 'plant' (or another way to avoid cancleable plants)
 - eigene icon font
 - handle autofocus
-- quantity of put back should be the same as plants available
 - should be possible to even get more plants from the order view
 - new each
 - die tabs mit icons
 - vielleicht info auf pflanzen seite, dass man pflanzen aussuchen kann um neue zu erstellen oder verschieben von lagern
 - style buttons in header
+- draggable aufräumen
 ** later **
 
 
-- style order
 - deprecations
-- form validations
 ** maybe **
 
 
+- style order
+- form validations
 - make small links buttons likes outline buttons?
 - tabs deutlicher
 - more styling of numbers etc.
@@ -51,6 +50,8 @@
 - webapp capable
 
 **done**
+- quantity of put back should be the same as plants available
+- make the add plant not use a createRecord 'plant' (or another way to avoid cancleable plants)
 - make the view know if they should fade in or not
 - zurück auf die zurück seite
 - upable down arrow

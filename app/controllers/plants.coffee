@@ -5,6 +5,7 @@
 PlantsController = Ember.ArrayController.extend AccessActiveOrderMixin,
   sortProperties: ['name']
   sortAscending: yes
+  filteredContent: Em.computed.filterBy 'arrangedContent', 'isNew', no
   modalVisible: no
   actionSheetVisible: no
   actions:

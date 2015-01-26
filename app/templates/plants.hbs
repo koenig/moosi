@@ -22,7 +22,7 @@
 
       </div>
     {{/if}}
-    {{#each plant in arrangedContent}}
+    {{#each plant in filteredContent}}
       <div class="item" {{action 'linkToPlant' plant}}>
         <span>{{plant.name}}</span>
         <span class='flex'></span>
