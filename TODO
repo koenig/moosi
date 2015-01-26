@@ -29,19 +29,20 @@
 - quantity of put back should be the same as plants available
 - should be possible to even get more plants from the order view
 - new each
-** later **
-- style buttons in header
-- make the view know if they should fade in or not
-- vielleicht info auf pflanzen seite, dass man pflanzen aussuchen kann um neue zu erstellen oder verschieben von lagern
-- make small links buttons likes outline buttons?
 - die tabs mit icons
+- vielleicht info auf pflanzen seite, dass man pflanzen aussuchen kann um neue zu erstellen oder verschieben von lagern
+- style buttons in header
+** later **
+
+
 - style order
-- tabs deutlicher
 - deprecations
 - form validations
 ** maybe **
 
 
+- make small links buttons likes outline buttons?
+- tabs deutlicher
 - more styling of numbers etc.
 - content security policy
 - deploy
@@ -50,6 +51,7 @@
 - webapp capable
 
 **done**
+- make the view know if they should fade in or not
 - zurück auf die zurück seite
 - upable down arrow
 - use cents instead of floats

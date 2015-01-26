@@ -25,7 +25,6 @@ DraggableView = Ember.View.extend
 
     # dragTrigger = '<div class="mobile-drag-trigger"><i class="icon-grip"></i></div>'
     # $(dragTrigger).appendTo($view)
-
     Em.run.later( =>
       @set 'shouldShow', yes
       # $view.css({ '-webkit-transform': 'translate3d(-100%, 0, 0)' })
