@@ -2,7 +2,7 @@
 
 DateInputComponent = Ember.TextField.extend
   onInit: ( ->
-    date = @get('date')
+    date = new Date @get('date')
     [year, month, day] = [date.getFullYear(), (date.getMonth()+1), date.getDate()]
     month = "0#{month}" if month < 10
     day = "0#{day}" if day < 10

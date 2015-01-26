@@ -16,5 +16,6 @@ Router.map ->
       @route 'edit'
     @route 'create'
 
+  # @route 'loading'
 
 `export default Router`
