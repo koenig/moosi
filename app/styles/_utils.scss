@@ -62,10 +62,26 @@ a.warn {
   &.thinner {
     width: 45px;
   }
+  &.fatter {
+    width: 95px;
+  }
 }
 .peace {
   color: #8A6DE9;
 }
 .relax {
   color: #ffb41d;
+}
+input:focus, textarea:focus {
+  outline:1px solid red;
+}
+button, a {
+  outline: 0;
+     -webkit-tap-highlight-color: rgba(0,0,0,0);
+     -webkit-tap-highlight-color: transparent;
+     -webkit-touch-callout: none;
+     -webkit-user-select: none;
+        -moz-user-select: none;
+         -ms-user-select: none;
+             user-select: none;
 }

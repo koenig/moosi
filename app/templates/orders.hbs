@@ -10,12 +10,11 @@
       <div class="item rows" {{action 'linkToOrder' order}}>
         <div class='row'>
           <span>{{order.name}}</span>
-          <span class='padding-left note smaller'>
+          <span class='flex col fatter smaller calm'>
             {{order.customer}}
           </span>
 
-          <span class='flex'></span>
-          <span class='number relax'>{{euro order.totalPrice}}</span>
+          <span class='number relax col'>{{euro order.totalPrice}}</span>
         </div>
       </div>
     {{/each}}
