@@ -21,7 +21,12 @@
       {{#each orderItem in orderItems itemController='orderItem'}}
         <div {{bind-attr class=orderItem.activityStyles}}>
           <div class="row">
-            <span>{{orderItem.plant.name}}&nbsp;<a href="#" class='smaller' {{action 'showPutBack'}}>{{#if orderItem.isFrom}}abbrechen{{else}}zurücklegen{{/if}}</a></span>
+            <span>{{orderItem.plant.name}}&nbsp;
+            {{#if orderItem.isFrom}}
+              <a href="#" class='btn-small note' {{action 'showPutBack'}}>abbrechen</a>
+            {{else}}
+              <a href="#" {{bind-attr class=':btn-small orderItem.hasFrom:note' }} {{action 'showPutBack'}}>zurücklegen</a>
+            {{/if}}</span>
             <span class='flex'></span>
             <span class='col number peace thinner'>{{orderItem.quantity}}</span>
             <span class='col number calm'>{{euro orderItem.plant.price}}</span>
@@ -30,16 +35,16 @@
           {{#if orderItem.isFrom}}
             {{#each plantPosition in orderItem.plant.positions itemController='plantPosition'}}
               <div {{bind-attr class=plantPosition.activityStyles}}>
-                <span class='padding-right'>
+                <span class='padding-right middle'>
                   {{plantPosition.quarter.name}}
                 </span>
                 {{#if plantPosition.isTo}}
                   {{focus-input value=plantPosition.transaction.quantity type='tel'}}
                   <span class='padding-left'>
-                    <button class='blue btn-desktop' {{action 'executePutBack' }}>zurücklegen</button>
+                    <button class="blue btn-desktop" {{action 'executePutBack' }}>zurücklegen</button>
                   </span>
                 {{else}}
-                  <span class='note smaller' {{action 'putBackToQuarter'}}>in dieses Lager zurücklegen</span>
+                  <a {{bind-attr class="plantPosition.hasTo:note :btn-small" }} {{action 'putBackToQuarter'}}>in dieses Lager zurücklegen</a>
                 {{/if}}
               </div>
             {{/each}}

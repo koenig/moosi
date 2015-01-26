@@ -5,6 +5,7 @@ PlantPositionController = Ember.ObjectController.extend
 
   transaction: Em.computed.alias 'controllers.transaction'
   hasFrom: Em.computed.bool 'transaction.from'
+  hasTo: Em.computed.bool 'transaction.to'
   isFrom: Em.computed 'transaction.from', ->
     @get('transaction.from') is @get('content')
   isTo: Em.computed 'transaction.to', ->
