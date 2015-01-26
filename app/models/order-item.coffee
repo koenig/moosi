@@ -6,6 +6,7 @@ belongsTo = DS.belongsTo
 OrderItem = DS.Model.extend
   order: belongsTo 'order', async: yes
   plant: belongsTo 'plant', async: yes
+  plantName: attr 'string'
   quantity: attr 'number'
 
   total: Em.computed 'plant.price', 'quantity', ->

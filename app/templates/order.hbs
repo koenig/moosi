@@ -28,7 +28,7 @@
               <a href="#" {{bind-attr class=':btn-small orderItem.hasFrom:note' }} {{action 'showPutBack'}}>zurücklegen</a>
             {{/if}}</span>
             <span class='flex'></span>
-            <span class='col number peace thinner'>{{orderItem.quantity}}</span>
+            <span class='col number peace'>{{orderItem.quantity}}</span>
             <span class='col number calm'>{{euro orderItem.plant.price}}</span>
             <span class='col number relax'>{{euro orderItem.total}}</span>
           </div>
@@ -65,7 +65,7 @@
     </div>
 
     <div class="padding aright">
-      <button class="blue btn-desktop" {{action "selectActiveOrder" this}}> Pflanzen hinzufügen </button>
+      <button class="blue btn-desktop" {{action "selectActiveOrder" this}}>Pflanzen hinzufügen</button>
     </div>
   </div>
   {{view 'tabs'}}

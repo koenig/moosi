@@ -19,7 +19,7 @@ OrderEditController = Ember.Controller.extend OrderTabActive,
       @get('content').destroyRecord().then =>
         @set 'shouldShowCreate', no
         Em.run.later( =>
-          @send 'goBack'
+          @transitionTo 'orders'
         , 400)
     goBack: ->
       @set 'shouldShowCreate', no

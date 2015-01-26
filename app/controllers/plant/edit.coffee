@@ -19,7 +19,7 @@ PlantEditController = Ember.ObjectController.extend
       @get('content').destroyRecord().then =>
         @set 'shouldShowCreate', no
         Em.run.later( =>
-          @send 'goBack'
+          @transitionTo 'plants'
         , 400)
     goBack: ->
       @set 'shouldShowCreate', no

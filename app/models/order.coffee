@@ -16,6 +16,7 @@ Order = DS.Model.extend
       order: @
       plant: plant
       quantity: 0
+      plantName: plant.name
     orderItem.save()
     orderItem
   totalPrice: Em.computed 'orderItems.@each.total', ->

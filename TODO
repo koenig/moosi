@@ -24,27 +24,27 @@
 - make single active order area
 - style buttons in header
 - draggable aufräumen
+- deletemode reset (time or leaving of site)
 ** later **
-
-- rechnungen auch von kunden, pflanzen etc. unabhängig machen
-- unabhängigkeit, von rechnungen zu pflanzen und quarter
-- cutomer auto fill in
-- suche/filtern von pflanzen
-- appcache
-- deprecations
 - rechnungen archivierbar machen
+- deprecations
+- content security policy
+- suche/filtern von pflanzen
+- cutomer auto fill in
+- appcache
+
 
 ** maybe **
 
 
 - form validations
-- content security policy
 - deploy
 - firebase
 - icon
 - webapp capable
 
 **done**
+- rechnungen auch von kunden, pflanzen etc. unabhängig machen, unabhängigkeit, von rechnungen zu pflanzen und quarter
 - make small links buttons likes outline buttons?
 - style order and "card"
 - more styling of numbers etc.
