@@ -34,19 +34,20 @@
 - suche/filtern von pflanzen
 - cutomer auto fill in
 - appcache
+- transaction form input validation
 
 
 ** maybe **
-
-- transaction form input validation
-- form validations create plant
+- loading state
+- todo size of website ?
 - deploy
 - firebase
-- icon
-- webapp capable
-- todo size of website
 
 **done**
+- suddenly more than two quarters in order
+- webapp capable
+- icon
+- form validations create plant
 - goback from imports
 - save and add next
 - form validations create order

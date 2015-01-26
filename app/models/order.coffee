@@ -16,13 +16,17 @@ Order = DS.Model.extend
       order: @
       plant: plant
       quantity: 0
-      plantName: plant.name
+      plantName: plant.get('name')
+      plantPriceInCents: plant.get('priceInCents')
     orderItem.save()
     orderItem
-  totalPrice: Em.computed 'orderItems.@each.total', ->
+  totalInCents: Em.computed 'orderItems.@each.totalInCents', ->
     sum = 0
-    @get('orderItems').forEach (orderItem) -> sum += orderItem.get('total') or 0
+    @get('orderItems').forEach (orderItem) -> sum += orderItem.get('totalInCents') or 0
     sum
+  totalPrice: Em.computed 'totalInCents', ->
+    @get('totalInCents')/100
+
   name: Em.computed 'number', -> "Rechnung #{@get('number')}"
 
 Order.reopenClass
