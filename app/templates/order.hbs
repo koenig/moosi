@@ -21,7 +21,7 @@
       {{#each orderItem in orderItems itemController='orderItem'}}
         <div {{bind-attr class=orderItem.activityStyles}}>
           <div class="row">
-            <span>{{orderItem.plant.name}}&nbsp;
+            <span>{{orderItem.plantName}}&nbsp;
             {{#if orderItem.isFrom}}
               <a href="#" class='btn-small note' {{action 'showPutBack'}}>abbrechen</a>
             {{else}}
@@ -29,8 +29,8 @@
             {{/if}}</span>
             <span class='flex'></span>
             <span class='col number peace'>{{orderItem.quantity}}</span>
-            <span class='col number calm'>{{euro orderItem.plant.price}}</span>
-            <span class='col number relax'>{{euro orderItem.total}}</span>
+            <span class='col number calm'>{{euro orderItem.plantPrice}}</span>
+            <span class='col number relax'>{{euro orderItem.totalPrice}}</span>
           </div>
           {{#if orderItem.isFrom}}
             {{#each plantPosition in orderItem.plant.positions itemController='plantPosition'}}
