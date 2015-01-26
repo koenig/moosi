@@ -1,4 +1,5 @@
 - evt. direkte feedback funktion
+- order-item displayName aus plant.name und plantName
 - bigger touch area "inner button"
 - font: -apple-system-headline;
 - divider
@@ -36,14 +37,15 @@
 
 ** maybe **
 
-
-- form validations
+- transaction form input validation
+- form validations create plant
 - deploy
 - firebase
 - icon
 - webapp capable
 
 **done**
+- form validations create order
 - rechnungen auch von kunden, pflanzen etc. unabhängig machen, unabhängigkeit, von rechnungen zu pflanzen und quarter
 - make small links buttons likes outline buttons?
 - style order and "card"

@@ -4,7 +4,11 @@
 OrdersCreateController = Ember.Controller.extend OrderTabActive,
   actions:
     save: ->
-      @store.createRecord('order', @get('content')).save().then (plant) =>
+      properties =
+        number: @get('content.number')
+        customer: @get('content.customer')
+        adress: @get('content.adress')
+      @store.createRecord('order', properties).save().then (plant) =>
         @set 'shouldShowCreate', no
         Em.run.later =>
           @transitionToRoute 'orders'

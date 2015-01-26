@@ -7,7 +7,7 @@ Order = DS.Model.extend
   number: attr 'string'
   customer: attr 'string'
   adress: attr 'string'
-  date: attr 'date'
+  date: attr 'date', defaultValue: -> new Date()
   orderItems: hasMany 'orderItem', async: true
   findOrderItemFor: (plant) ->
     orderItem = @get('orderItems').find (orderItem) -> orderItem.get('plant') is plant

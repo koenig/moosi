@@ -4,13 +4,18 @@
 </div>
 
 <div class="item item-input">
-  <label for="preis" class='input-label'>Kunde</label>
+  <label for="customer" class='input-label'>Kunde</label>
   {{input value=content.customer}}
 </div>
 
 <div class="item item-input">
   <label for="adress" class='input-label'>Adresse</label>
   {{textarea value=content.adress rows=3 }}
+</div>
+
+<div class="item item-input">
+  <label for="date" class='input-label'>Datum</label>
+  {{date-input date=content.date type='date'}}
 </div>
 
 
