@@ -15,6 +15,12 @@ var App = Ember.Application.extend({
     FastClick.attach(document.body);
     currency.settings.seperator = '.';
     currency.settings.decimal = ',';
+    // stop bouncy ui
+    document.addEventListener('touchmove', function(e) {
+      if (!$(e.target).parents('.content')[0]) {
+        e.preventDefault();
+      }
+    }, false);
   }
 });
 
