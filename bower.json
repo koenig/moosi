@@ -3,7 +3,7 @@
   "dependencies": {
     "handlebars": "2.0.0",
     "jquery": "^1.11.1",
-    "ember": "canary",
+    "ember": "1.10.0-beta.4",
     "ember-data": "1.0.0-beta.14.1",
     "ember-resolver": "~0.1.7",
     "loader.js": "stefanpenner/loader.js#1.0.1",
@@ -13,11 +13,7 @@
     "ember-qunit": "0.1.8",
     "ember-qunit-notifications": "0.0.4",
     "qunit": "~1.15.0",
-    "ionic": "driftyco/ionic-bower#1.0.0-beta.12",
     "fastclick": "~1.0.3",
     "currency.js": "~0.3.1"
-  },
-  "resolutions": {
-    "ember": "canary"
   }
 }
