@@ -30,21 +30,27 @@
 ** later **
 - rechnungen archivierbar machen
 - deprecations
-- content security policy
-- suche/filtern von pflanzen
-- cutomer auto fill in
-- appcache
 - transaction form input validation
 - zu breit?
 - passwort protection
-- empty states
+- suche/filtern von pflanzen
+- customer auto fill in
 
 ** maybe **
-- loading state nice
+- maybe go back a version or two
 - todo size of website ?
 - firebase
+- make colors for active state and active order a bit less colory
+- scrolling behavior of the whole site
+- content security policy (after firebase)
+- empty states
+- appcache
+- remove dependencies in bower (ionic)
+- put back bug (canary?)
+- is it possible to hide loading while going from orders to plants
 
 **done**
+- loading state nice
 - loading state
 - deploy
 - suddenly more than two quarters in order
