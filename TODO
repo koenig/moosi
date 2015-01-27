@@ -1,7 +1,7 @@
 - evt. direkte feedback funktion
 - order-item displayName aus plant.name und plantName
 - bigger touch area "inner button"
-- font: -apple-system-headline;
+- :active state for :hover
 - divider
 - order item  quick view in active order
 - handle removing of quarters
@@ -43,15 +43,17 @@
 - make colors for active state and active order a bit less colory
 - order adress only 2 colums
 - autofocus works stange on new plant
-- scrolling behavior of the whole site
 - content security policy (after firebase)
 - empty states
 - appcache
+- app loading state
+
+**done**
+- scrolling behavior of the whole site
 - remove dependencies in bower (ionic)
 - put back bug (canary?)
 - is it possible to hide loading while going from orders to plants
-
-**done**
+- font: -apple-system-headline;
 - loading state nice
 - loading state
 - deploy
