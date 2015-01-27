@@ -41,11 +41,12 @@
 .smaller {
   font-size: smaller;
 }
-.prime {
-  background-color: rgba(255, 195, 143, 0.4);
+// active states
+.prime, .item:active   {
+  background-color: rgba(255, 195, 143, 0.3);
 }
 .second {
-  background-color: rgba(255, 195, 143, 0.2);
+  background-color: rgba(255, 195, 143, 0.1);
 }
 a.warn {
   color:red;

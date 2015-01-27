@@ -39,16 +39,17 @@
 ** maybe **
 - maybe go back a version or two
 - todo size of website ?
-- firebase
 - make colors for active state and active order a bit less colory
 - order adress only 2 colums
 - autofocus works stange on new plant
-- content security policy (after firebase)
 - empty states
 - appcache
 - app loading state
+- firebase
+- content security policy (after firebase)
 
 **done**
+- item active state
 - scrolling behavior of the whole site
 - remove dependencies in bower (ionic)
 - put back bug (canary?)
