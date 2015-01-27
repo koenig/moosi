@@ -47,6 +47,7 @@
 - content security policy (after firebase)
 
 **done**
+- no vendor css file to save one request
 - empty states
 - order adress only 2 colums
 - autofocus works stange on new plant
