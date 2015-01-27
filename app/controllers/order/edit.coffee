@@ -18,6 +18,7 @@ OrderEditController = Ember.Controller.extend OrderTabActive,
     deleteOrder: ->
       @get('content').destroyRecord().then =>
         @set 'shouldShowCreate', no
+        @set 'deleteMode', no
         Em.run.later( =>
           @transitionTo 'orders'
         , 400)

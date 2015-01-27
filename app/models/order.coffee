@@ -35,8 +35,7 @@ Order.reopenClass
       id: 1
       number: '1'
       customer: 'Marko Liebknecht'
-      adress: 'Tannenallee 23
-      23443 Freiland'
+      adress: 'Tannenallee 23\n23443 Freiland'
       date: '2014-11-15'
       orderItems: [1, 2]
 
@@ -45,8 +44,7 @@ Order.reopenClass
       id: 2
       number: '2'
       customer: 'Resi Laub'
-      adress: 'Hammer Baum 23
-      20243 Hamburg'
+      adress: 'Hammer Baum 23\n20243 Hamburg'
       date: '2014-12-02'
       orderItems: [3]
     }

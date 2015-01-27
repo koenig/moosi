@@ -27,6 +27,10 @@
         <span class='col number calm padding-left'>{{plant.youngPlantQuantity}}</span>
         <span class='col number padding-left peace'>{{plant.quantity}}</span>
       </div>
+    {{else}}
+      <div class='padding acenter'>
+        <em class='note'>keine Pflanze angelegt</em>
+      </div>
     {{/each}}
   </div>
   {{view 'tabs'}}

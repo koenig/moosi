@@ -12,7 +12,6 @@
           {{customer}}<br>
           {{adressWithBreaks}}
         </div>
-        <div class='cell'></div>
         <div class='cell aright bottom smaller'>{{date date}}</div>
       </div>
       <div class='row'>
@@ -39,7 +38,7 @@
                   {{plantPosition.quarter.name}}
                 </span>
                 {{#if plantPosition.isTo}}
-                  {{focus-input value=plantPosition.transaction.quantity type='tel'}}
+                  {{input value=plantPosition.transaction.quantity type='tel'}}
                   <span class='padding-left'>
                     <button class="blue btn-desktop" {{action 'executePutBack' }}>zurücklegen</button>
                   </span>

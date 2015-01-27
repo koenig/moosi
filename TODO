@@ -35,20 +35,23 @@
 - passwort protection
 - suche/filtern von pflanzen
 - customer auto fill in
+- app loading state
+- offline edit mode
+- todo size of website ?
 
 ** maybe **
-- maybe go back a version or two
-- todo size of website ?
-- make colors for active state and active order a bit less colory
-- order adress only 2 colums
-- autofocus works stange on new plant
-- empty states
 - appcache
-- app loading state
+- check adding of quarter
 - firebase
 - content security policy (after firebase)
 
 **done**
+- empty states
+- order adress only 2 colums
+- autofocus works stange on new plant
+- make colors for active state and active order a bit less colory
+- maybe go back a ember version or two
+- delete second results in still in edit mode
 - item active state
 - scrolling behavior of the whole site
 - remove dependencies in bower (ionic)

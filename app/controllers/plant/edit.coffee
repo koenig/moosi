@@ -18,6 +18,7 @@ PlantEditController = Ember.ObjectController.extend
     deleteOrder: ->
       @get('content').destroyRecord().then =>
         @set 'shouldShowCreate', no
+        @set 'deleteMode', no
         Em.run.later( =>
           @transitionTo 'plants'
         , 400)
