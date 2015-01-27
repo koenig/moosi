@@ -41,6 +41,8 @@
 - todo size of website ?
 - firebase
 - make colors for active state and active order a bit less colory
+- order adress only 2 colums
+- autofocus works stange on new plant
 - scrolling behavior of the whole site
 - content security policy (after firebase)
 - empty states
