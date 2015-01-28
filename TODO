@@ -50,6 +50,7 @@
 - double quarters when active order in plant
 
 **done**
+- avoid that btn-small is different in size
 - icon should load correctly
 - check adding of quarter
 - no vendor css file to save one request
