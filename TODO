@@ -38,15 +38,16 @@
 - app loading state
 - offline edit mode
 - todo size of website ?
+- appcache
 
 ** maybe **
-- icon should load correctly
-- appcache
-- check adding of quarter
-- firebase
-- content security policy (after firebase)
+- firebase - content security policy (after firebase)
+- todo quarter button in own line
+- das sieht komisch aus mit dem delete button in iphone, vielleicht etwas mehr responsive
 
 **done**
+- icon should load correctly
+- check adding of quarter
 - no vendor css file to save one request
 - empty states
 - order adress only 2 colums
