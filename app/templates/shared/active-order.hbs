@@ -1,0 +1,27 @@
+{{#if hasActiveOrder}}
+  <div class="item active-order rows">
+    <div {{bind-attr class=":row hasFrom:slim"}}>
+      <span class='cell-center'>
+        {{#link-to 'order' activeOrder}}{{activeOrder.name}}{{/link-to}}
+        {{#if hasFrom }}&nbsp;<span class='badge'>nach</span>{{/if}}
+      </span>
+      <span class='flex'></span>
+      <span>
+        {{#if hasTransaction}}
+          <button href='#' class='btn-small' {{action 'resetTransaction'}}>abbrechen</button>
+        {{else}}
+          <button href='#' {{action 'deselectActiveOrder'}} class="btn-small">abbrechen</button>
+        {{/if}}
+      </span>
+    </div>
+
+    {{#if hasFrom }}
+      <div class="row">
+        {{input value=transaction.quantityInput type='tel'}}
+        <span class='aright padding-left'>
+          <button class="blue btn-desktop" {{action "execute"}}>hinzufügen</button>
+        </span>
+      </div>
+    {{/if}}
+  </div>
+{{/if}}

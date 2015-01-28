@@ -6,19 +6,7 @@
   </div>
 
   <div class='content list'>
-    {{#if hasActiveOrder}}
-      <div class="item active-order rows">
-        <div {{bind-attr class=":row hasFrom:slim"}}>
-          <span>
-            {{#link-to 'order' activeOrder}}{{activeOrder.name}}{{/link-to}}
-          </span>
-          <span class='flex'></span>
-          <span>
-            <a href='#' {{action 'deselectActiveOrder'}} class="smaller">abbrechen</a>
-          </span>
-        </div>
-      </div>
-    {{/if}}
+    {{partial 'shared/active-order'}}
     {{#each plant in filteredContent}}
       <div class="item" {{action 'linkToPlant' plant}}>
         <span>{{plant.name}}</span>

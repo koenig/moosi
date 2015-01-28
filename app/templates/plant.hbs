@@ -11,40 +11,7 @@
   </div>
 
   <div class='content list'>
-    {{#if hasActiveOrder}}
-      <div class="item active-order rows">
-
-
-        <div {{bind-attr class=":row hasFrom:slim"}}>
-          <span>
-            {{#link-to 'order' activeOrder}}{{activeOrder.name}}{{/link-to}}
-          </span>
-
-            {{#if hasFrom }}
-              &nbsp;<span class='note smaller badge padding-left'>
-                nach
-              </span>
-            {{/if}}
-          <span class='flex'></span>
-          <span>
-            {{#if hasTransaction}}
-              <a href='#' class='smaller btn-smaller' {{action 'resetTransaction'}}>abbrechen</a>
-            {{else}}
-              <a href='#' {{action 'deselectActiveOrder'}} class=" smaller btn-smaller'">abbrechen</a>
-            {{/if}}
-          </span>
-        </div>
-
-        {{#if hasFrom }}
-          <div class="row">
-            {{input value=transaction.quantityInput type='tel'}}
-            <span class='aright padding-left'>
-              <button class="blue btn-desktop" {{action "execute"}}> hinzufügen </button>
-            </span>
-          </div>
-        {{/if}}
-      </div>
-    {{/if}}
+    {{partial 'shared/active-order'}}
 
     <div class="item">
       <span>Preis</span>
