@@ -19,32 +19,50 @@
       </div>
       {{#each orderItem in orderItems itemController='orderItem'}}
         <div {{bind-attr class=orderItem.activityStyles}}>
-          <div class="row">
-            <span>{{orderItem.plantName}}&nbsp;
-            {{#if orderItem.isFrom}}
-              <a href="#" class='btn-small note' {{action 'showPutBack'}}>abbrechen</a>
-            {{else}}
-              <a href="#" {{bind-attr class=':btn-small orderItem.hasFrom:note' }} {{action 'showPutBack'}}>zurücklegen</a>
-            {{/if}}</span>
+          <div class="row slim">
+            {{!normal row}}
+            <span>{{orderItem.plantName}}</span>
             <span class='flex'></span>
             <span class='col number peace'>{{orderItem.quantity}}</span>
             <span class='col number calm'>{{euro orderItem.plantPrice}}</span>
             <span class='col number relax'>{{euro orderItem.totalPrice}}</span>
           </div>
+          <div class="row">
+            {{!normal row}}
+            <span>
+            {{#if orderItem.isFrom}}
+              <a href="#" class='btn-small note' {{action 'showPutBack'}}>abbrechen</a>
+            {{else}}
+              <a href="#" {{bind-attr class=':btn-small orderItem.hasFrom:note' }} {{action 'showPutBack'}}>zurücklegen</a>
+            {{/if}}
+            </span>
+            <span class='flex'></span>
+          </div>
+
           {{#if orderItem.isFrom}}
+            {{! selected for putback}}
             {{#each plantPosition in orderItem.plant.positions itemController='plantPosition'}}
               <div {{bind-attr class=plantPosition.activityStyles}}>
-                <span class='padding-right middle'>
+                <div {{bind-attr class=":row :grid-fit :med-grid-1of3 plantPosition.isTo:rows"}}>
+                <span class='padding-sright middle cell slim'>
                   {{plantPosition.quarter.name}}
                 </span>
+
                 {{#if plantPosition.isTo}}
-                  {{input value=plantPosition.transaction.quantity type='tel'}}
-                  <span class='padding-left'>
+                  {{!finale}}
+                  <span class='cell'>
+                    {{input value=plantPosition.transaction.quantity type='tel' class='number-input'}}
+                  </span>
+                  <span class='cell aright'>
                     <button class="blue btn-desktop" {{action 'executePutBack' }}>zurücklegen</button>
                   </span>
                 {{else}}
-                  <a {{bind-attr class="plantPosition.hasTo:note :btn-small" }} {{action 'putBackToQuarter'}}>in dieses Lager zurücklegen</a>
+                  {{! select quarter}}
+                  <span class='padding-left cell'>
+                    <a {{bind-attr class="plantPosition.hasTo:note :btn-small :cell" }} {{action 'putBackToQuarter'}}>hier zurücklegen</a>
+                  </span>
                 {{/if}}
+                </div>
               </div>
             {{/each}}
           {{/if}}

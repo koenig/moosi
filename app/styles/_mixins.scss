@@ -80,3 +80,11 @@
   -webkit-align-items: $values;
   align-items: $values;
 }
+@mixin align-self($values) {
+  -webkit-align-self: $values;
+  align-self: $values;
+}
+@mixin flex-wrap($values) {
+  -webkit-flex-wrap: $values;
+  flex-wrap: $values;
+}

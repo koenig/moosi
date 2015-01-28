@@ -12,8 +12,8 @@ PlantPositionController = Ember.ObjectController.extend
     @get('transaction.to') is @get('content')
 
   activityStyles: Em.computed 'isTo', 'isFrom', ->
-    return 'row prime' if @get 'isTo'
-    'row'
+    return 'prime' if @get 'isTo'
+    ''
 
 
   actions:

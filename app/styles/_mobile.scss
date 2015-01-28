@@ -132,41 +132,6 @@ body {
     }
 }
 
-.card {
-  @include flexbox();
-  // background: green;
-  margin: 8px;
-  padding: 7px;
-  border: 1px solid rgb(221, 221, 221);
-  border-radius: 2px;
-  background-color: #fff;
-
-  .cell {
-    // background: red;
-    padding: 8px 0px;
-
-    @include flex(1);
-  }
-  &.rows {
-    @include flex-direction(column);
-    padding: 0;
-    .row {
-      padding: 8px 16px 8px 16px;
-      @include flexbox();
-    }
-  }
-}
-
-.top {
-  align-items: flex-start;
-}
-.bottom {
-  align-items: flex-end;
-}
-.center {
-  align-items: center;
-}
-
 .content {
   @include flex(1);
   -webkit-overflow:touch;
