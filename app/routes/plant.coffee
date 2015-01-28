@@ -1,9 +1,11 @@
 `import Ember from 'ember'`
 
 PlantRoute = Ember.Route.extend
-  afterModel: (model, transition) ->
+  afterModel: (plant, transition) ->
     if 'plant' is transition.targetName.substring 0, 5
-      transition.send 'setPlantState', model.get('id')
+      transition.send 'setPlantState', plant.get('id')
+    plant.get('positions').then (positions) =>
+      positions.getEach 'quarter'
   actions:
     willTransition: (transition) ->
       if 'plant' is transition.targetName.substring 0, 5

@@ -44,6 +44,10 @@
 - firebase - content security policy (after firebase)
 - todo quarter button in own line
 - das sieht komisch aus mit dem delete button in iphone, vielleicht etwas mehr responsive
+- select quarter in active order mode only for quarters with quantity
+-Transaktion abbrechen in plant
+- Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
+- double quarters when active order in plant
 
 **done**
 - icon should load correctly

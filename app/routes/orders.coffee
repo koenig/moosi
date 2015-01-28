@@ -5,7 +5,6 @@ OrdersRoute = Ember.Route.extend
   actions:
     linkToOrder: (order) -> @transitionTo 'order', order
     selectActiveOrder: (order) ->
-      console.log 'selecting order', order
       @controllerFor('application').set 'activeOrder', order
       @send 'goToPlants'
 
