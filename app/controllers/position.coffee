@@ -20,6 +20,7 @@ PositionController = Ember.ObjectController.extend AccessActiveOrderMixin,
   actions:
     selectPosition: ->
       if @get 'hasActiveOrder'
+        return if 1 > @get 'content.quantity'
         @set 'transaction.from', @get 'content'
       else
         @set 'transaction.to', @get 'content'

@@ -18,13 +18,13 @@
       </div>
     {{/each}}
 
-    <div class='padding flexbox'>
+    <div class='padding'>
       {{input value=selectedQuarter.name}}
-      <div class="aright padding-left">
-        <button {{action 'createQuarter'}} class="blue btn-desktop">
-          {{#if editMode}}ändern{{else}}hinzufügen{{/if}}
-        </button>
-      </div>
+    </div>
+    <div class="aright padding">
+      <button {{action 'createQuarter'}} class="blue btn-desktop">
+        {{#if editMode}}ändern{{else}}hinzufügen{{/if}}
+      </button>
     </div>
   </div>
 

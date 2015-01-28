@@ -29,11 +29,12 @@ QuartersController = Ember.ArrayController.extend
         selectedQuarter: quarter
         editMode: yes
     stopRename: ->
-      @get('selectedQuarter').rollback()
+      @get('selectedQuarter').rollback() if @get('selectedQuarter.isDirty')
       @resetSelection()
 
     goBack: ->
-      @resetSelection()
+      @send 'stopRename'
+      # @resetSelection()
       true
 
 `export default QuartersController`

@@ -6,5 +6,10 @@
   </div>
   <div class='content list'>
     {{partial 'order/form'}}
+    {{#if isNotDeletable}}
+      <div class='padding attach'>
+        <em class='smaller note'>alles zurücklegen</em>
+      </div>
+    {{/if}}
   </div>
 {{/view}}

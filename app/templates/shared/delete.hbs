@@ -4,12 +4,7 @@
   <button class="warn btn-desktop smaller" {{action "deleteOrder"}} title="save">sicher löschen</button>
 {{else}}
   {{#if content.isNew}}{{else}}
-    <button class="btn-desktop warn smaller" {{action "goIntoDeleteMode"}} {{bind-attr disabled=isNotDeletable }}>
-      '{{content.name}}' löschen
-      {{#if isNotDeletable}}
-        <br><em class='smaller black visible'>vorher alles zurücklegen</em>
-      {{/if}}
-    </button>
+    <button class="btn-desktop warn smaller" {{action "goIntoDeleteMode"}} {{bind-attr disabled=isNotDeletable }}>löschen</button>
   {{/if}}
   <span class='flex'></span>
   <button class="blue button" {{bind-attr disabled=isNotValid }} {{action "save"}} title="save">speichern</button>

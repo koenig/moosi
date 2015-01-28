@@ -42,12 +42,13 @@
 
 ** maybe **
 - firebase - content security policy (after firebase)
-- todo quarter button in own line
-- das sieht komisch aus mit dem delete button in iphone, vielleicht etwas mehr responsive
-- select quarter in active order mode only for quarters with quantity
 
 - Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 **done**
+- das sieht komisch aus mit dem delete button in iphone, vielleicht etwas mehr responsive
+- todo quarter button in own line
+- select quarter in active order mode only for quarters with quantity
+- quartiere namensänderung ohne speichern -> zurück -> rollback
 -Transaktion abbrechen in plant
 - double quarters when active order in plant
 - avoid that btn-small is different in size
