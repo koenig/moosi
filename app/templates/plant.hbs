@@ -4,9 +4,9 @@
 
     <h2 class='title'>{{name}}</h2>
     {{#if hasTransaction}}
-      <a></a>
+      <a {{action 'resetTransaction'}}>abbrechen</a>
     {{else}}
-      <a class='right' {{action 'editPlant'}}>bearbeiten</a>
+      <a {{action 'editPlant'}}>bearbeiten</a>
     {{/if}}
   </div>
 

@@ -45,11 +45,11 @@
 - todo quarter button in own line
 - das sieht komisch aus mit dem delete button in iphone, vielleicht etwas mehr responsive
 - select quarter in active order mode only for quarters with quantity
--Transaktion abbrechen in plant
-- Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
-- double quarters when active order in plant
 
+- Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 **done**
+-Transaktion abbrechen in plant
+- double quarters when active order in plant
 - avoid that btn-small is different in size
 - icon should load correctly
 - check adding of quarter
