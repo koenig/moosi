@@ -29,8 +29,11 @@
   vertical-align: middle;
 }
 .badge {
-  padding: 3px 5px;
-  border-radius: 5px;
+  padding: 1px 4px;
+  display:inline-block;
+  border-radius: 3px;
+  font-size: smaller;
+  vertical-align:bottom;
   display: -webkit-inline-box;
   background-color: #43cee6;
   color: white !important;

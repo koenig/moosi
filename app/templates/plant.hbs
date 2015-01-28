@@ -13,25 +13,26 @@
   <div class='content list'>
     {{#if hasActiveOrder}}
       <div class="item active-order rows">
+
+
         <div {{bind-attr class=":row hasFrom:slim"}}>
           <span>
             {{#link-to 'order' activeOrder}}{{activeOrder.name}}{{/link-to}}
           </span>
 
             {{#if hasFrom }}
-              <span class='note smaller badge padding-left'>
+              &nbsp;<span class='note smaller badge padding-left'>
                 nach
               </span>
             {{/if}}
-
-            {{#if hasTransaction}}
-              <a href='#' class='padding-left smaller' {{action 'resetTransaction'}}>abbrechen</a>
-            {{else}}
-              <a href='#' {{action 'deselectActiveOrder'}} class="padding-left smaller">abbrechen</a>
-            {{/if}}
-
           <span class='flex'></span>
-          <span class='smaller note'><em>{{doAction}}</em></span>
+          <span>
+            {{#if hasTransaction}}
+              <a href='#' class='smaller btn-smaller' {{action 'resetTransaction'}}>abbrechen</a>
+            {{else}}
+              <a href='#' {{action 'deselectActiveOrder'}} class=" smaller btn-smaller'">abbrechen</a>
+            {{/if}}
+          </span>
         </div>
 
         {{#if hasFrom }}
@@ -59,9 +60,9 @@
           <span>{{position.quarter.name}}
             {{#if isTransaction}}
               {{#if position.isFrom}}
-                <span class='note smaller badge'>von</span>
+                <span class='badge'>von</span>
               {{/if}}
-              {{#if position.isTo}}<span class='note smaller badge'>nach</span>{{/if}}
+              {{#if position.isTo}}<span class='badge'>nach</span>{{/if}}
             {{/if}}
           </span>
           <span class='flex'></span>

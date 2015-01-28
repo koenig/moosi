@@ -24,8 +24,12 @@
     &.slim {
       padding: 16px 16px 0 16px;
     }
+    &.attach {
+      padding-top: 0;
+    }
   }
 }
+
 
 .row-top, .top {
   @include align-items(flex-start);

@@ -11,11 +11,11 @@
         <div {{bind-attr class=":row hasFrom:slim"}}>
           <span>
             {{#link-to 'order' activeOrder}}{{activeOrder.name}}{{/link-to}}
+          </span>
+          <span class='flex'></span>
+          <span>
             <a href='#' {{action 'deselectActiveOrder'}} class="smaller">abbrechen</a>
           </span>
-
-          <span class='flex'></span>
-          <span class='smaller note'><em>wähl eine Pflanze</em></span>
         </div>
       </div>
     {{/if}}
