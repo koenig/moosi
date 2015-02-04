@@ -1,7 +1,6 @@
 `import DS from 'ember-data'`
-attr = DS.attr
-hasMany = DS.hasMany
-belongsTo = DS.belongsTo
+
+[attr, hasMany, belongsTo] = [DS.attr, DS.hasMany, DS.belongsTo]
 
 Plant = DS.Model.extend
   init: ->

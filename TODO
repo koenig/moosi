@@ -28,6 +28,7 @@
 - deletemode reset (time or leaving of site)
 - make "settings" a real route (and the action sheet coming in outlet)
 ** later **
+- make everything a transaction
 - rechnungen archivierbar machen
 - deprecations
 - transaction form input validation
@@ -39,6 +40,7 @@
 - offline edit mode
 - todo size of website ?
 - appcache
+- app scrolling bouncy when on "scrollable object"
 
 ** maybe **
 - firebase - content security policy (after firebase)
