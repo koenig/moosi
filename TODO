@@ -28,6 +28,7 @@
 - deletemode reset (time or leaving of site)
 - make "settings" a real route (and the action sheet coming in outlet)
 ** later **
+- app loading state
 - make everything a transaction
 - rechnungen archivierbar machen
 - deprecations
@@ -36,7 +37,6 @@
 - passwort protection
 - suche/filtern von pflanzen
 - customer auto fill in
-- app loading state
 - offline edit mode
 - todo size of website ?
 - appcache
@@ -44,6 +44,7 @@
 
 ** maybe **
 - firebase - content security policy (after firebase)
+- hier da ist irgendwie ein fehler bei den transactions
 
 - Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 **done**
