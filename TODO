@@ -43,6 +43,8 @@
 - app scrolling bouncy when on "scrollable object"
 
 ** maybe **
+- moosis emails (packlisten und diese übersicht)
+- indecies for rails
 - write tests (not only for transaction, order selection, put back)
 - polymorphic transactions
 - server transactions beibringen (execute transfer)
