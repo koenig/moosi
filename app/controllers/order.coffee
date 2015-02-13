@@ -3,7 +3,7 @@
 
 OrderController = Ember.ObjectController.extend OrderTabActive,
   adressWithBreaks: Em.computed 'adress', ->
-    new Handlebars.SafeString (@get('adress') or '').replace /(\r\n|\n|\r)/gm, '<br>'
+    new Ember.Handlebars.SafeString (@get('adress') or '').replace /(\r\n|\n|\r)/gm, '<br>'
 
   actions:
     editOrder: ->

@@ -6,6 +6,9 @@ var app = new EmberApp({
   autoprefixer: {
     browsers: ['last 2 ios version'],
     cascade: false
+  },
+  vendorFiles: {
+    'handlebars.js': null
   }
 });
 
