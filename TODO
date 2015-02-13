@@ -1,68 +1,69 @@
-- evt. direkte feedback funktion
+- make everything a transaction
+- firebase - content security policy (after firebase)
+- todo size of website ?
 - order-item displayName aus plant.name und plantName
+**not**
+- evt. direkte feedback funktion
 - bigger touch area "inner button"
-- :active state for :hover
-- divider
 - order item  quick view in active order
-- handle removing of quarters
 - get some icons
 - make the scss file more nice
-- more details in order view
-- passwort funktion
-- "backup"
-- loading state
-- error handling
-- input validation (not null not empty strings)
-- make buttons disableable
-- für den pc layouten
+- deprecations
+- polymorphic transactions
 - eigene icon font
 - handle autofocus
+- die tabs mit icons
+- error handlings
+
+**possible**
+- make "settings" a real route (and the action sheet coming in outlet)
+- :active state for :hover
+- divider
+- handle removing of quarters
+- make single active order area
+- loading state
+- error handling
+- make buttons disableable
+- für den pc layouten
 - make use of <header>
 - should be possible to even get more plants from the order view
 - new each
-- die tabs mit icons
 - vielleicht info auf pflanzen seite, dass man pflanzen aussuchen kann um neue zu erstellen oder verschieben von lagern
-- make single active order area
 - style buttons in header
-- draggable aufräumen
 - deletemode reset (time or leaving of site)
-- make "settings" a real route (and the action sheet coming in outlet)
-- polymorphic transactions
+- input validation (not null not empty strings)
 ** later **
 - app loading state
-- make everything a transaction
-- rechnungen archivierbar machen
-- deprecations
 - transaction form input validation
 - zu breit?
 - passwort protection
-- suche/filtern von pflanzen
-- customer auto fill in
 - offline edit mode
-- todo size of website ?
-- appcache
 - app scrolling bouncy when on "scrollable object"
-- Meinst du man kann das einbauen, dass ich genau wie bei der rechnungsfunktion auch nen "Packzettel" erstellen kann. Dann könnte ich zB abends nach einem Markttag noch auf dem Markt fehlende Positionen in den Packzettel einfügen und abends direkt aus den Quartieren nachpacken.
+- Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
+- caching im backend
 
 ** maybe **
-- caching im backend
+- "deleteable" is nur ne markierung
+- rechnungen archivierbar machen
+- suche/filtern von pflanzen
+- customer auto fill in
 - add isyoung to backend
-- make quarters young or not younable
-- Also vermehrt (jungpflanzen) und Akt gesamt (fertige Pflanzen) hattest du ja schon eingebaut.
-//Getopft und von 2012 (vom letzten Jahr) sind wohl nicht so wichtig.
-//Es wäre super wenn ich zu den Pflanzen jeweils eintragen kann in welchem Quartier (Standort) ich die Pflanzen finde.
-//Und es wär gut wenn ich markieren kann, ob Ich die pflanze schon vermehrt habe und ob ein Etikett vorhanden ist.
-//Etikett erst brauche ich nicht.
+- Also vermehrt (jungpflanzen) und Akt gesamt (fertige Pflanzen) hattest du ja schon eingebaut. -- Getopft und von 2012 (vom letzten Jahr) sind wohl nicht so wichtig. -- Es wäre super wenn ich zu den Pflanzen jeweils eintragen kann in welchem Quartier (Standort) ich die Pflanzen finde. -- Und es wär gut wenn ich markieren kann, ob Ich die pflanze schon vermehrt habe und ob ein Etikett vorhanden ist. -- Etikett erst brauche ich nicht.
 - moosis übersicht
 - indecies in rails
 - appcache
-- write tests (not only for transaction, order selection, put back)
-- Packlisten
+- backend mit frontend testen
+- write tests controller
+- write tests for transaction, order selection, put back
+- Packlisten - Meinst du man kann das einbauen, dass ich genau wie bei der rechnungsfunktion auch nen "Packzettel" erstellen kann. Dann könnte ich zB abends nach einem Markttag noch auf dem Markt fehlende Positionen in den Packzettel einfügen und abends direkt aus den Quartieren nachpacken.
 - server transactions beibringen (execute transfer)
-- firebase - content security policy (after firebase)
+- make quarters young or not youngable
 
-- Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 **done**
+- write tests models
+- draggable aufräumen
+- "backup"
+- more details in order view
 - zurücklegen verstecken
 - when on order reload and select as active order we get double quarters
 - update ember
