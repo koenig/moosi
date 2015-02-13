@@ -22,7 +22,7 @@ test '#youngPlantQuantity', ->
   expect 1
   Em.run =>
     store = @store()
-    young = store.createRecord 'quarter'
+    young = store.createRecord 'quarter', isYoung: yes
     old = store.createRecord 'quarter'
 
     young_p = store.createRecord 'position',
@@ -42,7 +42,7 @@ test '#quantity', ->
   expect 1
   Em.run =>
     store = @store()
-    young = store.createRecord 'quarter'
+    young = store.createRecord 'quarter', isYoung: yes
     old = store.createRecord 'quarter'
     third = store.createRecord 'quarter'
 

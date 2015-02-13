@@ -6,5 +6,15 @@ moduleForModel 'position', 'Position',
 
 test 'it exists', ->
   model = @subject()
-  # store = @store()
   ok !!model
+
+
+test '#isPlant', ->
+  expect 2
+  store = @store()
+  Em.run =>
+    quarter = store.createRecord 'quarter'
+    model = @subject quarter: quarter
+
+    equal model.get('isPlant'), quarter.get('isPlant')
+    equal model.get('isYoung'), quarter.get('isYoung')

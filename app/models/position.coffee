@@ -7,6 +7,9 @@ Position = DS.Model.extend
   plant: belongsTo 'plant'
   quarter: belongsTo 'quarter' #, async: yes # this is probably not a good idea to change otherwise we have double positons in through plant model accessing quarter syncronous
 
+  isYoung: Em.computed.oneWay 'quarter.isYoung'
+  isPlant: Em.computed.oneWay 'quarter.isPlant'
+
 
 Position.reopenClass
   FIXTURES: [

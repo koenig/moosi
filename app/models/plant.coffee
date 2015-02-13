@@ -1,36 +1,32 @@
 `import DS from 'ember-data'`
+`import divideWithHundret from '../utils/divide-with-hundret'`
 
 [attr, hasMany, belongsTo] = [DS.attr, DS.hasMany, DS.belongsTo]
 
 Plant = DS.Model.extend
-  init: ->
-    @_super()
-
+  doThis: (->
     @store.find('quarter').then (quarters) =>
       quarters.forEach (quarter) =>
         foundQuarter = @get('positions').find (position) ->
           position.get('quarter') is quarter
         unless foundQuarter
           @createNewPosition quarter
-
+  ).on 'init'
 
   name: attr()
   priceInCents: attr 'number', defaultValue: 0
-  price: Em.computed 'priceInCents', ->
-    currency(@get('priceInCents')/100).format()
+  price: divideWithHundret 'priceInCents'
 
   positions: hasMany 'position'
   orderItems: hasMany 'orderItem'
 
-  youngPlantQuantity: Em.computed 'positions.@each.quantity', ->
-    @get('positions.firstObject.quantity')
+  youngPlantPositions: Em.computed.filterBy 'positions', 'isYoung'
+  youngPlantsquantityValues: Em.computed.mapBy 'youngPlantPositions', 'quantity'
+  youngPlantQuantity: Em.computed.sum 'youngPlantsquantityValues'
 
-  quantity: Em.computed 'positions.@each.quantity', ->
-    result = 0
-    @get('positions').forEach (position) =>
-      return if position is @get('positions.firstObject')
-      result += position.getWithDefault('quantity', 0)
-    result
+  plantPositions: Em.computed.filterBy 'positions', 'isPlant'
+  quantityValues: Em.computed.mapBy 'plantPositions', 'quantity'
+  quantity: Em.computed.sum 'quantityValues'
 
   createNewPosition: (quarter) ->
     quarter = @store.createRecord 'position',

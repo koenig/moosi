@@ -5,5 +5,15 @@ moduleForModel 'quarter', 'Quarter',
 
 test 'it exists', ->
   model = @subject()
-  # store = @store()
   ok !!model
+
+
+test '#isPlant', ->
+  expect 2
+  Em.run =>
+    model = @subject isYoung: yes
+
+    equal model.get('isPlant'), no
+
+    model.set 'isYoung', no
+    equal model.get('isPlant'), yes
