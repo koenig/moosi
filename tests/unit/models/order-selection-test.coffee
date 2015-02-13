@@ -7,5 +7,15 @@ moduleForModel 'order-selection', 'OrderSelection',
 
 test 'it exists', ->
   model = @subject()
-  # store = @store()
   ok !!model
+
+
+test '#isRealTransaction', ->
+  expect 1
+  store = @store()
+  Em.run =>
+    position = store.createRecord 'position'
+    orderItem = store.createRecord 'orderItem'
+
+    model = @subject from: position, to: orderItem
+    equal model.get('isRealTransaction'), yes

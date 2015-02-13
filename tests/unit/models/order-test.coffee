@@ -9,3 +9,16 @@ test 'it exists', ->
   model = @subject()
   # store = @store()
   ok !!model
+
+
+test '#findOrderItemFor', ->
+  expect 1
+  Em.run =>
+    store = @store()
+    plant = store.createRecord 'plant'
+
+    order = @subject()
+
+    orderItem1 = order.findOrderItemFor plant
+    orderItem2 = order.findOrderItemFor plant
+    equal orderItem1.toString(), orderItem2.toString()

@@ -9,3 +9,24 @@ test 'it exists', ->
   model = @subject()
   # store = @store()
   ok !!model
+
+
+test 'it calulates plantPrice', ->
+  expect 1
+  model = @subject plantPriceInCents: 300
+
+  equal model.get('plantPrice'), 3.00
+
+
+test 'it calulates totalInCents', ->
+  expect 1
+  model = @subject plantPriceInCents: 300, quantity: 2
+
+  equal model.get('totalInCents'), 600
+
+
+test 'it calulates totalPrice', ->
+  expect 1
+  model = @subject plantPriceInCents: 300, quantity: 2
+
+  equal model.get('totalPrice'), 6.00
