@@ -50,17 +50,17 @@
 //Es wäre super wenn ich zu den Pflanzen jeweils eintragen kann in welchem Quartier (Standort) ich die Pflanzen finde.
 //Und es wär gut wenn ich markieren kann, ob Ich die pflanze schon vermehrt habe und ob ein Etikett vorhanden ist.
 //Etikett erst brauche ich nicht.
-- moosis emails (packlisten und diese übersicht)
+- moosis übersicht
 - indecies in rails
 - appcache
 - write tests (not only for transaction, order selection, put back)
 - Packlisten
 - server transactions beibringen (execute transfer)
 - firebase - content security policy (after firebase)
-- zurücklegen verstecken
 
 - Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 **done**
+- zurücklegen verstecken
 - when on order reload and select as active order we get double quarters
 - update ember
 - hier da ist irgendwie ein fehler bei den transactions
