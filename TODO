@@ -46,6 +46,7 @@
 ** maybe **
 - moosis emails (packlisten und diese übersicht)
 - indecies in rails
+- appcache
 - write tests (not only for transaction, order selection, put back)
 - zurücklegen verstecken
 - server transactions beibringen (execute transfer)
