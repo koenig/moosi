@@ -3,4 +3,8 @@
 date = (date) ->
   new Date(date).toLocaleDateString()
 
-`export default date`
+DateHelper = Ember.Handlebars.makeBoundHelper date
+
+`export { date }`
+
+`export default DateHelper`

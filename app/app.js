@@ -2,8 +2,8 @@ import Ember from 'ember';
 import Resolver from 'ember/resolver';
 import loadInitializers from 'ember/load-initializers';
 import config from './config/environment';
-import euro from './helpers/euro';
-import date from './helpers/date';
+import { euro } from './helpers/euro';
+import { date } from './helpers/date';
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
