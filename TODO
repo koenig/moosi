@@ -43,11 +43,11 @@
 - caching im backend
 
 ** maybe **
+- on did create make positions at backend
 - "deleteable" is nur ne markierung
 - rechnungen archivierbar machen
-- suche/filtern von pflanzen
-- customer auto fill in
-- add isyoung to backend
+- suche/filtern von pflanzen -- dieses pull down -- die richtige suche
+- customer auto fill in -- customer list -- customer select
 - Also vermehrt (jungpflanzen) und Akt gesamt (fertige Pflanzen) hattest du ja schon eingebaut. -- Getopft und von 2012 (vom letzten Jahr) sind wohl nicht so wichtig. -- Es wäre super wenn ich zu den Pflanzen jeweils eintragen kann in welchem Quartier (Standort) ich die Pflanzen finde. -- Und es wär gut wenn ich markieren kann, ob Ich die pflanze schon vermehrt habe und ob ein Etikett vorhanden ist. -- Etikett erst brauche ich nicht.
 - moosis übersicht
 - appcache
@@ -58,9 +58,10 @@
 -- routen kreieren
 -- model kreieren
 -- controller kreieren
-- server transactions beibringen (execute transfer)
 
 **done**
+- add isyoung to backend
+- server transactions beibringen (execute transfer)
 - make quarters young or not youngable
 - indecies in rails
 - write tests models
