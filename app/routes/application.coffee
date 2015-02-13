@@ -1,6 +1,14 @@
 `import Ember from 'ember'`
 
 ApplicationRoute = Ember.Route.extend
+  afterModel: ->
+    @store.find 'plant'
+    @store.find 'position'
+
+    @store.find 'order'
+    @store.find 'orderItem'
+
+    @store.find 'quarter'
   actions:
     goToOrders: ->
       if @get 'orderState'
