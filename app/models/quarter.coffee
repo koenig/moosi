@@ -3,7 +3,7 @@
 [attr, hasMany, belongsTo] = [DS.attr, DS.hasMany, DS.belongsTo]
 
 Quarter = DS.Model.extend
-  name: attr()
+  name: attr 'string'
   positions: hasMany 'position'
 
 
