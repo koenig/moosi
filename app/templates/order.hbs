@@ -30,10 +30,12 @@
           <div class="row">
             {{!normal row}}
             <span>
-            {{#if orderItem.isFrom}}
-              <a href="#" class='btn-small note' {{action 'showPutBack'}}>abbrechen</a>
-            {{else}}
-              <a href="#" {{bind-attr class=':btn-small orderItem.hasFrom:note' }} {{action 'showPutBack'}}>zurücklegen</a>
+            {{#if showPutBacks}}
+              {{#if orderItem.isFrom}}
+                <a href="#" class='btn-small note' {{action 'showPutBack'}}>abbrechen</a>
+              {{else}}
+                <a href="#" {{bind-attr class=':btn-small orderItem.hasFrom:note' }} {{action 'showPutBack'}}>zurücklegen</a>
+              {{/if}}
             {{/if}}
             </span>
             <span class='flex'></span>
@@ -83,6 +85,9 @@
 
     <div class="padding aright">
       <button class="blue btn-desktop" {{action "selectActiveOrder" this}}>Pflanzen hinzufügen</button>
+    </div>
+    <div class="padding aright">
+      <button class="btn-small" {{action "togglePutBacks"}}>Pflanzen zurücklegen</button>
     </div>
   </div>
   {{view 'tabs'}}
