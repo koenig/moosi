@@ -23,6 +23,7 @@
 - vermehrt
 - jungpflanzen
 - pflanzen
+- analytiks
 
 **possible**
 - make "settings" a real route (and the action sheet coming in outlet)
@@ -52,6 +53,7 @@
 - caching im backend
 
 ** maybe **
+- make adress take you to edit
 - quarter -> standort
 - on did create make positions at backend
 - "deleteable" is nur ne markierung
