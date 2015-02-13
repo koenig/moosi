@@ -7,7 +7,9 @@
   <div class='content list'>
     {{#each quarter in arrangedContent itemController='quarter'}}
       <div {{bind-attr class="quarter.isActive:prime :item"}}>
-        <span class='flex'>{{quarter.name}}</span>
+        <span {{bind-attr class='quarter.isYoung:calm'}}>{{quarter.name}}</span>
+        <span class='flex'></span>
+
         {{#if quarter.isActive}}
           <a href="#" class='btn-small' {{action 'stopRename' quarter}}>abbrechen</a>
         {{else}}
@@ -18,13 +20,22 @@
       </div>
     {{/each}}
 
-    <div class='padding'>
+    <div class="padding">
       {{input value=selectedQuarter.name}}
     </div>
-    <div class="aright padding">
-      <button {{action 'createQuarter'}} class="blue btn-desktop">
-        {{#if editMode}}ändern{{else}}hinzufügen{{/if}}
+
+    <div class="aright padding flexbox center">
+      <button class="note btn-small" {{action 'toggleIsYoung'}}>
+        {{#if selectedQuarter.isYoung}}
+          <span class='calm'>Jungpflanzenlager</span>
+        {{else}}
+          Pflanzenlager
+        {{/if}}
       </button>
+      <span class='flex'></span>
+        <button {{action 'createQuarter'}} class="blue btn-desktop">
+          {{#if editMode}}ändern{{else}}hinzufügen{{/if}}
+        </button>
     </div>
   </div>
 

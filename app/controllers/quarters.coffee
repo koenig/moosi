@@ -6,7 +6,7 @@ QuartersController = Ember.ArrayController.extend
   editMode: no
   resetSelection: ->
     @setProperties
-      selectedQuarter: name: null
+      selectedQuarter: name: '', isYoung: no
       editMode: no
   actions:
     createQuarter: ->
@@ -34,7 +34,10 @@ QuartersController = Ember.ArrayController.extend
 
     goBack: ->
       @send 'stopRename'
-      # @resetSelection()
-      true
+      yes
+
+    toggleIsYoung: ->
+      @toggleProperty 'selectedQuarter.isYoung'
+      no
 
 `export default QuartersController`
