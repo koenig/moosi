@@ -27,6 +27,7 @@
 - draggable aufräumen
 - deletemode reset (time or leaving of site)
 - make "settings" a real route (and the action sheet coming in outlet)
+- polymorphic transactions
 ** later **
 - app loading state
 - make everything a transaction
@@ -46,13 +47,14 @@
 - moosis emails (packlisten und diese übersicht)
 - indecies for rails
 - write tests (not only for transaction, order selection, put back)
-- polymorphic transactions
+- zurücklegen verstecken
 - server transactions beibringen (execute transfer)
 - firebase - content security policy (after firebase)
-- hier da ist irgendwie ein fehler bei den transactions
+- when on order reload and select as active order we get double quarters
 
 - Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 **done**
+- hier da ist irgendwie ein fehler bei den transactions
 - das sieht komisch aus mit dem delete button in iphone, vielleicht etwas mehr responsive
 - todo quarter button in own line
 - select quarter in active order mode only for quarters with quantity
