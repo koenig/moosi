@@ -15,6 +15,15 @@
 - die tabs mit icons
 - error handlings
 
+**icons**
+- rechnung
+- packlisten
+- pflanzen
+- ettiket
+- vermehrt
+- jungpflanzen
+- pflanzen
+
 **possible**
 - make "settings" a real route (and the action sheet coming in outlet)
 - :active state for :hover
@@ -43,6 +52,7 @@
 - caching im backend
 
 ** maybe **
+- quarter -> standort
 - on did create make positions at backend
 - "deleteable" is nur ne markierung
 - rechnungen archivierbar machen
