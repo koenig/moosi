@@ -7,7 +7,6 @@ moduleForModel 'order-item', 'OrderItem',
 
 test 'it exists', ->
   model = @subject()
-  # store = @store()
   ok !!model
 
 

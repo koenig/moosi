@@ -1,4 +1,5 @@
 `import DS from 'ember-data'`
+`import divideWithHundret from '../utils/divide-with-hundret'`
 
 [attr, hasMany, belongsTo] = [DS.attr, DS.hasMany, DS.belongsTo]
 
@@ -9,12 +10,10 @@ OrderItem = DS.Model.extend
   plantPriceInCents: attr 'number'
   quantity: attr 'number'
 
-  plantPrice: Em.computed 'plantPriceInCents', ->
-    @get('plantPriceInCents')/100
-  totalInCents: Em.computed 'plant.priceInCents', 'quantity', ->
+  plantPrice: divideWithHundret 'plantPriceInCents'
+  totalInCents: Em.computed 'plantPriceInCents', 'quantity', ->
     @get('plantPriceInCents') * @get('quantity')
-  totalPrice: Em.computed 'totalInCents', ->
-    @get('totalInCents')/100
+  totalPrice: divideWithHundret 'totalInCents'
 
 OrderItem.reopenClass
   FIXTURES: [
