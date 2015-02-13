@@ -6,5 +6,11 @@ moduleForModel 'put-back', 'PutBack',
 
 test 'it exists', ->
   model = @subject()
-  # store = @store()
   ok !!model
+
+
+test '#isRealTransaction', ->
+  expect 1
+  model = @subject()
+
+  equal model.get('isRealTransaction'), yes

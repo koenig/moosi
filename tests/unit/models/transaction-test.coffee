@@ -7,5 +7,19 @@ moduleForModel 'transaction', 'Transaction',
 
 test 'it exists', ->
   model = @subject()
-  # store = @store()
   ok !!model
+
+
+test '#isRealTransaction', ->
+  expect 2
+  store = @store()
+  Em.run =>
+    a = store.createRecord('position')
+    b = store.createRecord('position')
+
+    model = @subject from: a, to: a
+
+    equal model.get('isRealTransaction'), no
+
+    model.set 'to', b
+    equal model.get('isRealTransaction'), yes

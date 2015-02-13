@@ -33,9 +33,11 @@ Plant = DS.Model.extend
     result
 
   createNewPosition: (quarter) ->
-    @store.createRecord 'position',
+    quarter = @store.createRecord 'position',
       quarter: quarter
       plant: @
+    Em.run.later => quarter.save()
+    quarter
 
 Plant.reopenClass
   FIXTURES: [
