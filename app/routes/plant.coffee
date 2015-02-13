@@ -5,7 +5,7 @@ PlantRoute = Ember.Route.extend
     if 'plant' is transition.targetName.substring 0, 5
       transition.send 'setPlantState', plant.get('id')
     plant.get('positions').then (positions) =>
-      positions.getEach 'quarter'
+      positions.forEach (position) -> position.get 'quarter'
   actions:
     willTransition: (transition) ->
       if 'plant' is transition.targetName.substring 0, 5

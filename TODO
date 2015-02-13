@@ -45,16 +45,16 @@
 
 ** maybe **
 - moosis emails (packlisten und diese übersicht)
-- indecies for rails
+- indecies in rails
 - write tests (not only for transaction, order selection, put back)
 - zurücklegen verstecken
 - server transactions beibringen (execute transfer)
 - firebase - content security policy (after firebase)
-- when on order reload and select as active order we get double quarters
-- update ember
 
 - Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 **done**
+- when on order reload and select as active order we get double quarters
+- update ember
 - hier da ist irgendwie ein fehler bei den transactions
 - das sieht komisch aus mit dem delete button in iphone, vielleicht etwas mehr responsive
 - todo quarter button in own line
