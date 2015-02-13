@@ -3,7 +3,9 @@
     "document",
     "window",
     "-Promise",
-    "FastClick"
+    "FastClick",
+    "currency",
+    "$"
   ],
   "browser": true,
   "boss": true,
@@ -29,6 +31,5 @@
   "white": false,
   "eqnull": true,
   "esnext": true,
-  "unused": true,
-  "FastClick": true
+  "unused": true
 }
