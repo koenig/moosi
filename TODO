@@ -56,6 +56,9 @@
 - write tests controller
 - write tests for transaction, order selection, put back
 - Packlisten - Meinst du man kann das einbauen, dass ich genau wie bei der rechnungsfunktion auch nen "Packzettel" erstellen kann. Dann könnte ich zB abends nach einem Markttag noch auf dem Markt fehlende Positionen in den Packzettel einfügen und abends direkt aus den Quartieren nachpacken.
+-- routen kreieren
+-- model kreieren
+-- controller kreieren
 - server transactions beibringen (execute transfer)
 - make quarters young or not youngable
 
