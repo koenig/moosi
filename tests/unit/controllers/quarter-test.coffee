@@ -1,9 +1,7 @@
 `import { test, moduleFor } from 'ember-qunit'`
 
-moduleFor 'controller:quarter', 'QuarterController', {
-  # Specify the other units that are required for this test.
-  # needs: ['controller:foo']
-}
+moduleFor 'controller:quarter', 'QuarterController',
+  needs: ['controller:quarters']
 
 # Replace this with your real tests.
 test 'it exists', ->

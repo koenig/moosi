@@ -1,9 +1,8 @@
 `import { test, moduleForModel } from 'ember-qunit'`
 
-moduleForModel 'put-back', 'PutBack', {
-  # Specify the other units that are required for this test.
-  needs: []
-}
+moduleForModel 'put-back', 'PutBack',
+  needs: 'model:order-item model:order-selection model:order model:plant model:position model:put-back model:quarter model:transaction'.w()
+
 
 test 'it exists', ->
   model = @subject()
