@@ -42,15 +42,22 @@
 - todo size of website ?
 - appcache
 - app scrolling bouncy when on "scrollable object"
+- Meinst du man kann das einbauen, dass ich genau wie bei der rechnungsfunktion auch nen "Packzettel" erstellen kann. Dann könnte ich zB abends nach einem Markttag noch auf dem Markt fehlende Positionen in den Packzettel einfügen und abends direkt aus den Quartieren nachpacken.
 
 ** maybe **
+- Also vermehrt (jungpflanzen) und Akt gesamt (fertige Pflanzen) hattest du ja schon eingebaut.
+//Getopft und von 2012 (vom letzten Jahr) sind wohl nicht so wichtig.
+//Es wäre super wenn ich zu den Pflanzen jeweils eintragen kann in welchem Quartier (Standort) ich die Pflanzen finde.
+//Und es wär gut wenn ich markieren kann, ob Ich die pflanze schon vermehrt habe und ob ein Etikett vorhanden ist.
+//Etikett erst brauche ich nicht.
 - moosis emails (packlisten und diese übersicht)
 - indecies in rails
 - appcache
 - write tests (not only for transaction, order selection, put back)
-- zurücklegen verstecken
+- Packlisten
 - server transactions beibringen (execute transfer)
 - firebase - content security policy (after firebase)
+- zurücklegen verstecken
 
 - Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 **done**
