@@ -7,8 +7,7 @@ OrderSelection = DS.Model.extend
   to: belongsTo 'orderItem'
   quantity: attr 'number'
 
-  isRealTransaction: Em.computed 'from', 'to', ->
-    @get('to') isnt @get('from')
+  isRealTransaction: yes
 
 
 `export default OrderSelection`

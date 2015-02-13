@@ -7,8 +7,7 @@ PutBack = DS.Model.extend
   to: belongsTo 'position'
   quantity: attr 'number'
 
-  isRealTransaction: Em.computed 'from', 'to', ->
-    @get('to') isnt @get('from')
+  isRealTransaction: yes
 
 
 
