@@ -8,10 +8,10 @@ Plant = DS.Model.extend
 
     @store.find('quarter').then (quarters) =>
       quarters.forEach (quarter) =>
-        @get('positions').then (positions) =>
-          foundQuarter = positions.find (position) -> position.get('quarter') is quarter
-          unless foundQuarter
-            @createNewPosition quarter
+        foundQuarter = @get('positions').find (position) ->
+          position.get('quarter') is quarter
+        unless foundQuarter
+          @createNewPosition quarter
 
 
   name: attr()
@@ -19,8 +19,8 @@ Plant = DS.Model.extend
   price: Em.computed 'priceInCents', ->
     currency(@get('priceInCents')/100).format()
 
-  positions: hasMany 'position', async: yes
-  orderItems: hasMany 'orderItem', async: true
+  positions: hasMany 'position'
+  orderItems: hasMany 'orderItem'
 
   youngPlantQuantity: Em.computed 'positions.@each.quantity', ->
     @get('positions.firstObject.quantity')

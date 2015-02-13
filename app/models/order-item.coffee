@@ -3,8 +3,8 @@
 [attr, hasMany, belongsTo] = [DS.attr, DS.hasMany, DS.belongsTo]
 
 OrderItem = DS.Model.extend
-  order: belongsTo 'order', async: yes
-  plant: belongsTo 'plant', async: yes
+  order: belongsTo 'order'
+  plant: belongsTo 'plant'
   plantName: attr 'string'
   plantPriceInCents: attr 'number'
   quantity: attr 'number'
