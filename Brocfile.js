@@ -3,12 +3,24 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
-  autoprefixer: {
-    browsers: ['last 2 ios version'],
-    cascade: false
-  },
   vendorFiles: {
     'handlebars.js': null
+  },
+  fingerprint: {
+    enabled: true    
+  },
+  outputPaths: {
+    app: {
+      html: 'index.html',
+      css: {
+        'app': '/assets/moosi.css'
+      },
+      js: '/assets/moosi.js'
+    },
+    vendor: {
+      css: '/assets/hidden/vendor.css',
+      js: '/assets/vendor.js'
+    }
   }
 });
 

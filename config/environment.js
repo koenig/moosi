@@ -19,6 +19,12 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.manifest = {
+    enabled: true,
+    excludePaths: ['robots.txt', 'crossdomain.xml', 'index.html', 'testem.js', 'tests/index.html', 'assets/hidden/'],
+    showCreateDate: false,
+  }
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
