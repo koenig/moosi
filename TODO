@@ -74,9 +74,9 @@
 -- routen kreieren
 -- model kreieren
 -- controller kreieren
-- make adress take you to edit
 
 **done**
+- make adress take you to edit
 - appcache
 - add isyoung to backend
 - server transactions beibringen (execute transfer)
