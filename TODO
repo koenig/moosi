@@ -43,6 +43,7 @@
 - deletemode reset (time or leaving of site)
 - input validation (not null not empty strings)
 ** later **
+- dryer routes
 - app loading state
 - transaction form input validation
 - zu breit?
@@ -64,16 +65,21 @@
 - backend mit frontend testen
 **last**
 
-
+- ember data update
 - moosis übersicht
 - on did create make positions at backend
 - Also vermehrt (jungpflanzen) und Akt gesamt (fertige Pflanzen) hattest du ja schon eingebaut. -- Getopft und von 2012 (vom letzten Jahr) sind wohl nicht so wichtig. -- Es wäre super wenn ich zu den Pflanzen jeweils eintragen kann in welchem Quartier (Standort) ich die Pflanzen finde. -- Und es wär gut wenn ich markieren kann, ob Ich die pflanze schon vermehrt habe und ob ein Etikett vorhanden ist. -- Etikett erst brauche ich nicht.
 - write tests controller
 - write tests for transaction, order selection, put back
 - Packlisten - Meinst du man kann das einbauen, dass ich genau wie bei der rechnungsfunktion auch nen "Packzettel" erstellen kann. Dann könnte ich zB abends nach einem Markttag noch auf dem Markt fehlende Positionen in den Packzettel einfügen und abends direkt aus den Quartieren nachpacken.
--- routen kreieren
--- model kreieren
--- controller kreieren
+-- packing list "done" abhacken können
+-- packlist: templates
+-- packlist: tabbs
+-- packlist: link logic
+-- packlist: controller kreieren
+-- packlist: order anpassen
+-- packlist: routen kreieren
+-- packlist: router einstellen
 
 **done**
 - make adress take you to edit
