@@ -15,6 +15,10 @@ Router.map ->
     @resource 'order', path: '/:order_id', ->
       @route 'edit'
     @route 'create'
+  @resource 'packing-lists', ->
+    @resource 'packing-list', path: '/:packing_list_id', ->
+      @route 'edit'
+    @route 'create'
 
   # @route 'loading'
 
