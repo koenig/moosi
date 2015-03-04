@@ -1,8 +1,9 @@
 `import DS from 'ember-data'`
+`import className from '../mixins/class-name'`
 
 [attr, hasMany, belongsTo] = [DS.attr, DS.hasMany, DS.belongsTo]
 
-Position = DS.Model.extend
+Position = DS.Model.extend className, 
   quantity: attr 'number', defaultValue: 0
   plant: belongsTo 'plant'
   quarter: belongsTo 'quarter' #, async: yes # this is probably not a good idea to change otherwise we have double positons in through plant model accessing quarter syncronous
