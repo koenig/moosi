@@ -1,10 +1,9 @@
 `import DS from 'ember-data'`
 `import divideWithHundret from '../utils/divide-with-hundret'`
-`import className from '../mixins/class-name'`
 
 [attr, hasMany, belongsTo] = [DS.attr, DS.hasMany, DS.belongsTo]
 
-Plant = DS.Model.extend className,
+Plant = DS.Model.extend
   doThis: (->
     @store.find('quarter').then (quarters) =>
       quarters.forEach (quarter) =>

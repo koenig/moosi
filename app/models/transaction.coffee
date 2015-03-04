@@ -1,10 +1,9 @@
 `import DS from 'ember-data'`
-`import className from '../mixins/class-name'`
 
 [attr, hasMany, belongsTo] = [DS.attr, DS.hasMany, DS.belongsTo]
 
 
-Transaction = DS.Model.extend className, 
+Transaction = DS.Model.extend
   from: belongsTo 'position'
   to: belongsTo 'position'
   quantity: attr 'number'

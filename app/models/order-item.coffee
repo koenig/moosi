@@ -1,10 +1,9 @@
 `import DS from 'ember-data'`
 `import divideWithHundret from '../utils/divide-with-hundret'`
-`import className from '../mixins/class-name'`
 
 [attr, hasMany, belongsTo] = [DS.attr, DS.hasMany, DS.belongsTo]
 
-OrderItem = DS.Model.extend className,
+OrderItem = DS.Model.extend
   order: belongsTo 'order'
   plant: belongsTo 'plant'
   plantName: attr 'string'
