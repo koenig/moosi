@@ -1,20 +1,20 @@
 `import Ember from 'ember'`
 
 ApplicationController = Ember.Controller.extend
-  queryParams: ['activeOrderId']
-  activeOrderId: null
+  queryParams: ['aid']
+  aid: null
 
   onActiveOrderChange: (->
-    return if @get('activeOrderId') is @get('activeOrder.id')
-    @set 'activeOrderId', @get 'activeOrder.id'
+    return if @get('aid') is @get('activeOrder.id')
+    @set 'aid', @get 'activeOrder.id'
   ).observes 'activeOrder'
 
   onActiveOrderIdChange: ( ->
-    return unless @get 'activeOrderId'
-    @store.find('order',  @get 'activeOrderId').then (newOrder) =>
+    return unless @get 'aid'
+    @store.find('order',  @get 'aid').then (newOrder) =>
       return if @get('activeOrder.id') is newOrder.get('id')
       @set 'activeOrder', newOrder
-  ).observes 'activeOrderId'
+  ).observes 'aid'
 
 
 `export default ApplicationController`
