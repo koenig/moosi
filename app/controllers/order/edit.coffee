@@ -1,7 +1,6 @@
 `import Ember from 'ember'`
-`import OrderTabActive from 'moosi/mixins/order-tab-active'`
 
-OrderEditController = Ember.Controller.extend OrderTabActive,
+OrderEditController = Ember.Controller.extend
   isNotDeletable: Em.computed 'content.orderItems.[]', ->
     @get('content.orderItems.length') > 0
   actions:

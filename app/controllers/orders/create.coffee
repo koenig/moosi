@@ -1,7 +1,6 @@
 `import Ember from 'ember'`
-`import OrderTabActive from 'moosi/mixins/order-tab-active'`
 
-OrdersCreateController = Ember.Controller.extend OrderTabActive,
+OrdersCreateController = Ember.Controller.extend
   actions:
     save: ->
       properties =
