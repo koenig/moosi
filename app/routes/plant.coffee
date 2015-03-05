@@ -1,13 +1,11 @@
 `import Ember from 'ember'`
 
 PlantRoute = Ember.Route.extend
-  afterModel: (plant, transition) ->
-    if 'plant' is transition.targetName.substring 0, 5
-      transition.send 'setPlantState', plant.get('id')
+  afterModel: (model, transition) ->
+    @updateStateTo transition, 'plant', model.get('id')
   actions:
     willTransition: (transition) ->
-      if 'plant' is transition.targetName.substring 0, 5
-        transition.send 'setPlantState', false
+      @updateStateTo transition, 'plant', no
     goBack: ->
       @transitionTo 'plants'
 

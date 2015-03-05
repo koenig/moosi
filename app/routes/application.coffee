@@ -10,24 +10,19 @@ ApplicationRoute = Ember.Route.extend
 
     @store.find 'quarter'
   actions:
-    goToOrders: ->
-      if @get 'orderState'
-        @controllerFor('order').set 'shouldShowCreate', yes
-        @transitionTo 'order', @get 'orderState'
+    goTo: (whereTo) ->
+      if @get "#{whereTo}State"
+        @controllerFor(whereTo).set 'shouldShowCreate', yes
+        @transitionTo whereTo.dasherize(), @get "#{whereTo}State"
       else
-        @transitionTo 'orders'
-    goToPlants: ->
-      if @get 'plantState'
-        @controllerFor('plant').set 'shouldShowCreate', yes
-        @transitionTo 'plant', @get 'plantState'
-      else
-        @transitionTo 'plants'
+        @transitionTo "#{whereTo.pluralize().dasherize()}"
 
-    setOrderState: (newState) ->
-      @set 'orderState', newState
-    setPlantState: (newState) ->
-      @set 'plantState', newState
+    setState: (name, newState) ->
+      @set "#{name}State", newState
 
+    selectActiveOrder: (order) ->
+      @controllerFor('application').set 'activeOrder', order
+      @send 'goTo', 'plant'
     deselectActiveOrder: ->
       @controllerFor('application').set 'activeOrder', null
       @controllerFor('transaction').send 'resetTransaction'

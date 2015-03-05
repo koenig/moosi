@@ -1,13 +1,11 @@
 `import Ember from 'ember'`
 
 OrderRoute = Ember.Route.extend
-  afterModel: (order, transition) ->
-    if 'order' is transition.targetName.substring 0, 5
-      transition.send 'setOrderState', order.get('id')
+  afterModel: (model, transition) ->
+    @updateStateTo transition, 'order', model.get('id')
   actions:
     willTransition: (transition) ->
-      if 'order' is transition.targetName.substring 0, 5
-        transition.send 'setOrderState', false
+      @updateStateTo transition, 'order', false
     goBack: ->
       @transitionTo 'orders'
 

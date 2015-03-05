@@ -52,6 +52,7 @@
 - app scrolling bouncy when on "scrollable object"
 - Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 - caching im backend
+-- packlist: check if tabbed history link logic is still working (write tests)
 ** maybe **
 
 - maybe route logic instead of resources absically just moving order/edit to orders/order/edit
@@ -75,12 +76,12 @@
 - Packlisten - Meinst du man kann das einbauen, dass ich genau wie bei der rechnungsfunktion auch nen "Packzettel" erstellen kann. Dann könnte ich zB abends nach einem Markttag noch auf dem Markt fehlende Positionen in den Packzettel einfügen und abends direkt aus den Quartieren nachpacken.
 -- packing list "done" abhacken können
 -- packlist: order anpassen
--- packlists: tabbs titles
--- packlist: check if tabbed link logic is still working (write tests)
--- packlist: make the internal links obey orders/packing-list sublinks
--- packlist: tabbs
+-- packlists: tabbs titles and highlight
 
 **done**
+-- packlist: make the internal links obey orders/packing-list sublinks
+-- packlist: tabbs
+- use dependency injection for classname and is active tab
 -- packlist: templates
 -- packlist: controller kreieren
 -- packlist: routen kreieren
