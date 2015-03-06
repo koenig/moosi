@@ -20,12 +20,12 @@ PlantEditController = Ember.ObjectController.extend
         @set 'shouldShowCreate', no
         @set 'deleteMode', no
         Em.run.later( =>
-          @transitionTo 'plants'
+          @transitionToRoute 'plants'
         , 400)
     goBack: ->
       @get('content').rollback()
       @set 'shouldShowCreate', no
-      @transitionTo 'plant'
+      @transitionToRoute 'plant'
       no
 
 
