@@ -1,0 +1,27 @@
+<div class="moosi">
+  <div class='header'>
+    <a class='left'></a>
+    <h1 class="title">Packzettel</h1>
+    {{#link-to 'packing-lists.create'}}neu{{/link-to}}
+  </div>
+
+  <div class='content list'>
+    {{#each order in arrangedContent}}
+      <div class="item rows" {{action 'linkTo' order}}>
+        <div class='row'>
+          <span>{{order.customer}}</span>
+          <span class='flex col fatter smaller calm'>
+            {{date order.date}}
+          </span>
+        </div>
+      </div>
+    {{else}}
+      <div class='padding acenter'>
+        <em class='note'>keine Packzettel angelegt</em>
+      </div>
+    {{/each}}
+  </div>
+
+  {{view 'tabs'}}
+</div>
+{{outlet}}

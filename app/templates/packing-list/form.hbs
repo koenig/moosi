@@ -1,0 +1,14 @@
+<div class="item item-input">
+  <label for="customer" class='input-label'>Name</label>
+  {{input value=content.customer}}
+</div>
+
+<div class="item item-input">
+  <label for="date" class='input-label'>Datum</label>
+  {{date-input date=content.date type='date'}}
+</div>
+
+
+<div class="padding aright flexbox">
+  {{partial 'shared/delete'}}
+</div>
