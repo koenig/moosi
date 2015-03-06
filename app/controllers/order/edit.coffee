@@ -19,11 +19,11 @@ OrderEditController = Ember.Controller.extend
         @set 'shouldShowCreate', no
         @set 'deleteMode', no
         Em.run.later( =>
-          @transitionTo 'orders'
+          @transitionToRoute 'orders'
         , 400)
     goBack: ->
       @get('content').rollback()
       @set 'shouldShowCreate', no
-      @transitionTo 'order'
+      @transitionToRoute 'order'
 
 `export default OrderEditController`
