@@ -80,11 +80,11 @@
 - Packlisten - Meinst du man kann das einbauen, dass ich genau wie bei der rechnungsfunktion auch nen "Packzettel" erstellen kann. Dann könnte ich zB abends nach einem Markttag noch auf dem Markt fehlende Positionen in den Packzettel einfügen und abends direkt aus den Quartieren nachpacken.
 - make the packing list backend (add 'isPackingList')
 - check for default values (where it makes sense)
-- make packing list return customer as name
 -- packing list "done" abhacken können
--- make the packing list filters for models routes
+- make packing list return customer as name
 
 **done**
+-- make the packing list filters for models routes
 -- packlist: order model anpassen
 -- packlists: tabbs titles and highlight
 -- packlist: make the internal links obey orders/packing-list sublinks

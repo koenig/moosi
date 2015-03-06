@@ -1,7 +1,7 @@
 `import Ember from 'ember'`
 
 OrdersRoute = Ember.Route.extend
-  model: -> @store.find 'order'
+  model: -> @store.filter 'order', (order) -> not order.get('isPackingList')
   actions:
     linkTo: (id) -> @transitionTo 'order', id
 
