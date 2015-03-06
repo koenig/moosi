@@ -18,7 +18,7 @@ ApplicationRoute = Ember.Route.extend
         @transitionTo "#{whereTo.pluralize().dasherize()}"
 
     setState: (name, newState) ->
-      @set "#{name}State", newState
+      @set "#{name.camelize()}State", newState
 
     selectActiveOrder: (order) ->
       @controllerFor('application').set 'activeOrder', order
