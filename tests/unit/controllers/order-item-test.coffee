@@ -10,3 +10,12 @@ test 'it exists', ->
   controller = @subject()
   ok controller
 
+test ' -> #toggleDone', ->
+  controller = @subject(content: Em.Object.create(done: no))
+
+  controller.send 'toggleDone'
+  equal controller.get('content.done'), yes, 'content.done should be true'
+
+  controller.send 'toggleDone'
+  equal controller.get('content.done'), no, 'content.done should be false'
+

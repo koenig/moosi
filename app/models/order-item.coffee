@@ -9,6 +9,7 @@ OrderItem = DS.Model.extend
   plantName: attr 'string'
   plantPriceInCents: attr 'number'
   quantity: attr 'number'
+  done: attr 'boolean'
 
   plantPrice: divideWithHundret 'plantPriceInCents'
   totalInCents: Em.computed 'plantPriceInCents', 'quantity', ->

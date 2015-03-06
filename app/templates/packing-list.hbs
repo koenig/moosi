@@ -9,11 +9,11 @@
     <div class="card rows">
       {{#each orderItem in orderItems itemController='orderItem'}}
         <div {{bind-attr class=orderItem.activityStyles}}>
-          <div class="row slim">
+          <div {{action 'toggleDone' bubbles=false}} {{bind-attr class=":row :slim orderItem.done:note"}}>
             {{!normal row}}
             <span>{{orderItem.plantName}}</span>
             <span class='flex'></span>
-            <span class='col number peace'>{{orderItem.quantity}}</span>
+            <span {{bind-attr class=":col :number orderItem.done:note:peace"}}>{{orderItem.quantity}}</span>
           </div>
           <div class="row">
             {{!normal row}}
