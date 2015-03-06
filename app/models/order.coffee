@@ -26,6 +26,9 @@ Order = DS.Model.extend
       orderItem.save()
     orderItem
 
+  typeName: Em.computed 'isPackingList', ->
+    return 'packing-list' if @get 'isPackingList'
+    'order'
   totalInCentsValues: Em.computed.mapBy 'orderItems', 'totalInCents'
   totalInCents: Em.computed.sum 'totalInCentsValues'
   totalPrice: Em.computed 'totalInCents', -> @get('totalInCents')/100
