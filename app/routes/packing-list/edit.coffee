@@ -1,8 +1,9 @@
 `import Ember from 'ember'`
 
 PackingListEditRoute = Ember.Route.extend
-  controllerName: 'order/edit'
-  renderTemplate: -> @render 'order/edit'
+  actions:
+    goBack: ->
+      @transitionTo 'packing-list', @modelFor 'packing-list'
 
 
 `export default PackingListEditRoute`

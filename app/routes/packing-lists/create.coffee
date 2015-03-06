@@ -1,7 +1,17 @@
 `import Ember from 'ember'`
 
 PackingListsCreateRoute = Ember.Route.extend
-  controllerName: 'orders/create'
-  renderTemplate: -> @render 'orders/create'
+  model: ->
+    {
+      customer: null
+      adress: null
+      date: new Date()
+      isNew: yes
+      isPackingList: yes
+    }
+
+  actions:
+    goBack: ->
+      @transitionTo 'packing-lists'
 
 `export default PackingListsCreateRoute`
