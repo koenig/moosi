@@ -1,6 +1,7 @@
 `import Ember from 'ember'`
 
 PlantsCreateController = Ember.ObjectController.extend
+  needs: ['plant']
   shouldShowCreate: no
   isNotValid: Em.computed.empty 'content.name'
 
@@ -11,7 +12,7 @@ PlantsCreateController = Ember.ObjectController.extend
           position.save()
         @set 'shouldShowCreate', no
         Em.run.later( =>
-          @controllerFor('plant').set 'shouldShowCreate', yes
+          @get('controllers.plant').set 'shouldShowCreate', yes
           @transitionTo 'plant', model
         , 400)
     saveAndRepeat: ->

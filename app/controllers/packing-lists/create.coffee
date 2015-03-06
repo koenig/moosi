@@ -1,6 +1,7 @@
 `import Ember from 'ember'`
 
 PackingListsCreateController = Ember.Controller.extend
+  needs: ['packing-list']
   actions:
     save: ->
       properties =
@@ -11,7 +12,7 @@ PackingListsCreateController = Ember.Controller.extend
       @store.createRecord('order', properties).save().then (model) =>
         @set 'shouldShowCreate', no
         Em.run.later =>
-          @controllerFor('packing-list').set 'shouldShowCreate', yes
+          @get('controllers.packing-list').set 'shouldShowCreate', yes
           @transitionToRoute 'packing-list', model
         , 400
 

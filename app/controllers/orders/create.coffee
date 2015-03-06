@@ -1,6 +1,7 @@
 `import Ember from 'ember'`
 
 OrdersCreateController = Ember.Controller.extend
+  needs: ['order']
   actions:
     save: ->
       properties =
@@ -10,7 +11,7 @@ OrdersCreateController = Ember.Controller.extend
       @store.createRecord('order', properties).save().then (model) =>
         @set 'shouldShowCreate', no
         Em.run.later =>
-          @controllerFor('order').set 'shouldShowCreate', yes
+          @get('controllers.order').set 'shouldShowCreate', yes
           @transitionToRoute 'order', model
         , 400
 
