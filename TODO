@@ -85,9 +85,9 @@
 - on did create make positions at backend
 - Also vermehrt (jungpflanzen) und Akt gesamt (fertige Pflanzen) hattest du ja schon eingebaut. -- Getopft und von 2012 (vom letzten Jahr) sind wohl nicht so wichtig. -- Es wäre super wenn ich zu den Pflanzen jeweils eintragen kann in welchem Quartier (Standort) ich die Pflanzen finde. -- Und es wär gut wenn ich markieren kann, ob Ich die pflanze schon vermehrt habe und ob ein Etikett vorhanden ist. -- Etikett erst brauche ich nicht.
 - moosis übersicht
-- nächste nummer ohne packing lists berechnen
 
 **done**
+- nächste nummer ohne packing lists berechnen
 - make missing objects (fixture id) go to normal route instead -> tests for
 -- packing list "done" abhacken können (backend)
 - den übergang after create schöner
