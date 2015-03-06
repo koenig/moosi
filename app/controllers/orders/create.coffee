@@ -7,10 +7,11 @@ OrdersCreateController = Ember.Controller.extend
         number: @get('content.number')
         customer: @get('content.customer')
         adress: @get('content.adress')
-      @store.createRecord('order', properties).save().then (order) =>
+      @store.createRecord('order', properties).save().then (model) =>
         @set 'shouldShowCreate', no
         Em.run.later =>
-          @transitionToRoute 'orders'
+          @controllerFor('order').set 'shouldShowCreate', yes
+          @transitionToRoute 'order', model
         , 400
 
 

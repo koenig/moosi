@@ -2,6 +2,7 @@
 
 OrderController = Ember.ObjectController.extend
   showPutBacks: no
+  shouldShowCreate: no
   adressWithBreaks: Em.computed 'adress', ->
     new Ember.Handlebars.SafeString (@get('adress') or '').replace /(\r\n|\n|\r)/gm, '<br>'
 

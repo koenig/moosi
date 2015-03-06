@@ -65,11 +65,13 @@
 - move linkto in application route and make generic
 - ember cli update
 - ember data update
+- access active order could be an initializer
 - Em.run.later in one line
 - write tests controller
 - write tests for transaction, order selection, put back
 - maybe show last added at active order/packing list
 - farben noch mal überdenken
+- goback could be generic too
 **features**
 
 
@@ -80,11 +82,11 @@
 - on did create make positions at backend
 - Also vermehrt (jungpflanzen) und Akt gesamt (fertige Pflanzen) hattest du ja schon eingebaut. -- Getopft und von 2012 (vom letzten Jahr) sind wohl nicht so wichtig. -- Es wäre super wenn ich zu den Pflanzen jeweils eintragen kann in welchem Quartier (Standort) ich die Pflanzen finde. -- Und es wär gut wenn ich markieren kann, ob Ich die pflanze schon vermehrt habe und ob ein Etikett vorhanden ist. -- Etikett erst brauche ich nicht.
 - moosis übersicht
--- after create of order and packing list go to the order and packing list instead of the overview
 -- packing list "done" abhacken können
 -- packing list "done" abhacken können (backend)
 
 **done**
+-- after create of order and packing list go to the order and packing list instead of the overview
 - Packlisten - Meinst du man kann das einbauen, dass ich genau wie bei der rechnungsfunktion auch nen "Packzettel" erstellen kann. Dann könnte ich zB abends nach einem Markttag noch auf dem Markt fehlende Positionen in den Packzettel einfügen und abends direkt aus den Quartieren nachpacken.
 - make the packing list backend (add 'isPackingList')
 - make active order link go to packing lists if necessary

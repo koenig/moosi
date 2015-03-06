@@ -2,7 +2,7 @@
 
 PackingListController = Ember.ObjectController.extend
   showPutBacks: no
-  # shouldShowCreate: no
+  shouldShowCreate: no
 
   actions:
     togglePutBacks: ->

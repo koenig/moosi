@@ -8,10 +8,11 @@ PackingListsCreateController = Ember.Controller.extend
         customer: @get('content.customer')
         adress: @get('content.adress')
         isPackingList: yes
-      @store.createRecord('order', properties).save().then (order) =>
+      @store.createRecord('order', properties).save().then (model) =>
         @set 'shouldShowCreate', no
         Em.run.later =>
-          @transitionToRoute 'packing-lists'
+          @controllerFor('packing-list').set 'shouldShowCreate', yes
+          @transitionToRoute 'packing-list', model
         , 400
 
 

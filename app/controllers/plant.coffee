@@ -3,6 +3,7 @@
 
 PlantController = Ember.ObjectController.extend AccessActiveOrderMixin,
   needs: ['transaction']
+  shouldShowCreate: no
 
   transaction: Em.computed.alias 'controllers.transaction'
   hasFrom: Em.computed.bool 'transaction.from'
