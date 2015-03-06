@@ -10,11 +10,13 @@ PackingListsCreateController = Ember.Controller.extend
         adress: @get('content.adress')
         isPackingList: yes
       @store.createRecord('order', properties).save().then (model) =>
-        @set 'shouldShowCreate', no
+        @get('controllers.packing-list').set 'shouldShowCreate', no
         Em.run.later =>
-          @get('controllers.packing-list').set 'shouldShowCreate', yes
-          @transitionToRoute 'packing-list', model
-        , 400
+          @set 'shouldShowCreate', no
+          Em.run.later =>
+            @transitionToRoute 'packing-list', model
+          , 300
+        , 300
 
 
 `export default PackingListsCreateController`

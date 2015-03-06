@@ -10,11 +10,13 @@ PlantsCreateController = Ember.ObjectController.extend
       @get('content').save().then (model) =>
         model.get('positions').forEach (position) ->
           position.save()
-        @set 'shouldShowCreate', no
-        Em.run.later( =>
-          @get('controllers.plant').set 'shouldShowCreate', yes
-          @transitionTo 'plant', model
-        , 400)
+        @get('controllers.plant').set 'shouldShowCreate', yes
+        Em.run.later =>
+          @set 'shouldShowCreate', no
+          Em.run.later =>
+            @transitionToRoute 'plant', model
+          , 400
+        , 400
     saveAndRepeat: ->
       @get('content').save().then (plant) =>
         plant.get('positions').forEach (position) ->
