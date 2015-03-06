@@ -3,6 +3,6 @@
 OrdersRoute = Ember.Route.extend
   model: -> @store.find 'order'
   actions:
-    linkToOrder: (order) -> @transitionTo 'order', order
+    linkTo: (id) -> @transitionTo 'order', id
 
 `export default OrdersRoute`
