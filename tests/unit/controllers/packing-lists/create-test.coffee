@@ -2,7 +2,7 @@
 
 moduleFor 'controller:packing-lists/create', {
   # Specify the other units that are required for this test.
-  # needs: ['controller:foo']
+  needs: ['controller:packing-list']
 }
 
 # Replace this with your real tests.
