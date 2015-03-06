@@ -29,7 +29,9 @@ Order = DS.Model.extend
   totalInCentsValues: Em.computed.mapBy 'orderItems', 'totalInCents'
   totalInCents: Em.computed.sum 'totalInCentsValues'
   totalPrice: Em.computed 'totalInCents', -> @get('totalInCents')/100
-  name: Em.computed 'number', -> "Rechnung #{@get('number')}"
+  name: Em.computed 'number', 'customer', 'isPackingList', ->
+    return @get('customer') if @get('isPackingList')
+    "Rechnung #{@get('number')}"
 
 Order.reopenClass
   FIXTURES: [

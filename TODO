@@ -81,9 +81,10 @@
 - make the packing list backend (add 'isPackingList')
 - check for default values (where it makes sense)
 -- packing list "done" abhacken können
-- make packing list return customer as name
+- make active order link go to packing lists if necessary
 
 **done**
+- make packing list return customer as name
 -- make the packing list filters for models routes
 -- packlist: order model anpassen
 -- packlists: tabbs titles and highlight

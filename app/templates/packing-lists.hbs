@@ -9,7 +9,7 @@
     {{#each order in arrangedContent}}
       <div class="item rows" {{action 'linkTo' order}}>
         <div class='row'>
-          <span>{{order.customer}}</span>
+          <span>{{order.name}}</span>
           <span class='flex col fatter smaller calm'>
             {{date order.date}}
           </span>
