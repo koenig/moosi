@@ -23,7 +23,7 @@
 - vermehrt
 - jungpflanzen
 - pflanzen
-- analytiks
+- analytics
 
 **possible**
 - make "settings" a real route (and the action sheet coming in outlet)
@@ -77,7 +77,7 @@
 - dry up animations code (create to model)
 **features**
 
-
+- fehler catcher
 - activate and test appcache
 - backend mit frontend testen
 **last**

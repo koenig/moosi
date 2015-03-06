@@ -13,11 +13,14 @@ PlantsController = Ember.ArrayController.extend AccessActiveOrderMixin,
       @set 'modalVisible', yes
     openActionSheet: ->
       @set 'actionSheetVisible', yes
-    goToQuarters: ->
+    goTo: (where) ->
+      console.log 'go2', where
       @set 'actionSheetVisible', no
-      @transitionToRoute 'quarters'
-    goToImport: ->
-      @set 'actionSheetVisible', no
-      @transitionToRoute 'plants.import'
+
+      nameRouteMap = Em.MapWithDefault.create defaultValue: (key) -> key
+      nameRouteMap.set 'import', 'plants.import'
+      destination = nameRouteMap.get where
+      @transitionToRoute destination
+
 
 `export default PlantsController`

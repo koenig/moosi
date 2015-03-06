@@ -5,6 +5,7 @@ Router = Ember.Router.extend
   location: config.locationType
 
 Router.map ->
+  @resource 'analytics'
   @resource 'plants', ->
     @resource 'plant', path: '/:plant_id', ->
       @route 'edit'

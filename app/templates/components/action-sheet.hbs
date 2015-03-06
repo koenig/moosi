@@ -2,8 +2,10 @@
   <div class="action-sheet-wrapper action-sheet-up">
     <div class="action-sheet">
       <div class="action-sheet-group">
-        <button class="sheet-button" {{action 'goToImport'}}>Pflanzen importieren</button>
-        <button class="sheet-button" {{action 'goToQuarters'}}>Quartiere</button>
+        <button class="sheet-button" {{action 'goTo' 'import'}}>Pflanzen importieren</button>
+        <button class="sheet-button" {{action 'goTo' 'quarters'}}>Quartiere</button>
+        <button class="sheet-button" {{action 'goTo' 'analytics'}}>Analytics</button>
+
       </div>
       <div class="action-sheet-group" ng-if="cancelText">
         <button class="sheet-button" {{action "hideSheet"}}>Zurück</button>
