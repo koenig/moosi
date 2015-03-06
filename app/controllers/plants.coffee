@@ -14,7 +14,6 @@ PlantsController = Ember.ArrayController.extend AccessActiveOrderMixin,
     openActionSheet: ->
       @set 'actionSheetVisible', yes
     goTo: (where) ->
-      console.log 'go2', where
       @set 'actionSheetVisible', no
 
       nameRouteMap = Em.MapWithDefault.create defaultValue: (key) -> key
