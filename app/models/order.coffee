@@ -7,6 +7,7 @@ Order = DS.Model.extend
   customer: attr 'string'
   adress: attr 'string'
   date: attr 'date', defaultValue: -> new Date()
+  isPackingList: attr 'boolean', defaultValue: false
 
   orderItems: hasMany 'orderItem', async: true
 
@@ -39,7 +40,7 @@ Order.reopenClass
       adress: 'Tannenallee 23\n23443 Freiland'
       date: '2014-11-15'
       orderItems: [1, 2]
-
+      isPackingList: no
     }
     {
       id: 2
@@ -48,7 +49,17 @@ Order.reopenClass
       adress: 'Hammer Baum 23\n20243 Hamburg'
       date: '2014-12-02'
       orderItems: [3]
+      isPackingList: no
     }
+    {
+      id: 3
+      number: null
+      customer: 'Höwer Markt'
+      date: '2014-12-22'
+      orderItems: [4, 5]
+      isPackingList: yes
+    }
+
 
   ]
 

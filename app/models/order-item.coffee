@@ -22,7 +22,7 @@ OrderItem.reopenClass
       order: 1
       plant: 1
       quantity: 12
-      plantName: 'Tulpe'
+      plantName: 'Narzisse'
       plantPriceInCents: 200
     }
     {
@@ -30,8 +30,8 @@ OrderItem.reopenClass
       order: 1
       plant: 2
       quantity: 3
-      plantName: 'Tulpe'
-      plantPriceInCents: 200
+      plantName: 'Rose'
+      plantPriceInCents: 320
     }
     {
       id: 3
@@ -39,7 +39,23 @@ OrderItem.reopenClass
       plant: 1
       quantity: 6
       plantName: 'Tulpe'
-      plantPriceInCents: 200
+      plantPriceInCents: 120
+    }
+    {
+      id: 4
+      order: 3
+      plant: 1
+      quantity: 12
+      plantName: 'Glücksfeder'
+      plantPriceInCents: 2200
+    }
+    {
+      id: 5
+      order: 3
+      plant: 2
+      quantity: 3
+      plantName: 'Elefantenfuss'
+      plantPriceInCents: 1900
     }
   ]
 
