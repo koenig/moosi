@@ -19,7 +19,7 @@ PackingListEditController = Ember.Controller.extend
         @set 'shouldShowCreate', no
         @set 'deleteMode', no
         Em.run.later( =>
-          @transitionToRoute 'orders'
+          @transitionToRoute 'packing-lists'
         , 400)
     goBack: ->
       @get('content').rollback()
