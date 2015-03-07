@@ -77,6 +77,7 @@
 - dry up animations code (create to model)
 **features**
 
+- issues menü punkt wäre an sich recht easy, macht es sinn? an sich schon vermutlich mehr issues (on the go) -> remember REWORK
 - fehler catcher
 - activate and test appcache
 - backend mit frontend testen
@@ -84,9 +85,9 @@
 
 - on did create make positions at backend
 - Also vermehrt (jungpflanzen) und Akt gesamt (fertige Pflanzen) hattest du ja schon eingebaut. -- Getopft und von 2012 (vom letzten Jahr) sind wohl nicht so wichtig. -- Es wäre super wenn ich zu den Pflanzen jeweils eintragen kann in welchem Quartier (Standort) ich die Pflanzen finde. -- Und es wär gut wenn ich markieren kann, ob Ich die pflanze schon vermehrt habe und ob ein Etikett vorhanden ist. -- Etikett erst brauche ich nicht.
-- moosis übersicht
 
 **done**
+- moosis übersicht / analytics
 - nächste nummer ohne packing lists berechnen
 - make missing objects (fixture id) go to normal route instead -> tests for
 -- packing list "done" abhacken können (backend)
