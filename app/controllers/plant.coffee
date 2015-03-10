@@ -3,6 +3,7 @@
 
 PlantController = Ember.ObjectController.extend AccessActiveOrderMixin,
   needs: ['transaction']
+  shouldShowCreate: no
 
   transaction: Em.computed.alias 'controllers.transaction'
   hasFrom: Em.computed.bool 'transaction.from'
@@ -27,5 +28,9 @@ PlantController = Ember.ObjectController.extend AccessActiveOrderMixin,
     goBack: ->
       @get('transaction').send 'resetTransaction'
       yes
+
+    toggle: (property) ->
+      @toggleProperty property
+      no
 
 `export default PlantController`

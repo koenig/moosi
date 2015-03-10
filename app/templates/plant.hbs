@@ -19,6 +19,18 @@
       <span class='number relax'>{{euro price}}</span>
     </div>
 
+    <div class="item" {{action 'toggle' 'propagated'}}>
+      <span>Vermehrt</span>
+      <span class='flex'></span>
+      <span class='number relax'>{{bool propagated}}</span>
+    </div>
+
+    <div class="item" {{action 'toggle' 'labelled'}}>
+      <span>Etikettiert</span>
+      <span class='flex'></span>
+      <span class='number relax'>{{bool labelled}}</span>
+    </div>
+
     <div class="item divider">Bestände</div>
 
     {{#each position in positions itemController='position'}}

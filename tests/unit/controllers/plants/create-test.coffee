@@ -2,7 +2,7 @@
 
 moduleFor 'controller:plants/create', 'PlantsCreateController', {
   # Specify the other units that are required for this test.
-  # needs: ['controller:foo']
+  needs: ['controller:plant']
 }
 
 # Replace this with your real tests.

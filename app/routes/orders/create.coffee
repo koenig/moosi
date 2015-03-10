@@ -2,7 +2,7 @@
 
 OrdersCreateRoute = Ember.Route.extend
   model: ->
-    @store.find('order').then (orders) =>
+    @store.filter('order', (order) -> not order.get('isPackingList')).then (orders) =>
       orderCount = orders.content.length + 1
 
       {

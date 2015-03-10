@@ -1,12 +1,8 @@
 `import Ember from 'ember'`
 
 OrdersRoute = Ember.Route.extend
-  model: -> @store.find 'order'
+  model: -> @store.filter 'order', (order) -> not order.get('isPackingList')
   actions:
-    linkToOrder: (order) -> @transitionTo 'order', order
-    selectActiveOrder: (order) ->
-      @controllerFor('application').set 'activeOrder', order
-      @send 'goToPlants'
-
+    linkTo: (id) -> @transitionTo 'order', id
 
 `export default OrdersRoute`

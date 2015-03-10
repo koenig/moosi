@@ -2,7 +2,7 @@
   <div class="item active-order rows">
     <div {{bind-attr class=":row hasFrom:slim"}}>
       <span class='cell-center'>
-        {{#link-to 'order' activeOrder}}{{activeOrder.name}}{{/link-to}}
+        {{#link-to activeOrder.typeName activeOrder}}{{activeOrder.name}}{{/link-to}}
         {{#if hasFrom }}&nbsp;<span class='badge'>nach</span>{{/if}}
       </span>
       <span class='flex'></span>

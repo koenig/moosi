@@ -23,7 +23,7 @@
 - vermehrt
 - jungpflanzen
 - pflanzen
-- analytiks
+- analytics
 
 **possible**
 - make "settings" a real route (and the action sheet coming in outlet)
@@ -43,6 +43,8 @@
 - deletemode reset (time or leaving of site)
 - input validation (not null not empty strings)
 ** later **
+- rename shouldshowcreate
+- dryer routes
 - app loading state
 - transaction form input validation
 - zu breit?
@@ -51,31 +53,69 @@
 - app scrolling bouncy when on "scrollable object"
 - Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 - caching im backend
+-- packlist: check if tabbed history link logic is still working (write tests)
 ** maybe **
 
+- maybe route logic instead of resources absically just moving order/edit to orders/order/edit
 - rechnungen archivierbar machen
 - suche/filtern von pflanzen -- dieses pull down -- die richtige suche
 - "deleteable" is nur ne markierung
 - customer auto fill in -- customer list -- customer select
+- check for default values (where it makes sense)
+- make test for isDeletable and use build in component macros
+- move linkto in application route and make generic
+- ember cli update
+- ember data update
+- access active order could be an initializer
+- Em.run.later in one line
+- write tests controller
+- write tests for transaction, order selection, put back
+- maybe show last added at active order/packing list
+- farben noch mal überdenken
+- goback could be generic too
+- bubbles=false to avoid no's
+- dry up animations code (create to model)
 **features**
 
-
+- issues menü punkt wäre an sich recht easy, macht es sinn? an sich schon vermutlich mehr issues (on the go) -> remember REWORK
+- fehler catcher
 - activate and test appcache
 - backend mit frontend testen
 **last**
 
-
-- moosis übersicht
 - on did create make positions at backend
-- Also vermehrt (jungpflanzen) und Akt gesamt (fertige Pflanzen) hattest du ja schon eingebaut. -- Getopft und von 2012 (vom letzten Jahr) sind wohl nicht so wichtig. -- Es wäre super wenn ich zu den Pflanzen jeweils eintragen kann in welchem Quartier (Standort) ich die Pflanzen finde. -- Und es wär gut wenn ich markieren kann, ob Ich die pflanze schon vermehrt habe und ob ein Etikett vorhanden ist. -- Etikett erst brauche ich nicht.
-- write tests controller
-- write tests for transaction, order selection, put back
-- Packlisten - Meinst du man kann das einbauen, dass ich genau wie bei der rechnungsfunktion auch nen "Packzettel" erstellen kann. Dann könnte ich zB abends nach einem Markttag noch auf dem Markt fehlende Positionen in den Packzettel einfügen und abends direkt aus den Quartieren nachpacken.
--- routen kreieren
--- model kreieren
--- controller kreieren
+- errors on order index
+- error on goback from order
+- etikett und vermehrt auf index
+- handle long plant names on index
 
 **done**
+- als vermehrt markieren
+- etikett vorhanden markierung
+- als vermehrt markieren (backend)
+- etikett vorhanden markierung (backend)
+- Also vermehrt (jungpflanzen) und Akt gesamt (fertige Pflanzen) hattest du ja schon eingebaut. -- Getopft und von 2012 (vom letzten Jahr) sind wohl nicht so wichtig. -- Es wäre super wenn ich zu den Pflanzen jeweils eintragen kann in welchem Quartier (Standort) ich die Pflanzen finde. -- Und es wär gut wenn ich markieren kann, ob Ich die pflanze schon vermehrt habe und ob ein Etikett vorhanden ist. -- Etikett erst brauche ich nicht.
+- moosis übersicht / analytics
+- nächste nummer ohne packing lists berechnen
+- make missing objects (fixture id) go to normal route instead -> tests for
+-- packing list "done" abhacken können (backend)
+- den übergang after create schöner
+-- packing list "done" abhacken können
+-- after create of order and packing list go to the order and packing list instead of the overview
+- Packlisten - Meinst du man kann das einbauen, dass ich genau wie bei der rechnungsfunktion auch nen "Packzettel" erstellen kann. Dann könnte ich zB abends nach einem Markttag noch auf dem Markt fehlende Positionen in den Packzettel einfügen und abends direkt aus den Quartieren nachpacken.
+- make the packing list backend (add 'isPackingList')
+- make active order link go to packing lists if necessary
+- make packing list return customer as name
+-- make the packing list filters for models routes
+-- packlist: order model anpassen
+-- packlists: tabbs titles and highlight
+-- packlist: make the internal links obey orders/packing-list sublinks
+-- packlist: tabbs
+- use dependency injection for classname and is active tab
+-- packlist: templates
+-- packlist: controller kreieren
+-- packlist: routen kreieren
+-- packlist: router einstellen
 - make adress take you to edit
 - appcache
 - add isyoung to backend

@@ -1,0 +1,79 @@
+{{#view 'draggable' shouldShow=shouldShowCreate}}
+  <div class='header'>
+    {{partial 'shared/back-button'}}
+    <h2 class='title'>{{name}}</h2>
+    <a href="#" {{action 'editOrder'}}>bearbeiten</a>
+  </div>
+
+  <div class='content'>
+    <div class="card rows">
+      {{#each orderItem in orderItems itemController='orderItem'}}
+        <div {{bind-attr class=orderItem.activityStyles}}>
+          <div {{action 'toggleDone' bubbles=false}} {{bind-attr class=":row :slim orderItem.done:note"}}>
+            {{!normal row}}
+            <span>{{orderItem.plantName}}</span>
+            <span class='flex'></span>
+            <span {{bind-attr class=":col :number orderItem.done:note:peace"}}>{{orderItem.quantity}}</span>
+          </div>
+          <div class="row">
+            {{!normal row}}
+            <span>
+            {{#if showPutBacks}}
+              {{#if orderItem.isFrom}}
+                <a href="#" class='btn-small note' {{action 'showPutBack'}}>abbrechen</a>
+              {{else}}
+                <a href="#" {{bind-attr class=':btn-small orderItem.hasFrom:note' }} {{action 'showPutBack'}}>zurücklegen</a>
+              {{/if}}
+            {{/if}}
+            </span>
+            <span class='flex'></span>
+          </div>
+
+          {{#if orderItem.isFrom}}
+            {{! selected for putback}}
+            {{#each plantPosition in orderItem.plant.positions itemController='plantPosition'}}
+              <div {{bind-attr class=plantPosition.activityStyles}}>
+                <div {{bind-attr class=":row :grid-fit :med-grid-1of3 plantPosition.isTo:rows"}}>
+                <span class='padding-sright middle cell slim'>
+                  {{plantPosition.quarter.name}}
+                </span>
+
+                {{#if plantPosition.isTo}}
+                  {{!finale}}
+                  <span class='cell'>
+                    {{input value=plantPosition.transaction.quantity type='tel' class='number-input'}}
+                  </span>
+                  <span class='cell aright'>
+                    <button class="blue btn-desktop" {{action 'executePutBack' }}>zurücklegen</button>
+                  </span>
+                {{else}}
+                  {{! select quarter}}
+                  <span class='padding-left cell'>
+                    <a {{bind-attr class="plantPosition.hasTo:note :btn-small :cell" }} {{action 'putBackToQuarter'}}>hier zurücklegen</a>
+                  </span>
+                {{/if}}
+                </div>
+              </div>
+            {{/each}}
+          {{/if}}
+        </div>
+      {{else}}
+        <div class="row">
+          <em>leer</em>
+        </div>
+
+      {{/each}}
+
+    </div>
+
+    <div class="padding aright">
+      <button class="blue btn-desktop" {{action "selectActiveOrder" this}}>Pflanzen hinzufügen</button>
+    </div>
+    <div class="padding aright">
+      <button class="btn-small" {{action "togglePutBacks"}}>Pflanzen zurücklegen</button>
+    </div>
+  </div>
+  {{view 'tabs'}}
+{{/view}}
+
+{{outlet}}
