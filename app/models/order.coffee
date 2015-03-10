@@ -8,6 +8,7 @@ Order = DS.Model.extend
   adress: attr 'string'
   date: attr 'date', defaultValue: -> new Date()
   isPackingList: attr 'boolean', defaultValue: false
+  isOrder: Em.computed.not 'isPackingList'
 
   orderItems: hasMany 'orderItem', async: true
 

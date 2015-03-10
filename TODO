@@ -53,12 +53,11 @@
 - app scrolling bouncy when on "scrollable object"
 - Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 - caching im backend
--- packlist: check if tabbed history link logic is still working (write tests)
 ** maybe **
 
+- import spinner
 - maybe route logic instead of resources absically just moving order/edit to orders/order/edit
 - rechnungen archivierbar machen
-- suche/filtern von pflanzen -- dieses pull down -- die richtige suche
 - "deleteable" is nur ne markierung
 - customer auto fill in -- customer list -- customer select
 - check for default values (where it makes sense)
@@ -83,13 +82,15 @@
 - backend mit frontend testen
 **last**
 
+- suche/filtern von pflanzen -- dieses pull down -- die richtige suche
 - on did create make positions at backend
-- errors on order index
-- error on goback from order
 - etikett und vermehrt auf index
 - handle long plant names on index
 
 **done**
+- errors on order index
+- error on goback from order
+-- packlist: check if tabbed history link logic is still working (write tests)
 - als vermehrt markieren
 - etikett vorhanden markierung
 - als vermehrt markieren (backend)
