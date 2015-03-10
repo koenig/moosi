@@ -2,7 +2,7 @@
   <div class='header'>
     {{partial 'shared/back-button'}}
 
-    <h2 class='title'>{{name}}</h2>
+    <h2 class='title'><span class='smaller'>{{name}}</span></h2>
     {{#if hasTransaction}}
       <a {{action 'resetTransaction'}}>abbrechen</a>
     {{else}}

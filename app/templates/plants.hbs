@@ -8,12 +8,14 @@
   <div class='content list'>
     {{partial 'shared/active-order'}}
     {{#each plant in filteredContent}}
-      <div class="item" {{action 'linkToPlant' plant}}>
-        <span>{{plant.name}}</span>
-        <span class='flex'></span>
-        <span class='col number relax'>{{euro plant.price}}</span>
-        <span class='col number padding-left calm'>{{plant.youngPlantQuantity}}</span>
-        <span class='col number padding-left peace'>{{plant.quantity}}</span>
+      <div class="item rows" {{action 'linkToPlant' plant}}>
+        <div class="row slim number">{{plant.name}}</div>
+        <div class="row" style='padding-top:10px'>
+          <span class='flex'></span>
+          <span class='col number relax'>{{euro plant.price}}</span>
+          <span class='col number padding-left calm'>{{plant.youngPlantQuantity}}</span>
+          <span class='col number padding-left peace'>{{plant.quantity}}</span>
+        </div>
       </div>
     {{else}}
       <div class='padding acenter'>
