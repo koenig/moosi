@@ -29,4 +29,8 @@ PlantController = Ember.ObjectController.extend AccessActiveOrderMixin,
       @get('transaction').send 'resetTransaction'
       yes
 
+    toggle: (property) ->
+      @toggleProperty property
+      no
+
 `export default PlantController`

@@ -13,7 +13,9 @@ Plant = DS.Model.extend
           @createNewPosition quarter
   ).on 'init'
 
-  name: attr()
+  name: attr 'string'
+  propagated: attr 'boolean', defaultValue: false
+  labelled: attr 'boolean', defaultValue: false
   priceInCents: attr 'number', defaultValue: 0
   price: divideWithHundret 'priceInCents'
 
@@ -39,17 +41,21 @@ Plant.reopenClass
   FIXTURES: [
     {
       id: 1
-      name: 'anc'
+      name: "Agastache rugosa 'After Eight'"
       priceInCents: 240
       positions: [1, 2]
       orderItems: [1, 3]
+      labelled: yes
+      propagated: no
     }
     {
       id: 2
-      name: 'all'
+      name: "Echinacea purpurea 'Baby Swan White'"
       priceInCents: 320
       positions: [3, 4]
       orderItems: [2]
+      labelled: no
+      propagated: yes
     }
   ]
 `export default Plant`
