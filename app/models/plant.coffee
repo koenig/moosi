@@ -13,11 +13,15 @@ Plant = DS.Model.extend
           @createNewPosition quarter
   ).on 'init'
 
-  name: attr 'string'
+  name: attr 'string', defaultValue: ''
   propagated: attr 'boolean', defaultValue: false
   labelled: attr 'boolean', defaultValue: false
   priceInCents: attr 'number', defaultValue: 0
   price: divideWithHundret 'priceInCents'
+  searchName: Em.computed 'name', -> @get('name').toLowerCase()
+  onInit: (-> @get('searchName')).observes('name').on('init')
+  # search
+  hideOnPlantsList: no
 
   positions: hasMany 'position'
   orderItems: hasMany 'orderItem'

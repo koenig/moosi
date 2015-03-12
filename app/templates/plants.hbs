@@ -1,14 +1,22 @@
 <div class="moosi">
   <div class='header'>
     <a class='left' {{action 'openActionSheet'}}>menü</a>
-    <h1 class="title">Pflanzen</h1>
+    <h1 class="title" {{action 'toggleSearch'}}>Pflanzen <span style="-webkit-transform: rotate(-45deg);
+               -moz-transform: rotate(-45deg);
+                 -o-transform: rotate(-45deg);
+                 display:inline-block">&#9906;</span></h1>
     {{#link-to 'plants.create'}}neu{{/link-to}}
   </div>
 
   <div class='content list'>
     {{partial 'shared/active-order'}}
-    {{#each plant in filteredContent}}
-      <div class="item rows" {{action 'linkToPlant' plant}}>
+    {{#if showSearchField}}
+      <div class="item">
+        {{input type='search' value=searchString}}
+      </div>
+    {{/if}}
+    {{#each plant in arrangedContent}}
+      <div {{bind-attr class=":item :rows plant.hideOnPlantsList:hide"}} {{action 'linkToPlant' plant}}>
         <div class="row slim number">{{plant.name}}</div>
         <div class="row" style='padding-top:10px'>
           <span class='flex'></span>

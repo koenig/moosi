@@ -74,6 +74,8 @@
 - goback could be generic too
 - bubbles=false to avoid no's
 - dry up animations code (create to model)
+- search fixed
+- etikett und vermehrt auf index
 **features**
 
 - issues menü punkt wäre an sich recht easy, macht es sinn? an sich schon vermutlich mehr issues (on the go) -> remember REWORK
@@ -82,12 +84,12 @@
 - backend mit frontend testen
 **last**
 
-- suche/filtern von pflanzen -- dieses pull down -- die richtige suche
 - on did create make positions at backend
-- etikett und vermehrt auf index
-- handle long plant names on index
 
 **done**
+- suche/filtern von pflanzen -- dieses pull down -- die richtige suche
+- implement better search
+- handle long plant names on index
 - errors on order index
 - error on goback from order
 -- packlist: check if tabbed history link logic is still working (write tests)
