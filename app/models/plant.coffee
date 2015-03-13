@@ -5,12 +5,11 @@
 
 Plant = DS.Model.extend
   doThis: (->
-    @store.find('quarter').then (quarters) =>
-      quarters.forEach (quarter) =>
-        foundQuarter = @get('positions').find (position) ->
-          position.get('quarter') is quarter
-        unless foundQuarter
-          @createNewPosition quarter
+    @store.all('quarter').forEach (quarter) =>
+      foundQuarter = @get('positions').find (position) ->
+        position.get('quarter') is quarter
+      unless foundQuarter
+        @createNewPosition quarter
   ).on 'init'
 
   name: attr 'string', defaultValue: ''

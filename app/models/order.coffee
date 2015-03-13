@@ -10,10 +10,11 @@ Order = DS.Model.extend
   isPackingList: attr 'boolean', defaultValue: false
   isOrder: Em.computed.not 'isPackingList'
 
-  orderItems: hasMany 'orderItem', async: true
+  orderItems: hasMany 'orderItem'
 
   findOrderItemFor: (plant) ->
-    orderItem = @get('orderItems').find (orderItem) -> orderItem.get('plant') is plant
+    orderItem = @get('orderItems').find (orderItem) ->
+      orderItem.get('plant') is plant
     return orderItem if orderItem
     orderItem = @store.createRecord 'orderItem',
       order: @
