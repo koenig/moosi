@@ -9,9 +9,10 @@
     <div class="card rows">
       {{#each orderItem in orderItems itemController='orderItem'}}
         <div {{bind-attr class=orderItem.activityStyles}}>
-          <div {{action 'toggleDone' bubbles=false}} {{bind-attr class=":row :slim orderItem.done:note"}}>
+          <div {{bind-attr class=":row :slim orderItem.done:note :row-center"}}>
             {{!normal row}}
-            <span>{{orderItem.plantName}}</span>
+            <div class='col' {{action 'toggleDone' bubbles=false}}>{{input type='checkbox' checked=orderItem.done}}</div>
+            <span {{bind-attr class=":number orderItem.done:strikethrough"}} {{action 'link' 'plant'orderItem.plant}}>{{orderItem.plantName}}</span>
             <span class='flex'></span>
             <span {{bind-attr class=":col :number orderItem.done:note:peace"}}>{{orderItem.quantity}}</span>
           </div>

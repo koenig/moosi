@@ -30,5 +30,6 @@ ApplicationRoute = Ember.Route.extend
     resetTransaction: ->
       @controllerFor('transaction').send 'resetTransaction'
 
+    link: -> @transitionTo.apply @, arguments
 
 `export default ApplicationRoute`
