@@ -76,17 +76,25 @@
 - dry up animations code (create to model)
 - search fixed
 - etikett und vermehrt auf index
+- issues menü punkt wäre an sich recht easy, macht es sinn? an sich schon vermutlich mehr issues (on the go) -> remember REWORK
+- move data integrity to backend (positions for quarters etc.)
+- packing list make done more obvious
+-- make a line through in done
+-- packinglist also use number for plant name
+- make name in packing list linkable
+- remove deprecated linkTo actions
 **features**
 
-- issues menü punkt wäre an sich recht easy, macht es sinn? an sich schon vermutlich mehr issues (on the go) -> remember REWORK
 - fehler catcher
 - activate and test appcache
 - backend mit frontend testen
 **last**
 
 - on did create make positions at backend
+- vermehrt und labelled müssen safe auslösen
 
 **done**
+- order_selection should make transaction on create
 - suche/filtern von pflanzen -- dieses pull down -- die richtige suche
 - implement better search
 - handle long plant names on index
