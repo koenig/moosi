@@ -90,10 +90,11 @@
 - backend mit frontend testen
 **last**
 
+- scheinbar geht das mit den speichern der tab stände nicht mehr (zumindest bei pack list)
 - on did create make positions at backend
-- vermehrt und labelled müssen safe auslösen
 
 **done**
+- vermehrt und labelled müssen safe auslösen
 - order_selection should make transaction on create
 - suche/filtern von pflanzen -- dieses pull down -- die richtige suche
 - implement better search
