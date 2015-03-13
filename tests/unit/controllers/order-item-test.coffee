@@ -11,11 +11,12 @@ test 'it exists', ->
   ok controller
 
 test ' -> #toggleDone', ->
-  controller = @subject(content: Em.Object.create(done: no))
+  orderItem = Em.Object.create done: no, save: ->
+  controller = @subject content: orderItem
 
   controller.send 'toggleDone'
-  equal controller.get('content.done'), yes, 'content.done should be true'
+  equal orderItem.get('done'), yes, 'orderItem.done should be true'
 
   controller.send 'toggleDone'
-  equal controller.get('content.done'), no, 'content.done should be false'
+  equal orderItem.get('done'), no, 'orderItem.done should be false'
 
