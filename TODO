@@ -53,6 +53,9 @@
 - app scrolling bouncy when on "scrollable object"
 - Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 - caching im backend
+- make active order fixed in position
+- order items with hr?
+- transactionables should not return collection on index (backend)
 ** maybe **
 
 - import spinner
@@ -90,10 +93,12 @@
 - backend mit frontend testen
 **last**
 
-- scheinbar geht das mit den speichern der tab stände nicht mehr (zumindest bei pack list)
+
+-error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
 - on did create make positions at backend
 
 **done**
+- scheinbar geht das mit den speichern der tab stände nicht mehr (zumindest bei pack list)
 - vermehrt und labelled müssen safe auslösen
 - order_selection should make transaction on create
 - suche/filtern von pflanzen -- dieses pull down -- die richtige suche

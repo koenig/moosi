@@ -2,18 +2,21 @@
 
 ApplicationRoute = Ember.Route.extend
   afterModel: ->
-    @store.find 'plant'
-    @store.find 'position'
+    Ember.RSVP.all [
+      @store.find 'plant'
+      @store.find 'position'
 
-    @store.find 'order'
-    @store.find 'orderItem'
+      @store.find 'order'
+      @store.find 'orderItem'
 
-    @store.find 'quarter'
+      @store.find 'quarter'
+    ]
   actions:
     goTo: (whereTo) ->
-      if @get "#{whereTo}State"
+      whereToCamelized = whereTo.camelize()
+      if @get "#{whereToCamelized}State"
         @controllerFor(whereTo).set 'shouldShowCreate', yes
-        @transitionTo whereTo.dasherize(), @get "#{whereTo}State"
+        @transitionTo whereTo.dasherize(), @get "#{whereToCamelized}State"
       else
         @transitionTo "#{whereTo.pluralize().dasherize()}"
 
