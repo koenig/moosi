@@ -1,6 +1,6 @@
 {
   "name": "moosi",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Moosi is a little app for small gardeners.",
   "private": true,
   "directories": {
