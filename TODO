@@ -95,10 +95,10 @@
 - backend mit frontend testen
 **last**
 
-- create new quarter -> action to backend
 -error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
 
 **done**
+- create new quarter -> action to backend
 - search fixed
 - make active order fixed in position
 - not donebar problem -> maybe hide donebar feature
