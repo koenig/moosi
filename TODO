@@ -53,7 +53,6 @@
 - app scrolling bouncy when on "scrollable object"
 - Vielleicht etwas mehr responsive bei den Buttons und Inputs nebeneinander
 - caching im backend
-- make active order fixed in position
 - order items with hr?
 - transactionables should not return collection on index (backend)
 ** maybe **
@@ -77,7 +76,6 @@
 - goback could be generic too
 - bubbles=false to avoid no's
 - dry up animations code (create to model)
-- search fixed
 - etikett und vermehrt auf index
 - issues menü punkt wäre an sich recht easy, macht es sinn? an sich schon vermutlich mehr issues (on the go) -> remember REWORK
 - move data integrity to backend (positions for quarters etc.)
@@ -101,6 +99,8 @@
 -error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
 
 **done**
+- search fixed
+- make active order fixed in position
 - not donebar problem -> maybe hide donebar feature
 - there is a problem withorder selections aid is not set
 - clean up jbuilder files

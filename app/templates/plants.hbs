@@ -8,13 +8,16 @@
     {{#link-to 'plants.create'}}neu{{/link-to}}
   </div>
 
-  <div class='content list'>
-    {{partial 'shared/active-order'}}
-    {{#if showSearchField}}
+  {{partial 'shared/active-order'}}
+  {{#if showSearchField}}
+    <div class='list'>
       <div class="item">
         {{input type='search' value=searchString}}
       </div>
-    {{/if}}
+    </div>
+  {{/if}}
+
+  <div class='content list'>
     {{#each plant in arrangedContent}}
       <div {{bind-attr class=":item :rows plant.hideOnPlantsList:hide"}} {{action 'linkToPlant' plant}}>
         <div class="row slim number">{{plant.name}}</div>
