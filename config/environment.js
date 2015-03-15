@@ -37,7 +37,7 @@ module.exports = function(environment) {
       'font-src': "'self'", // Allow fonts to be loaded from http://fonts.gstatic.com
       'connect-src': "'self' ws://0.0.0.0:35729 http://0.0.0.0:3000 'all'", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
       'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
+      'style-src': "'self' 'unsafe-inline'", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
       'media-src': "'self'"
     }
   }
@@ -59,11 +59,12 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self'",
-      'connect-src': "'self'",
+      'connect-src': "'self' http://moosi-back.herokuapps.com",
       'img-src': "'self'",
       'style-src': "'self'",
       'media-src': "'self'"
     }
+    ENV.host = 'http://moosi-back.herokuapps.com'
   }
 
   return ENV;
