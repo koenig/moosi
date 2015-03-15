@@ -1,7 +1,6 @@
 `import Ember from 'ember'`
-`import OrderTabActive from 'moosi/mixins/order-tab-active'`
 
-OrderEditController = Ember.Controller.extend OrderTabActive,
+OrderEditController = Ember.Controller.extend
   isNotDeletable: Em.computed 'content.orderItems.[]', ->
     @get('content.orderItems.length') > 0
   actions:
@@ -20,11 +19,11 @@ OrderEditController = Ember.Controller.extend OrderTabActive,
         @set 'shouldShowCreate', no
         @set 'deleteMode', no
         Em.run.later( =>
-          @transitionTo 'orders'
+          @transitionToRoute 'orders'
         , 400)
     goBack: ->
       @get('content').rollback()
       @set 'shouldShowCreate', no
-      @transitionTo 'order'
+      @transitionToRoute 'order'
 
 `export default OrderEditController`

@@ -1,0 +1,15 @@
+{{#view 'draggable' shouldShow=shouldShowCreate}}
+  <div class='header'>
+    {{partial 'shared/back-button'}}
+    <h2 class='title'>{{content.name}}</h2>
+    <a></a>
+  </div>
+  <div class='content list'>
+    {{partial 'packing-list/form'}}
+    {{#unless isDeletable}}
+      <div class='padding attach'>
+        <em class='smaller note'>alles zurücklegen</em>
+      </div>
+    {{/unless}}
+  </div>
+{{/view}}

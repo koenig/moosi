@@ -19,9 +19,11 @@
       </div>
       {{#each orderItem in orderItems itemController='orderItem'}}
         <div {{bind-attr class=orderItem.activityStyles}}>
-          <div class="row slim">
+          <div class="row slim number">
             {{!normal row}}
-            <span>{{orderItem.plantName}}</span>
+            <span {{action 'link' 'plant' orderItem.plant}}>{{orderItem.plantName}}</span>
+          </div>
+          <div class='row'>
             <span class='flex'></span>
             <span class='col number peace'>{{orderItem.quantity}}</span>
             <span class='col number calm'>{{euro orderItem.plantPrice}}</span>

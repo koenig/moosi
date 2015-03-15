@@ -16,11 +16,6 @@ QuartersController = Ember.ArrayController.extend
         quarter = @store.createRecord 'quarter',
           name: @get 'selectedQuarter.name'
 
-        quarter.one 'didCreate', (quarter) =>
-          @store.find('plant').then (plants) =>
-            plants.forEach (plant) ->
-              plant.createNewPosition quarter
-
         quarter.save()
       @resetSelection()
 

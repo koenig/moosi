@@ -1,9 +1,8 @@
 `import DS from 'ember-data'`
-`import className from '../mixins/class-name'`
 
 [attr, hasMany, belongsTo] = [DS.attr, DS.hasMany, DS.belongsTo]
 
-Quarter = DS.Model.extend className,
+Quarter = DS.Model.extend
   name: attr 'string'
   isYoung: attr 'boolean', defaultValue: false
   positions: hasMany 'position'

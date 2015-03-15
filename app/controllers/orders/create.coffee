@@ -1,17 +1,20 @@
 `import Ember from 'ember'`
-`import OrderTabActive from 'moosi/mixins/order-tab-active'`
 
-OrdersCreateController = Ember.Controller.extend OrderTabActive,
+OrdersCreateController = Ember.Controller.extend
+  needs: ['order']
   actions:
     save: ->
       properties =
         number: @get('content.number')
         customer: @get('content.customer')
         adress: @get('content.adress')
-      @store.createRecord('order', properties).save().then (order) =>
-        @set 'shouldShowCreate', no
+      @store.createRecord('order', properties).save().then (model) =>
+        @get('controllers.order').set 'shouldShowCreate', no
         Em.run.later =>
-          @transitionToRoute 'orders'
+          @set 'shouldShowCreate', no
+          Em.run.later =>
+            @transitionToRoute 'order', model
+          , 400
         , 400
 
 

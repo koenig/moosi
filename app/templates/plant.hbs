@@ -2,7 +2,7 @@
   <div class='header'>
     {{partial 'shared/back-button'}}
 
-    <h2 class='title'>{{name}}</h2>
+    <h2 class='title'><span class='smaller'>{{name}}</span></h2>
     {{#if hasTransaction}}
       <a {{action 'resetTransaction'}}>abbrechen</a>
     {{else}}
@@ -10,13 +10,25 @@
     {{/if}}
   </div>
 
+  {{partial 'shared/active-order'}}
   <div class='content list'>
-    {{partial 'shared/active-order'}}
 
     <div class="item">
       <span>Preis</span>
       <span class='flex'></span>
       <span class='number relax'>{{euro price}}</span>
+    </div>
+
+    <div class="item" {{action 'toggle' 'propagated'}}>
+      <span>Vermehrt</span>
+      <span class='flex'></span>
+      <span class='number relax'>{{bool propagated}}</span>
+    </div>
+
+    <div class="item" {{action 'toggle' 'labelled'}}>
+      <span>Etikettiert</span>
+      <span class='flex'></span>
+      <span class='number relax'>{{bool labelled}}</span>
     </div>
 
     <div class="item divider">Bestände</div>

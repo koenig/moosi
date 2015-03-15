@@ -1,19 +1,32 @@
 <div class="moosi">
   <div class='header'>
     <a class='left' {{action 'openActionSheet'}}>menü</a>
-    <h1 class="title">Pflanzen</h1>
+    <h1 class="title" {{action 'toggleSearch'}}>Pflanzen <span style="-webkit-transform: rotate(-45deg);
+               -moz-transform: rotate(-45deg);
+                 -o-transform: rotate(-45deg);
+                 display:inline-block">&#9906;</span></h1>
     {{#link-to 'plants.create'}}neu{{/link-to}}
   </div>
 
+  {{partial 'shared/active-order'}}
+  {{#if showSearchField}}
+    <div class='list'>
+      <div class="item">
+        {{input type='search' value=searchString}}
+      </div>
+    </div>
+  {{/if}}
+
   <div class='content list'>
-    {{partial 'shared/active-order'}}
-    {{#each plant in filteredContent}}
-      <div class="item" {{action 'linkToPlant' plant}}>
-        <span>{{plant.name}}</span>
-        <span class='flex'></span>
-        <span class='col number relax'>{{euro plant.price}}</span>
-        <span class='col number calm padding-left'>{{plant.youngPlantQuantity}}</span>
-        <span class='col number padding-left peace'>{{plant.quantity}}</span>
+    {{#each plant in arrangedContent}}
+      <div {{bind-attr class=":item :rows plant.hideOnPlantsList:hide"}} {{action 'linkToPlant' plant}}>
+        <div class="row slim number">{{plant.name}}</div>
+        <div class="row" style='padding-top:10px'>
+          <span class='flex'></span>
+          <span class='col number relax'>{{euro plant.price}}</span>
+          <span class='col number padding-left calm'>{{plant.youngPlantQuantity}}</span>
+          <span class='col number padding-left peace'>{{plant.quantity}}</span>
+        </div>
       </div>
     {{else}}
       <div class='padding acenter'>
@@ -25,5 +38,5 @@
 </div>
 {{outlet}}
 
-{{action-sheet isVisible=actionSheetVisible goToQuarters='goToQuarters' goToImport='goToImport'}}
+{{action-sheet isVisible=actionSheetVisible goTo='goTo' }}
 

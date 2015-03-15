@@ -10,12 +10,12 @@ PlantsImportController = Ember.Controller.extend
         @setProperties
           plantList: ''
           shouldShowCreate: no
-        @transitionTo 'plants'
+        @transitionToRoute 'plants'
 
 
     goBack: ->
       @set 'shouldShowCreate', no
-      @transitionTo 'plants'
+      @transitionToRoute 'plants'
       no
 
 

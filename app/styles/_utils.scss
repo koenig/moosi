@@ -6,8 +6,11 @@
 .upper { text-transform:uppercase; }
 .bold { font-weight:bold; }
 .aleft { text-align:left; }
+.aleftnow { text-align:left !important; }
 .aright { text-align:right; }
+.arightnow { text-align:right !important; }
 .acenter { text-align:center; }
+.acenternow { text-align:center !important; }
 .unselectable {
      -webkit-user-select:none;
         -moz-user-select:none;
@@ -76,6 +79,9 @@ a.warn {
 .relax {
   color: #ffb41d;
 }
+.hide {
+  display: none !important;
+}
 // input:focus, textarea:focus {
 //   // outline:1px solid red;
 // }
@@ -88,4 +94,7 @@ button, a {
         -moz-user-select: none;
          -ms-user-select: none;
              user-select: none;
+}
+.strikethrough {
+  text-decoration: line-through;
 }
