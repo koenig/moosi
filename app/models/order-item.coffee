@@ -7,9 +7,9 @@ OrderItem = DS.Model.extend
   order: belongsTo 'order'
   plant: belongsTo 'plant'
   plantName: attr 'string'
-  plantPriceInCents: attr 'number'
-  quantity: attr 'number'
-  done: attr 'boolean'
+  plantPriceInCents: attr 'number', defaultValue: 0
+  quantity: attr 'number', defaultValue: 0
+  done: attr 'boolean', defaultValue: false
 
   plantPrice: divideWithHundret 'plantPriceInCents'
   totalInCents: Em.computed 'plantPriceInCents', 'quantity', ->
