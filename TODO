@@ -86,6 +86,10 @@
 -- packinglist also use number for plant name
 - make name in packing list linkable
 - remove deprecated linkTo actions
+- russian doll caching
+- use composite pids (instead of id) for transactionals
+- make positions json leaner
+- somehow there is a problem when making transactions more than once
 **features**
 
 - fehler catcher
@@ -93,11 +97,13 @@
 - backend mit frontend testen
 **last**
 
-
+- create new quarter -> action to backend
 -error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
-- on did create make positions at backend
 
 **done**
+- there is a problem withorder selections aid is not set
+- clean up jbuilder files
+- on did create make positions at backend
 - scheinbar geht das mit den speichern der tab stände nicht mehr (zumindest bei pack list)
 - vermehrt und labelled müssen safe auslösen
 - order_selection should make transaction on create

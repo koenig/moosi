@@ -8,9 +8,10 @@ Plant = DS.Model.extend
     @store.all('quarter').forEach (quarter) =>
       foundQuarter = @get('positions').find (position) ->
         position.get('quarter') is quarter
-      unless foundQuarter
-        @createNewPosition quarter
+      return if foundQuarter
+      @createNewPosition quarter
   ).on 'init'
+  onInit: (-> @get('searchName')).observes('name').on('init')
 
   name: attr 'string', defaultValue: ''
   propagated: attr 'boolean', defaultValue: false
@@ -18,7 +19,6 @@ Plant = DS.Model.extend
   priceInCents: attr 'number', defaultValue: 0
   price: divideWithHundret 'priceInCents'
   searchName: Em.computed 'name', -> @get('name').toLowerCase()
-  onInit: (-> @get('searchName')).observes('name').on('init')
   # search
   hideOnPlantsList: no
 
@@ -34,11 +34,12 @@ Plant = DS.Model.extend
   quantity: Em.computed.sum 'quantityValues'
 
   createNewPosition: (quarter) ->
-    quarter = @store.createRecord 'position',
+    position = @store.createRecord 'position',
       quarter: quarter
       plant: @
-    Em.run.later => quarter.save()
-    quarter
+    Em.run.later => position.save()
+    position
+
 
 Plant.reopenClass
   FIXTURES: [

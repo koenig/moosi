@@ -23,9 +23,6 @@ Order = DS.Model.extend
       plantName: plant.get('name')
       plantPriceInCents: plant.get('priceInCents')
 
-    Em.run.later =>
-      @save()
-      orderItem.save()
     orderItem
 
   typeName: Em.computed 'isPackingList', ->

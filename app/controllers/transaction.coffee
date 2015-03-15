@@ -48,8 +48,11 @@ TransactionController = Ember.ObjectController.extend AccessActiveOrderMixin,
           to: @get 'to'
           quantity: @get 'quantity'
 
-    transaction.save()
     @send 'resetTransaction'
+    if @get('hasActiveOrder') and transaction.get('to.isNew')
+      transaction.get('to').save().then => transaction.save()
+    else
+      transaction.save()
 
   actions:
     resetTransaction: ->
