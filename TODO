@@ -101,6 +101,7 @@
 -error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
 
 **done**
+- not donebar problem -> maybe hide donebar feature
 - there is a problem withorder selections aid is not set
 - clean up jbuilder files
 - on did create make positions at backend

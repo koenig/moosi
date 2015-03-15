@@ -32,6 +32,6 @@ OrderItemController = Ember.ObjectController.extend
 
     toggleDone: ->
       @toggleProperty 'content.done'
-      @get('model').save()
+      @get('content').save()
 
 `export default OrderItemController`
