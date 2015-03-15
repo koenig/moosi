@@ -6,8 +6,11 @@
 .upper { text-transform:uppercase; }
 .bold { font-weight:bold; }
 .aleft { text-align:left; }
+.aleftnow { text-align:left !important; }
 .aright { text-align:right; }
+.arightnow { text-align:right !important; }
 .acenter { text-align:center; }
+.acenternow { text-align:center !important; }
 .unselectable {
      -webkit-user-select:none;
         -moz-user-select:none;
