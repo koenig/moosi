@@ -95,6 +95,7 @@
 - backend mit frontend testen
 **last**
 
+- seed plants
 -error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
 
 **done**

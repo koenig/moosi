@@ -64,6 +64,7 @@ module.exports = function(environment) {
       'style-src': "'self'",
       'media-src': "'self'"
     }
+    ENV.host = 'http://moosi-back.herokuapps.com'
   }
 
   return ENV;
