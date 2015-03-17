@@ -12,7 +12,7 @@
           <div {{bind-attr class=":row :slim orderItem.done:note :row-center"}}>
             {{!normal row}}
             <div class='col aleftnow' {{action 'toggleDone' bubbles=false}}>{{#if orderItem.done}}&#10004;{{else}}&#9744;{{/if}}</div>
-            <span {{bind-attr class=":number orderItem.done:strikethrough"}} {{action 'link' 'plant'orderItem.plant}}>{{orderItem.plantName}}</span>
+            <span {{bind-attr class=":number orderItem.done:strikethrough"}} {{action 'link' 'plant' orderItem.plant}}>{{orderItem.plantName}}</span>
             <span class='flex'></span>
             <span {{bind-attr class=":col :number orderItem.done:note:peace"}}>{{orderItem.quantity}}</span>
           </div>

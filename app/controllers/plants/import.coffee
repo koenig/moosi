@@ -1,12 +1,17 @@
 `import Ember from 'ember'`
 
 PlantsImportController = Ember.Controller.extend
+  plantsImportUrl: (adapter) ->
+    adapter.buildURL 'plants', 'import'
   actions:
     importPlants: ->
-      plantNames = @get('plantList').split('\n')
       blankLines = (name) => Em.isBlank name
-      createPlant = (name) => @store.createRecord('plant', name: name).save()
-      Em.RSVP.all(plantNames.reject(blankLines).map(createPlant)).then =>
+      plantNames = @get('plantList').split('\n').reject(blankLines)
+      adapter = @store.adapterFor('application')
+      adapter.ajax(@plantsImportUrl(adapter), 'POST', {data:{names: plantNames}}).then (payload) =>
+        @store.pushMany('plant', @store.normalize('plant', payload['plants']))
+        @store.pushMany('position', @store.normalize('position', payload['positions']))
+
         @setProperties
           plantList: ''
           shouldShowCreate: no
