@@ -2,15 +2,7 @@
 
 ApplicationRoute = Ember.Route.extend
   afterModel: ->
-    Ember.RSVP.all [
-      @store.find 'plant', everything: true
-      # @store.find 'position'
-      # @store.find 'order'
-      # @store.find 'orderItem'
-
-      # this should be removed too somehow
-      @store.find 'quarter'
-    ]
+    @store.find 'quarter', everything: true
   actions:
     goTo: (whereTo) ->
       whereToCamelized = whereTo.camelize()
