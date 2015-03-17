@@ -88,17 +88,23 @@
 - use composite pids (instead of id) for transactionals
 - make positions json leaner
 - somehow there is a problem when making transactions more than once
+- man muss den preis in orders irgendwie ändern können
 **features**
 
+- put back löst ein order select aus -> wenn has active order
+- mehrmaliges ausführen von order selects sind scheinbar problematisch
 - fehler catcher
 - activate and test appcache
 - backend mit frontend testen
 **last**
 
-- seed plants
+- seed plants/Lager
+- test everything online
+
 -error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
 
 **done**
+- server plant import
 - create new quarter -> action to backend
 - search fixed
 - make active order fixed in position
