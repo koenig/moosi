@@ -59,12 +59,12 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self'",
-      'connect-src': "'self' http://moosi-back.herokuapps.com",
+      'connect-src': "'self' http://moosi-back.herokuapp.com",
       'img-src': "'self'",
       'style-src': "'self'",
       'media-src': "'self'"
     }
-    ENV.host = 'http://moosi-back.herokuapps.com'
+    ENV.host = 'http://moosi-back.herokuapp.com'
   }
 
   return ENV;
