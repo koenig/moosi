@@ -33,7 +33,7 @@
 
     <div class="item divider">Bestände</div>
 
-    {{#each position in positions itemController='position'}}
+    {{#each position in orderedPositions itemController='position'}}
       <div {{bind-attr class=position.activityStyles}}>
         <div class="row" {{action 'selectPosition' position }}>
           <span>{{position.quarter.name}}
@@ -45,7 +45,7 @@
             {{/if}}
           </span>
           <span class='flex'></span>
-          <span {{bind-attr class="position.isYoungPlant:calm:peace :number"}}>{{position.quantity}}</span>
+          <span {{bind-attr class="position.isYoung:calm:peace :number"}}>{{position.quantity}}</span>
         </div>
         {{#if position.isTo}}
           <div class="row">
