@@ -6,11 +6,13 @@
 Plant = DS.Model.extend
   # this is to check if a plant has all positions availsable
   # doThis: (->
-  #   @store.all('quarter').forEach (quarter) =>
-  #     foundQuarter = @get('positions').find (position) ->
-  #       position.get('quarter') is quarter
-  #     return if foundQuarter
-  #     @createNewPosition quarter
+  #   console.log 'didcreate', @get('isNew'), @get('justCreated')
+  #   if @get('justCreated')
+  #     @store.all('quarter').forEach (quarter) =>
+  #       foundQuarter = @get('positions').find (position) ->
+  #         position.get('quarter') is quarter
+  #       return if foundQuarter
+  #       @createNewPosition quarter
   # ).on 'init'
   onInit: (-> @get('searchName')).observes('name').on('init')
 
@@ -38,7 +40,7 @@ Plant = DS.Model.extend
     position = @store.createRecord 'position',
       quarter: quarter
       plant: @
-    Em.run.later => position.save()
+    # Em.run.later => position.save()
     position
 
 
