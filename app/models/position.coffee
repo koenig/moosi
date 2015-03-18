@@ -6,11 +6,6 @@ Position = DS.Model.extend
   quantity: attr 'number', defaultValue: 0
   plant: belongsTo 'plant'
   quarter: belongsTo 'quarter' #, async: yes # this is probably not a good idea to change otherwise we have double positons in through plant model accessing quarter syncronous
-  # setId: (->
-  #   return unless @get 'plant'
-  #   return unless @get 'quarter'
-  #   @set 'id', "#{@get 'plant.id'}-#{@get 'quarter.id', ''}"
-  # ).observes 'plant.id', 'quarter.id'
 
   isYoung: Em.computed.oneWay 'quarter.isYoung'
   isPlant: Em.computed.oneWay 'quarter.isPlant'
