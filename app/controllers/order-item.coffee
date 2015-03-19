@@ -27,7 +27,7 @@ OrderItemController = Ember.ObjectController.extend
         @get('transaction').send('resetTransaction')
       else
         @set 'transaction.from', @get 'content'
-        @set 'transaction.quantity', @get 'quantity'
+        @set 'transaction.quantityInput', @get 'quantity'
       false
 
     toggleDone: ->

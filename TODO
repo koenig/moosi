@@ -89,21 +89,25 @@
 - make positions json leaner
 - somehow there is a problem when making transactions more than once
 - man muss den preis in orders irgendwie ändern können
-**features**
-
-- put back löst ein order select aus -> wenn has active order
-- mehrmaliges ausführen von order selects sind scheinbar problematisch
+- new style 1 line json collections
 - fehler catcher
 - activate and test appcache
-- backend mit frontend testen
+**features**
+
 **last**
 
-- seed plants/Lager
-- test everything online
 
 -error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
+- test everything online
 
 **done**
+- mehrmaliges ausführen von order selects sind scheinbar problematisch
+- order item wird irgendwie doppelt angezeigt, bis zu nem reload
+- da ist eine race condition in der ordnung der positions
+- put back löst ein order select aus -> wenn has active order
+- backend mit frontend testen
+- reihenfolge der positions beim speichern
+- seed plants/Lager
 - server plant import
 - create new quarter -> action to backend
 - search fixed

@@ -11,6 +11,13 @@ PlantController = Ember.ObjectController.extend AccessActiveOrderMixin,
   hasTransaction: Em.computed.or 'hasFrom', 'hasTo'
   isTransaction: Em.computed.alias 'transaction.isRealTransaction'
 
+  orderedPositions: Em.computed.sort 'positions', (a, b) ->
+    aId = a.get('quarter.id')
+    bId = b.get('quarter.id')
+    return 1 if aId > bId
+    return -1 if  aId < bId
+    0
+
   actions:
     execute: ->
       @get('transaction').execute()

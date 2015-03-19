@@ -4,14 +4,6 @@
 [attr, hasMany, belongsTo] = [DS.attr, DS.hasMany, DS.belongsTo]
 
 Plant = DS.Model.extend
-  # this is to check if a plant has all positions availsable
-  # doThis: (->
-  #   @store.all('quarter').forEach (quarter) =>
-  #     foundQuarter = @get('positions').find (position) ->
-  #       position.get('quarter') is quarter
-  #     return if foundQuarter
-  #     @createNewPosition quarter
-  # ).on 'init'
   onInit: (-> @get('searchName')).observes('name').on('init')
 
   name: attr 'string', defaultValue: ''
@@ -38,7 +30,6 @@ Plant = DS.Model.extend
     position = @store.createRecord 'position',
       quarter: quarter
       plant: @
-    Em.run.later => position.save()
     position
 
 

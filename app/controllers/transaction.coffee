@@ -4,7 +4,7 @@
 TransactionController = Ember.ObjectController.extend AccessActiveOrderMixin,
   from: null
   to: null
-  quantityInput: null
+  quantityInput: ''
   quantity: Em.computed 'quantityInput', ->
     (@get('quantityInput') or '').replace(',', '.')
   isRealTransaction: Em.computed 'from', 'to', ->
@@ -29,18 +29,17 @@ TransactionController = Ember.ObjectController.extend AccessActiveOrderMixin,
     # model itself
     return unless @get('isValidTransaction')
 
-    if @get 'hasActiveOrder'
-      # setup to
-      transaction = @store.createRecord 'orderSelection',
+    if action is "putBack"
+      transaction = @store.createRecord 'putBack',
         from: @get 'from'
-        to: @get('activeOrder').findOrderItemFor @get('from.plant')
+        to: @get 'to'
         quantity: @get 'quantity'
-
     else
-      if action is "putBack"
-        transaction = @store.createRecord 'putBack',
+      if @get 'hasActiveOrder'
+        # setup to
+        transaction = @store.createRecord 'orderSelection',
           from: @get 'from'
-          to: @get 'to'
+          to: @get('activeOrder').findOrderItemFor @get('from.plant')
           quantity: @get 'quantity'
       else
         transaction = @store.createRecord 'transaction',
@@ -48,18 +47,18 @@ TransactionController = Ember.ObjectController.extend AccessActiveOrderMixin,
           to: @get 'to'
           quantity: @get 'quantity'
 
-    @send 'resetTransaction'
     if @get('hasActiveOrder') and transaction.get('to.isNew')
       transaction.get('to').save().then => transaction.save()
     else
       transaction.save()
+    @send 'resetTransaction'
 
   actions:
     resetTransaction: ->
       @setProperties
         from: null
         to: null
-        quantityInput: null
+        quantityInput: ''
 
 
 `export default TransactionController`
