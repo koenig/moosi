@@ -11,8 +11,9 @@ PlantsController = Ember.ArrayController.extend AccessActiveOrderMixin,
 
   searchString: ''
   onSearchStringChange: (->
+    searchString = @get('searchString').toLowerCase()
     @get('arrangedContent').forEach (plant) =>
-      plant.set 'hideOnPlantsList', Em.isBlank plant.get('searchName').match @get 'searchString'
+      plant.set 'hideOnPlantsList', Em.isBlank plant.get('searchName').match searchString
   ).observes 'searchString'
   actions:
     openmodal: ->
