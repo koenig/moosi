@@ -6,7 +6,7 @@ TransactionController = Ember.ObjectController.extend AccessActiveOrderMixin,
   to: null
   quantityInput: ''
   quantity: Em.computed 'quantityInput', ->
-    (@get('quantityInput') or '').replace(',', '.')
+    "#{@get('quantityInput')}".replace(',', '.')
   isRealTransaction: Em.computed 'from', 'to', ->
     @get('to') isnt @get('from')
   quantityShouldBeNumeric: Em.computed 'quantity', ->
