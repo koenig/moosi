@@ -92,29 +92,30 @@
 - new style 1 line json collections
 - fehler catcher
 - activate and test appcache
+- make title yello when there is a search string
+- aktivate save and repeat feature
 **features**
 
 **last**
-
 - update plant doesnt update position
-- action sheet/footer too low
-- fullscreen mobile support
 - packliste doppelte einträge nach order selection
 - not able to select for order selection
-- putback leaves window open
+
+- action sheet/footer too low
+- fullscreen mobile support
 - on android the symbol errors
 - cant cancel active order on plant/index page
 - doppelte eingabe der positions von pflanzen bei der creation = alte position quantities
-- speichern und sofort weiter => viele neue positions (hide function at first)
-- neue pflanze verschwinden aus der liste
 - error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
 - test everything online
 - loading states
 - übergänge machen requests?
-- make title yello when there is a search string
 
 push new backend push new frontend!
+- neue pflanze verschwinden aus der liste
+- putback leaves window open
 **done**
+- speichern und sofort weiter => viele neue positions (hide function at first)
 - put back somewhat strange no reaction
 - suche lower case
 - mehrmaliges ausführen von order selects sind scheinbar problematisch
