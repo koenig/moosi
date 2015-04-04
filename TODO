@@ -110,11 +110,14 @@
 - test everything online
 - loading states
 - übergänge machen requests?
+- price should be empty and positions too when creating new plants
+- search field type shouldnt be search...
 
 push new backend push new frontend!
 - neue pflanze verschwinden aus der liste
 - putback leaves window open
 **done**
+- edit header is strange
 - speichern und sofort weiter => viele neue positions (hide function at first)
 - put back somewhat strange no reaction
 - suche lower case
