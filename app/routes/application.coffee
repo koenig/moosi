@@ -21,6 +21,7 @@ ApplicationRoute = Ember.Route.extend
     deselectActiveOrder: ->
       @controllerFor('application').set 'activeOrder', null
       @controllerFor('transaction').send 'resetTransaction'
+      no
 
     resetTransaction: ->
       @controllerFor('transaction').send 'resetTransaction'
