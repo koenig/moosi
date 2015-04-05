@@ -94,6 +94,8 @@
 - activate and test appcache
 - make title yello when there is a search string
 - aktivate save and repeat feature
+- make only clickable items have an action style
+- on android the symbol errors
 **features**
 
 **last**
@@ -102,19 +104,21 @@
 - not able to select for order selection
 
 - action sheet/footer too low
-- fullscreen mobile support
-- on android the symbol errors
 - cant cancel active order on plant/index page
 - doppelte eingabe der positions von pflanzen bei der creation = alte position quantities
 - error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
 - test everything online
 - loading states
 - übergänge machen requests?
+- price should be empty and positions too when creating new plants
 
 push new backend push new frontend!
 - neue pflanze verschwinden aus der liste
 - putback leaves window open
 **done**
+- fullscreen mobile support
+- search field type shouldnt be search...
+- edit header is strange
 - speichern und sofort weiter => viele neue positions (hide function at first)
 - put back somewhat strange no reaction
 - suche lower case
