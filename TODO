@@ -100,21 +100,23 @@
 - price should be empty and positions too when creating new plants
 - pfeile anstatt zurück
 - bearbeiten ersetzen mit edit oder nem icon
+- make plants loading faster
+- loading states
+- mark active order/packlist in index
 **features**
 
 **last**
-- cant cancel active order on plant/index page
-- doppelte eingabe der positions von pflanzen bei der creation = alte position quantities
-- error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
-- loading states
-- packliste doppelte einträge nach order selection
 
-push new backend push new frontend!
+**done**
 - action sheet/footer too low
-- update plant doesnt update position
+- packliste doppelte einträge nach order selection
+push new backend push new frontend!
+- doppelte eingabe der positions von pflanzen bei der creation = alte position quantities
 - neue pflanze verschwinden aus der liste
 - putback leaves window open
-**done**
+- update plant doesnt update position
+- cant cancel active order on plant/index page
+- error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
 - after order select it should be a blank state like before selecting anything
 - test everything online
 - übergänge machen requests?
