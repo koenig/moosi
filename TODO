@@ -96,26 +96,31 @@
 - aktivate save and repeat feature
 - make only clickable items have an action style
 - on android the symbol errors
+- display of version
+- price should be empty and positions too when creating new plants
+- pfeile anstatt zurück
+- bearbeiten ersetzen mit edit oder nem icon
+- make plants loading faster
+- loading states
+- mark active order/packlist in index
 **features**
 
 **last**
-- update plant doesnt update position
-- packliste doppelte einträge nach order selection
-- not able to select for order selection
 
+**done**
 - action sheet/footer too low
-- cant cancel active order on plant/index page
-- doppelte eingabe der positions von pflanzen bei der creation = alte position quantities
-- error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
-- test everything online
-- loading states
-- übergänge machen requests?
-- price should be empty and positions too when creating new plants
-
+- packliste doppelte einträge nach order selection
 push new backend push new frontend!
+- doppelte eingabe der positions von pflanzen bei der creation = alte position quantities
 - neue pflanze verschwinden aus der liste
 - putback leaves window open
-**done**
+- update plant doesnt update position
+- cant cancel active order on plant/index page
+- error while processing route: order.index Assertion Failed: ArrayProxy expects an Array or Ember.ArrayProxy
+- after order select it should be a blank state like before selecting anything
+- test everything online
+- übergänge machen requests?
+- not able to select for order selection
 - fullscreen mobile support
 - search field type shouldnt be search...
 - edit header is strange
