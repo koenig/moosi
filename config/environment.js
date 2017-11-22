@@ -24,6 +24,9 @@ module.exports = function(environment) {
     excludePaths: ['robots.txt', 'crossdomain.xml', 'index.html', 'testem.js', 'tests/index.html', 'assets/hidden/'],
     showCreateDate: false,
   }
+  
+  // setup backend URL
+  ENV.host = process.env.BACKEND_URL || 'http://0.0.0.0:3000';
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -55,16 +58,16 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    var connectSrcString = "'self' " + ENV.host;
     ENV.contentSecurityPolicy = {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self'",
-      'connect-src': "'self' http://moosi-back.herokuapp.com",
+      'connect-src': connectSrcString,
       'img-src': "'self'",
       'style-src': "'self'",
       'media-src': "'self'"
     }
-    ENV.host = 'http://moosi-back.herokuapp.com'
   }
 
   return ENV;
